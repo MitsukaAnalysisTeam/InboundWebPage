@@ -1,0 +1,31 @@
+{
+  "ramen": [
+    {
+      "id": "white-miso",
+      "name": "White Miso Ramen",
+      "description": "Our signature ramen featuring a rich and creamy white miso broth. The perfect balance of umami and sweetness.",
+      "price": "¥980",
+      "imageUrl": "/images/ramen/white-miso-ramen.jpg",
+      "ingredients": ["White Miso", "Chashu", "Green Onion", "Bean Sprouts", "Corn"],
+      "spiceLevel": "Mild"
+    },
+    {
+      "id": "red-miso",
+      "name": "Red Miso Ramen",
+      "description": "A bold and flavorful ramen with our special red miso blend. Rich in umami with a hint of spiciness.",
+      "price": "¥1,080",
+      "imageUrl": "/images/ramen/red-miso-ramen.jpg",
+      "ingredients": ["Red Miso", "Chashu", "Green Onion", "Bean Sprouts", "Garlic"],
+      "spiceLevel": "Medium"
+    },
+    {
+      "id": "spicy-miso",
+      "name": "Spicy Miso Ramen",
+      "description": "Our popular spicy miso ramen with a perfect blend of heat and flavor. Not for the faint-hearted!",
+      "price": "¥1,180",
+      "imageUrl": "/images/ramen/spicy-miso-ramen.jpg",
+      "ingredients": ["Red Miso", "Chashu", "Green Onion", "Bean Sprouts", "Spicy Sauce"],
+      "spiceLevel": "Hot"
+    }
+  ]
+} 

@@ -1,0 +1,29 @@
+{
+  "history": [
+    {
+      "year": 2010,
+      "title": "The Beginning",
+      "description": "Mitsukabose was founded near Hotarugaike Station, starting with a simple mission: to serve the best miso ramen in Osaka."
+    },
+    {
+      "year": 2015,
+      "title": "Expansion of Menu",
+      "description": "We expanded our menu to include various types of miso ramen, introducing our signature red miso ramen that became an instant hit."
+    },
+    {
+      "year": 2018,
+      "title": "Miso Innovation",
+      "description": "Developed our unique mixed miso blend, combining traditional techniques with modern innovation."
+    },
+    {
+      "year": 2022,
+      "title": "New Location",
+      "description": "Relocated to our current location in the Airport Center Building, allowing us to serve more customers while maintaining our quality."
+    },
+    {
+      "year": 2024,
+      "title": "Looking Forward",
+      "description": "Continuing our journey of serving authentic miso ramen while exploring new possibilities in Japanese cuisine."
+    }
+  ]
+} 
