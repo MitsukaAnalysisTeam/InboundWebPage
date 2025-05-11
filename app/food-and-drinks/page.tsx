@@ -1,7 +1,8 @@
-import { getFoodDrinks, type FoodDrinkItem } from '@/domain/services/dataService';
+import { getFoodDrinks } from '@/domain/services/dataService';
+import type { FoodDrinkItem } from '@/domain/types';
 
 export default function FoodAndDrinksPage() {
-  const items = getFoodDrinks();
+  const items: FoodDrinkItem[] = getFoodDrinks();
 
   return (
     <div className="max-w-4xl mx-auto">
