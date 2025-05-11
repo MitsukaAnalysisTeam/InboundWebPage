@@ -16,8 +16,8 @@ export default function HeroSection() {
 
       <div className="relative h-full flex items-center justify-center text-center text-white">
         <div className="max-w-3xl px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Fermentation, Miso & Noodles
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Welcome To Mitsukabose
           </h1>
           <p className="text-xl md:text-2xl mb-8">
             Experience the art of traditional Japanese miso ramen

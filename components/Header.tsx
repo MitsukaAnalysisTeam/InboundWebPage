@@ -1,35 +1,23 @@
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 shadow-sm">
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-primary">
-            Mitsukabose
-          </Link>
-
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="#what-is-miso" className="text-gray-600 hover:text-primary">
-              What is Miso
-            </Link>
-            <Link href="#why-miso-ramen" className="text-gray-600 hover:text-primary">
-              Why Miso Ramen
-            </Link>
-            <Link href="#menu" className="text-gray-600 hover:text-primary">
-              Menu
-            </Link>
-            <Link href="#retail" className="text-gray-600 hover:text-primary">
-              Retail
-            </Link>
-            <Link href="#access" className="text-gray-600 hover:text-primary">
-              Access
-            </Link>
-          </div>
-
-          <button className="md:hidden">
+    <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* モバイルメニューボタン */}
+          <button
+            className="md:hidden p-2 rounded-md hover:bg-gray-100"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="メニューを開く"
+          >
             <svg
-              className="w-6 h-6"
+              className="h-6 w-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -38,12 +26,19 @@ export default function Header() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
+                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
               />
             </svg>
           </button>
+
+          {/* ロゴ */}
+          <Link href="/" className="flex items-center ml-auto">
+            <span className="text-xl font-bold text-[#2B2B2B] hover:text-gray-700 transition-colors">
+              Mitsukabose
+            </span>
+          </Link>
         </div>
-      </nav>
+      </div>
     </header>
   );
 } 

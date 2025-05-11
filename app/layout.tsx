@@ -20,8 +20,10 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning>
         <div className="flex min-h-screen">
           <Sidebar />
-          <main className="flex-1 p-8 lg:ml-60">
-            {children}
+          <main className="flex-1 p-4 sm:p-6 md:p-8 lg:ml-60">
+            <div className="max-w-4xl mx-auto">
+              {children}
+            </div>
           </main>
         </div>
       </body>
