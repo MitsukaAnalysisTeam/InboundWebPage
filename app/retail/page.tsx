@@ -1,11 +1,14 @@
 import { Section } from '@/components/Section';
 import { getRetailItems } from '@/domain/services/dataService';
 import Image from 'next/image';
+import Header from '@/components/Header';
 
 export default function RetailPage() {
   const items = getRetailItems();
 
   return (
+    <main>
+      <Header />
     <Section title="Retail Miso & Souvenirs">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {items.map((item) => (
@@ -26,5 +29,6 @@ export default function RetailPage() {
         ))}
       </div>
     </Section>
+    </main>
   );
 } 

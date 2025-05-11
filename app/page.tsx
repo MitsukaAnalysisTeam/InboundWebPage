@@ -15,7 +15,7 @@ export default function Home() {
   const misoList = getAllMiso();
 
   return (
-    <main>
+    <main className="w-screen h-screen">
       <Header />
       <HeroSection />
       <WhatIsMisoSection />
