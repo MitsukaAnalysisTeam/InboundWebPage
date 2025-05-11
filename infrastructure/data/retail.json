@@ -2,31 +2,43 @@
   {
     "name": "Kaachan Miso (500g)",
     "priceYen": 1200,
-    "highlight": "Rich Toyono-town miso, perfect travel souvenir."
+    "highlight": "Rich Toyono-town miso, perfect travel souvenir.",
+    "imageUrl": "/images/retail/kaachan.jpg",
+    "description": "Traditional miso from Toyono Town, known for its rich and slightly sweet flavor profile. Perfect for home cooking or as a souvenir."
   },
   {
     "name": "Marusan Miso (500g)",
     "priceYen": 1500,
-    "highlight": "Deep-flavored miso from Nagano."
+    "highlight": "Deep-flavored miso from Nagano.",
+    "imageUrl": "/images/retail/marusan.jpg",
+    "description": "Premium miso from Nagano prefecture, offering deep umami flavors. Ideal for hearty soups and stews."
   },
   {
     "name": "Ishino White Miso (500g)",
     "priceYen": 1400,
-    "highlight": "Creamy Kyoto-style miso."
+    "highlight": "Creamy Kyoto-style miso.",
+    "imageUrl": "/images/retail/ishino.jpg",
+    "description": "A mild and creamy white miso from Kyoto, perfect for light dishes and dressings."
   },
   {
     "name": "Yamago Miso (500g)",
     "priceYen": 1300,
-    "highlight": "Balanced sweetness from Yamanashi."
+    "highlight": "Balanced sweetness from Yamanashi.",
+    "imageUrl": "/images/retail/yamago.jpg",
+    "description": "Well-balanced miso from Yamanashi with a natural sweetness. Great for everyday cooking."
   },
   {
     "name": "Hozan Miso (500g)",
     "priceYen": 1600,
-    "highlight": "Full-bodied miso from Aichi."
+    "highlight": "Full-bodied miso from Aichi.",
+    "imageUrl": "/images/retail/hozan.jpg",
+    "description": "A full-bodied miso from Aichi prefecture, rich in flavor. Perfect for bold dishes."
   },
   {
     "name": "Kantoya Miso (500g)",
     "priceYen": 1450,
-    "highlight": "Earthy, robust Tokyo-style miso."
+    "highlight": "Earthy, robust Tokyo-style miso.",
+    "imageUrl": "/images/retail/kanto.jpg",
+    "description": "Traditional Tokyo-style miso with an earthy and robust character. A must-have for authentic Japanese cooking."
   }
 ] 

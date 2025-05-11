@@ -5,7 +5,9 @@
     "priceYen": 980,
     "ingredients": ["miso broth", "wheat noodles", "pork chashu", "green onions", "bamboo shoots", "egg"],
     "dietary": ["pork"],
-    "allergies": ["soy", "wheat", "egg", "dairy"]
+    "allergies": ["soy", "wheat", "egg", "dairy"],
+    "imageUrl": "/images/menu/ramen-001.jpg",
+    "description": "Our signature white miso ramen features a creamy, slightly sweet broth made with carefully selected white miso."
   },
   {
     "id": "red-miso",
@@ -13,7 +15,9 @@
     "priceYen": 1080,
     "ingredients": ["red miso broth", "wheat noodles", "pork chashu", "green onions", "bamboo shoots", "egg", "spices"],
     "dietary": ["pork"],
-    "allergies": ["soy", "wheat", "egg", "dairy"]
+    "allergies": ["soy", "wheat", "egg", "dairy"],
+    "imageUrl": "/images/menu/ramen-002.jpg",
+    "description": "A bold and flavorful ramen made with our special blend of red miso, offering deep umami flavors."
   },
   {
     "id": "spicy-miso",
@@ -21,7 +25,9 @@
     "priceYen": 1180,
     "ingredients": ["miso broth", "wheat noodles", "pork chashu", "green onions", "bamboo shoots", "egg", "chili oil"],
     "dietary": ["pork", "spicy"],
-    "allergies": ["soy", "wheat", "egg", "dairy"]
+    "allergies": ["soy", "wheat", "egg", "dairy"],
+    "imageUrl": "/images/menu/ramen-003.jpg",
+    "description": "A spicy twist on our classic miso ramen, with perfectly balanced heat and flavor."
   },
   {
     "id": "shrimp-curry",
@@ -29,7 +35,9 @@
     "priceYen": 1280,
     "ingredients": ["curry broth", "wheat noodles", "shrimp", "green onions", "bamboo shoots", "egg"],
     "dietary": ["seafood"],
-    "allergies": ["soy", "wheat", "egg", "dairy", "shellfish"]
+    "allergies": ["soy", "wheat", "egg", "dairy", "shellfish"],
+    "imageUrl": "/images/menu/ramen-004.jpg",
+    "description": "Unique fusion of Japanese and Indian flavors, featuring a rich curry broth with shrimp essence."
   },
   {
     "id": "vegi-miso",
@@ -37,7 +45,9 @@
     "priceYen": 1100,
     "ingredients": ["miso broth", "vegetable stock", "rice noodles", "mixed veggies"],
     "dietary": ["vegan", "vegetarian", "gluten-free"],
-    "allergies": ["soy"]
+    "allergies": ["soy"],
+    "imageUrl": "/images/menu/ramen-005.jpg",
+    "description": "A vegetable-rich ramen made with our special vegetable broth and miso blend."
   },
   {
     "id": "kids-ramen",
@@ -45,7 +55,9 @@
     "priceYen": 780,
     "ingredients": ["mild miso broth", "wheat noodles", "pork chashu", "green onions", "corn"],
     "dietary": ["pork"],
-    "allergies": ["soy", "wheat", "dairy"]
+    "allergies": ["soy", "wheat", "dairy"],
+    "imageUrl": "/images/menu/ramen-006.jpg",
+    "description": "Specially designed for children, with a mild and kid-friendly flavor profile."
   },
   {
     "id": "vegan-tantanmen",
@@ -53,6 +65,8 @@
     "priceYen": 1180,
     "ingredients": ["sesame-chili broth", "rice noodles", "tofu", "green onions", "bamboo shoots", "peanuts"],
     "dietary": ["vegan", "vegetarian", "gluten-free"],
-    "allergies": ["soy", "peanuts"]
+    "allergies": ["soy", "peanuts"],
+    "imageUrl": "/images/menu/ramen-007.jpg",
+    "description": "A vegan version of the classic tantanmen, featuring a rich sesame-chili broth."
   }
 ] 

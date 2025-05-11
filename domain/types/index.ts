@@ -22,6 +22,10 @@ export interface MisoType {
   name: string;
   origin: string;
   flavor: string;
+  imageUrl: string;
+  description: string;
+  characteristics: string[];
+  bestFor: string[];
 }
 
 export interface MisoInfo {
@@ -33,6 +37,8 @@ export interface FoodDrinkItem {
   name: string;
   category: 'ramen' | 'beer' | 'sake';
   highlight: string;
+  imageUrl: string;
+  description: string;
 }
 
 export interface MenuItem {
@@ -42,16 +48,22 @@ export interface MenuItem {
   ingredients: string[];
   dietary: string[];
   allergies: string[];
+  imageUrl: string;
+  description: string;
 }
 
 export interface RetailItem {
   name: string;
   priceYen: number;
   highlight: string;
+  imageUrl: string;
+  description: string;
 }
 
 export interface AccessInfo {
   station: string;
   walkTime: string;
   mapUrl: string;
+  imageUrl: string;
+  description: string;
 } 

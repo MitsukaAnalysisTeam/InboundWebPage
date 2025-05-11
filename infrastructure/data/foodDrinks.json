@@ -2,46 +2,64 @@
   {
     "name": "White Miso Ramen",
     "category": "ramen",
-    "highlight": "Creamy broth with subtle sweetness."
+    "highlight": "Creamy broth with subtle sweetness.",
+    "imageUrl": "/images/menu/ramen-001.jpg",
+    "description": "Our signature white miso ramen features a creamy, slightly sweet broth made with carefully selected white miso."
   },
   {
     "name": "Red Miso Ramen",
     "category": "ramen",
-    "highlight": "Bold umami with a hint of spice."
+    "highlight": "Bold umami with a hint of spice.",
+    "imageUrl": "/images/menu/ramen-002.jpg",
+    "description": "A bold and flavorful ramen made with our special blend of red miso, offering deep umami flavors."
   },
   {
     "name": "Spicy Miso Ramen",
     "category": "ramen",
-    "highlight": "For heat lovers, perfectly balanced."
+    "highlight": "For heat lovers, perfectly balanced.",
+    "imageUrl": "/images/menu/ramen-003.jpg",
+    "description": "A spicy twist on our classic miso ramen, with perfectly balanced heat and flavor."
   },
   {
     "name": "Shrimp Curry Ramen",
     "category": "ramen",
-    "highlight": "Aromatic curry broth with shrimp essence."
+    "highlight": "Aromatic curry broth with shrimp essence.",
+    "imageUrl": "/images/menu/ramen-004.jpg",
+    "description": "Unique fusion of Japanese and Indian flavors, featuring a rich curry broth with shrimp essence."
   },
   {
     "name": "Vegi Miso Ramen",
     "category": "ramen",
-    "highlight": "Vegetable-forward, vegan-friendly."
+    "highlight": "Vegetable-forward, vegan-friendly.",
+    "imageUrl": "/images/menu/ramen-005.jpg",
+    "description": "A vegetable-rich ramen made with our special vegetable broth and miso blend."
   },
   {
     "name": "Kids Ramen",
     "category": "ramen",
-    "highlight": "Mild flavor for little ones."
+    "highlight": "Mild flavor for little ones.",
+    "imageUrl": "/images/menu/ramen-006.jpg",
+    "description": "Specially designed for children, with a mild and kid-friendly flavor profile."
   },
   {
     "name": "Vegan Tantanmen",
     "category": "ramen",
-    "highlight": "Rich sesame-chili broth, fully plant-based."
+    "highlight": "Rich sesame-chili broth, fully plant-based.",
+    "imageUrl": "/images/menu/ramen-007.jpg",
+    "description": "A vegan version of the classic tantanmen, featuring a rich sesame-chili broth."
   },
   {
     "name": "Minoh Beer",
     "category": "beer",
-    "highlight": "Local craft beer from Minoh Brewery."
+    "highlight": "Local craft beer from Minoh Brewery.",
+    "imageUrl": "/images/menu/beer-001.jpg",
+    "description": "Fresh craft beer from the renowned Minoh Brewery, perfect with our ramen."
   },
   {
     "name": "Akishika Sake",
     "category": "sake",
-    "highlight": "Premium sake from Akishika Brewery."
+    "highlight": "Premium sake from Akishika Brewery.",
+    "imageUrl": "/images/menu/sake-001.jpg",
+    "description": "Premium sake from Akishika Brewery, carefully selected to complement our dishes."
   }
 ] 

@@ -1,10 +1,10 @@
 import misoData from '@/infrastructure/data/miso.json';
-import { Miso } from './miso';
+import { MisoType } from '@/domain/types';
 
-export const getAllMiso = (): Miso[] => {
-  return misoData.miso;
+export const getAllMiso = (): MisoType[] => {
+  return misoData.types;
 };
 
-export const getMisoById = (id: string): Miso | undefined => {
-  return misoData.miso.find(miso => miso.id === id);
+export const getMisoById = (id: string): MisoType | undefined => {
+  return misoData.types.find(miso => miso.id === id);
 }; 
