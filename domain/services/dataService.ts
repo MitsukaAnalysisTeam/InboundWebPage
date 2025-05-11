@@ -9,18 +9,12 @@ import {
   RestaurantInfo,
   HistoryEvent,
   MisoInfo,
+  MisoType,
   FoodDrinkItem,
   MenuItem,
   RetailItem,
   AccessInfo
 } from '../types';
-
-export interface MisoType {
-  id: string;
-  name: string;
-  origin: string;
-  flavor: string;
-}
 
 export function getRestaurantInfo(): RestaurantInfo {
   return restaurantData;
