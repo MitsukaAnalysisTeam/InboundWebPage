@@ -1,0 +1,14 @@
+{
+  "name": "Fermentation, Miso & Noodles Mitsukabose",
+  "address": "2F, Airport Center Building, 1-6-5 Hotarugaike Higashimachi, Toyonaka, Osaka 560-0036, Japan",
+  "access": "1-minute walk from Hotarugaike Station East Exit (Hankyu Takarazuka Line & Osaka Monorail)",
+  "hours": {
+    "Wed–Sat": "11:30–23:00 (Last order 23:00)",
+    "Sun & Holidays": "11:30–21:30 (Last order 21:30)"
+  },
+  "closed": ["Monday", "Tuesday"],
+  "phone": "+81-6-6850-3532",
+  "website": "https://mitsukabose.com",
+  "instagram": "https://www.instagram.com/mitsukabose.official/",
+  "twitter": "https://x.com/mitsukabose"
+} 

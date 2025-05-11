@@ -1,0 +1,47 @@
+[
+  {
+    "name": "White Miso Ramen",
+    "category": "ramen",
+    "highlight": "Creamy broth with subtle sweetness."
+  },
+  {
+    "name": "Red Miso Ramen",
+    "category": "ramen",
+    "highlight": "Bold umami with a hint of spice."
+  },
+  {
+    "name": "Spicy Miso Ramen",
+    "category": "ramen",
+    "highlight": "For heat lovers, perfectly balanced."
+  },
+  {
+    "name": "Shrimp Curry Ramen",
+    "category": "ramen",
+    "highlight": "Aromatic curry broth with shrimp essence."
+  },
+  {
+    "name": "Vegi Miso Ramen",
+    "category": "ramen",
+    "highlight": "Vegetable-forward, vegan-friendly."
+  },
+  {
+    "name": "Kids Ramen",
+    "category": "ramen",
+    "highlight": "Mild flavor for little ones."
+  },
+  {
+    "name": "Vegan Tantanmen",
+    "category": "ramen",
+    "highlight": "Rich sesame-chili broth, fully plant-based."
+  },
+  {
+    "name": "Minoh Beer",
+    "category": "beer",
+    "highlight": "Local craft beer from Minoh Brewery."
+  },
+  {
+    "name": "Akishika Sake",
+    "category": "sake",
+    "highlight": "Premium sake from Akishika Brewery."
+  }
+] 

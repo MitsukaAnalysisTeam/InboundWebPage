@@ -1,0 +1,58 @@
+[
+  {
+    "id": "white-miso",
+    "name": "White Miso Ramen",
+    "priceYen": 980,
+    "ingredients": ["miso broth", "wheat noodles", "pork chashu", "green onions", "bamboo shoots", "egg"],
+    "dietary": ["pork"],
+    "allergies": ["soy", "wheat", "egg", "dairy"]
+  },
+  {
+    "id": "red-miso",
+    "name": "Red Miso Ramen",
+    "priceYen": 1080,
+    "ingredients": ["red miso broth", "wheat noodles", "pork chashu", "green onions", "bamboo shoots", "egg", "spices"],
+    "dietary": ["pork"],
+    "allergies": ["soy", "wheat", "egg", "dairy"]
+  },
+  {
+    "id": "spicy-miso",
+    "name": "Spicy Miso Ramen",
+    "priceYen": 1180,
+    "ingredients": ["miso broth", "wheat noodles", "pork chashu", "green onions", "bamboo shoots", "egg", "chili oil"],
+    "dietary": ["pork", "spicy"],
+    "allergies": ["soy", "wheat", "egg", "dairy"]
+  },
+  {
+    "id": "shrimp-curry",
+    "name": "Shrimp Curry Ramen",
+    "priceYen": 1280,
+    "ingredients": ["curry broth", "wheat noodles", "shrimp", "green onions", "bamboo shoots", "egg"],
+    "dietary": ["seafood"],
+    "allergies": ["soy", "wheat", "egg", "dairy", "shellfish"]
+  },
+  {
+    "id": "vegi-miso",
+    "name": "Vegi Miso Ramen",
+    "priceYen": 1100,
+    "ingredients": ["miso broth", "vegetable stock", "rice noodles", "mixed veggies"],
+    "dietary": ["vegan", "vegetarian", "gluten-free"],
+    "allergies": ["soy"]
+  },
+  {
+    "id": "kids-ramen",
+    "name": "Kids Ramen",
+    "priceYen": 780,
+    "ingredients": ["mild miso broth", "wheat noodles", "pork chashu", "green onions", "corn"],
+    "dietary": ["pork"],
+    "allergies": ["soy", "wheat", "dairy"]
+  },
+  {
+    "id": "vegan-tantanmen",
+    "name": "Vegan Tantanmen",
+    "priceYen": 1180,
+    "ingredients": ["sesame-chili broth", "rice noodles", "tofu", "green onions", "bamboo shoots", "peanuts"],
+    "dietary": ["vegan", "vegetarian", "gluten-free"],
+    "allergies": ["soy", "peanuts"]
+  }
+] 
