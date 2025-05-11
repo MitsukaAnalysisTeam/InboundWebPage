@@ -1,52 +1,41 @@
 {
-  "miso": [
+  "intro": "Miso is a fermented soybean paste that has been a cornerstone of Japanese cuisine for over a thousand years. At Mitsukabose, we carefully select and blend different types of miso to create our unique flavor profile.",
+  "types": [
     {
-      "id": "white-miso",
-      "name": "White Miso",
-      "description": "A light and sweet miso made from rice koji and soybeans. Fermented for a shorter period, resulting in a mild, delicate flavor.",
-      "imageUrl": "/images/miso/white-miso.jpg",
-      "characteristics": [
-        "Light and sweet",
-        "Mild umami",
-        "Creamy texture"
-      ],
-      "bestFor": [
-        "Light soups",
-        "Dressings",
-        "Marinades"
-      ]
+      "id": "kaachan",
+      "name": "Kaachan Miso",
+      "origin": "Toyono Town",
+      "flavor": "Rich, slightly sweet"
     },
     {
-      "id": "red-miso",
-      "name": "Red Miso",
-      "description": "A rich and robust miso with deep umami flavors. Fermented longer than white miso, creating a complex and hearty taste.",
-      "imageUrl": "/images/miso/red-miso.jpg",
-      "characteristics": [
-        "Rich and bold",
-        "Strong umami",
-        "Deep flavor"
-      ],
-      "bestFor": [
-        "Hearty soups",
-        "Stews",
-        "Glazes"
-      ]
+      "id": "marusan",
+      "name": "Marusan Miso",
+      "origin": "Nagano",
+      "flavor": "Deep umami"
     },
     {
-      "id": "mixed-miso",
-      "name": "Mixed Miso",
-      "description": "Our special blend of different miso types, creating a unique balance of flavors that's perfect for our signature ramen.",
-      "imageUrl": "/images/miso/mixed-miso.jpg",
-      "characteristics": [
-        "Balanced flavor",
-        "Complex umami",
-        "Versatile"
-      ],
-      "bestFor": [
-        "Signature ramen",
-        "Sauces",
-        "Dipping sauces"
-      ]
+      "id": "ishino",
+      "name": "Ishino White Miso",
+      "origin": "Kyoto",
+      "flavor": "Mild, creamy"
+    },
+    {
+      "id": "yamago",
+      "name": "Yamago Miso",
+      "origin": "Yamanashi",
+      "flavor": "Balanced sweetness"
+    },
+    {
+      "id": "hozan",
+      "name": "Hozan Miso",
+      "origin": "Aichi",
+      "flavor": "Full-bodied"
+    },
+    {
+      "id": "kanto",
+      "name": "Kantoya Miso",
+      "origin": "Tokyo area",
+      "flavor": "Earthy, robust"
     }
   ]
 } 
