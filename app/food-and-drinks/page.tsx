@@ -1,13 +1,11 @@
 import { getFoodDrinks } from '@/domain/services/dataService';
 import type { FoodDrinkItem } from '@/domain/types';
-import Header from '@/components/Header';
 
 export default function FoodAndDrinksPage() {
   const items: FoodDrinkItem[] = getFoodDrinks();
 
   return (
     <main>
-      <Header />
     <div className="max-w-4xl mx-auto">
       <h1 className="text-4xl font-bold mb-8">Food & Drinks</h1>
 

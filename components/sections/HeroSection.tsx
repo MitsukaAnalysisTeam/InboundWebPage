@@ -35,7 +35,7 @@ export default function HeroSection() {
             Experience the art of traditional Japanese miso ramen
           </p>
           <a
-            href="#menu"
+            href="menu"
             className="inline-block bg-primary text-white px-6 py-2 rounded-full text-base font-semibold hover:bg-primary-dark transition-colors"
           >
             View Menu

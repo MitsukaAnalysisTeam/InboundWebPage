@@ -1,13 +1,11 @@
 import { getMenuItems } from '@/domain/services/dataService';
 import Image from 'next/image';
-import Header from '@/components/Header';
 
 export default function MenuPage() {
   const menuItems = getMenuItems();
 
   return (
     <main>
-      <Header />
     <div className="max-w-4xl mx-auto">
       <h1 className="text-4xl font-bold mb-8">Menu</h1>
 
