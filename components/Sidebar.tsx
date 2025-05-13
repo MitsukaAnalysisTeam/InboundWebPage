@@ -25,6 +25,19 @@ export default function Sidebar() {
     setIsMounted(true)
   }, [])
 
+  useEffect(() => {
+    if (!isMounted) return;
+
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        close()
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMounted, close])
+
   const handleLinkClick = () => {
     if (window.innerWidth < 1024) {
       close()
@@ -77,12 +90,17 @@ export default function Sidebar() {
                 key={item.href}
                 href={item.href}
                 onClick={handleLinkClick}
-                className={`block px-3 py-2 sm:px-4 sm:py-2 rounded-md transition-colors text-sm sm:text-base
+                className={`
+                  block px-3 py-2 sm:px-4 sm:py-2 rounded-md transition-colors text-sm sm:text-base
                   ${
                     isActive(item.href)
                       ? "bg-gray-100 text-[#2B2B2B] font-medium border-l-4 border-[#2B2B2B]"
                       : "text-gray-600 hover:bg-gray-50 hover:text-[#2B2B2B]"
-                  }`}
+                  }
+                  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-amber-500
+                  after:transition-all after:duration-400 after:ease-in-out
+                  hover:after:w-full
+                `}
               >
                 {item.name}
               </Link>

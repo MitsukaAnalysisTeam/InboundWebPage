@@ -3,6 +3,8 @@
 import { getMenuItems } from '@/domain/services/dataService';
 import { MenuItem } from '@/domain/types';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import AnimatedSection from '../AnimatedSection';
 
 export default function MenuSection() {
   const items = getMenuItems();
@@ -14,9 +16,18 @@ export default function MenuSection() {
 
         <div className="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory">
           {items.map((item: MenuItem) => (
-            <div
+            <motion.div
               key={item.id}
               className="flex-none w-80 snap-center"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)'
+              }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              style={{ 
+                transformOrigin: 'center',
+                willChange: 'transform, box-shadow'
+              }}
             >
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative h-48">
@@ -65,7 +76,7 @@ export default function MenuSection() {
                   </details>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
