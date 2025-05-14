@@ -9,20 +9,22 @@ import AccessSection from '@/components/sections/AccessSection';
 import { getAllRamen } from "@/domain/ramen/ramenService";
 import { getAllMiso } from "@/domain/miso/misoService";
 import Image from "next/image";
+import { getHeroImages } from '@/lib/getHeroImages';
 
 export default function Home() {
   const ramenList = getAllRamen()
   const misoList = getAllMiso()
+  const heroImages = getHeroImages();
 
   return (
     <div className="w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <HeroSection />
+        <HeroSection images={heroImages} />
         <WhatIsMisoSection />
         <WhyMisoRamenSection />
         <FoodAndDrinksSection />
         <MenuSection />
-        {/* <RetailSection /> */}
+        <RetailSection />
         <AccessSection />
       </div>
     </div>
