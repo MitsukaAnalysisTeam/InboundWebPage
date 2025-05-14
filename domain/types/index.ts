@@ -43,6 +43,7 @@ export interface FoodDrinkItem {
 
 export interface MenuItem {
   id: string;
+  category: string;
   name: string;
   priceYen: number;
   ingredients: string[];

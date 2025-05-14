@@ -4,7 +4,7 @@ import { getMenuItems } from '@/domain/services/dataService';
 import { MenuItem } from '@/domain/types';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import AnimatedSection from '../AnimatedSection';
+import { useState } from 'react';
 
 export default function MenuSection() {
   const items = getMenuItems();
@@ -32,7 +32,7 @@ export default function MenuSection() {
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative h-48">
                   <Image
-                    src={`/images/menu/${item.id}.jpg`}
+                    src={item.imageUrl}
                     alt={item.name}
                     fill
                     className="object-cover"
@@ -53,6 +53,23 @@ export default function MenuSection() {
                         {diet}
                       </span>
                     ))}
+                  </div>
+
+                  <div className="mb-4">
+                    <p id={`description-${item.id}`} className="text-sm text-gray-600 line-clamp-3">
+                      {item.description}
+                    </p>
+                    <button
+                      className="text-primary text-sm font-medium mt-1 hover:underline focus:outline-none"
+                      onClick={() => {
+                        const element = document.getElementById(`description-${item.id}`);
+                        if (element) {
+                          element.classList.toggle('line-clamp-3');
+                        }
+                      }}
+                    >
+                      details
+                    </button>
                   </div>
 
                   <details className="group">

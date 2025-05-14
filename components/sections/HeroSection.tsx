@@ -50,7 +50,7 @@ export default function HeroSection() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link href="/menu">
               <button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg rounded-md font-medium transition-colors duration-200 min-w-[180px]">
