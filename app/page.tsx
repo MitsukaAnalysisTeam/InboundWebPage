@@ -22,7 +22,7 @@ export default function Home() {
         <WhyMisoRamenSection />
         <FoodAndDrinksSection />
         <MenuSection />
-        <RetailSection />
+        {/* <RetailSection /> */}
         <AccessSection />
       </div>
     </div>

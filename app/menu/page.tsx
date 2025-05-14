@@ -66,19 +66,44 @@ export default function MenuPage() {
                             details
                           </button>
                         </div>
-                        <details className="group mt-auto">
-                          <summary className="cursor-pointer text-primary font-medium">Ingredients & Allergies</summary>
-                          <div className="mt-2 space-y-2">
-                            <div>
-                              <h4 className="font-medium mb-1">Ingredients:</h4>
-                              <p className="text-xs text-gray-600">{item.ingredients.join(', ')}</p>
-                            </div>
-                            <div>
-                              <h4 className="font-medium mb-1">Allergies:</h4>
-                              <p className="text-xs text-gray-600">{item.allergies.join(', ')}</p>
+                        <div className="space-y-4">
+                          <div>
+                            <h4 className="font-medium mb-2">Ingredients:</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {item.ingredients.map((ingredient, index) => (
+                                <span key={index} className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+                                  {ingredient}
+                                </span>
+                              ))}
                             </div>
                           </div>
-                        </details>
+
+                          {item.dietary.length > 0 && (
+                            <div>
+                              <h4 className="font-medium mb-2">Dietary Options:</h4>
+                              <div className="flex flex-wrap gap-2">
+                                {item.dietary.map((option, index) => (
+                                  <span key={index} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                                    {option}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {item.allergies.length > 0 && (
+                            <div>
+                              <h4 className="font-medium mb-2">Allergens:</h4>
+                              <div className="flex flex-wrap gap-2">
+                                {item.allergies.map((allergy, index) => (
+                                  <span key={index} className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">
+                                    {allergy}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>

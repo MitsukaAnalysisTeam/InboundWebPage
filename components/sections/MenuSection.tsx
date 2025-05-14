@@ -32,7 +32,7 @@ export default function MenuSection() {
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative h-48">
                   <Image
-                    src={item.imageUrl}
+                    src={`/images/menu/${item.id}.jpg`}
                     alt={item.name}
                     fill
                     className="object-cover"
