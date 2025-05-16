@@ -51,6 +51,7 @@ export interface MenuItem {
   allergies: string[];
   imageUrl: string;
   description: string;
+  availableAt?: string[];
 }
 
 export interface RetailItem {

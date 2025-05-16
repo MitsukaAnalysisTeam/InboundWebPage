@@ -2,7 +2,7 @@
 
 import { getMenuItems } from '@/domain/services/dataService';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, Info } from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
@@ -27,22 +27,56 @@ const CATEGORY_LABELS: Record<string, { en: string; ja: string; description: str
   JapaneseSake: {
     en: 'Japanese Sake',
     ja: '日本酒',
-    description: 'Traditional rice wine from different regions of Japan',
+    description: "Akishika Shuzō's Junmai Series, brewed in Nose Town, Osaka. Robust, expressive sake with rich umami and vibrant acidity. Perfect pairing with ramen and Japanese side dishes.",
   },
   Ippin: {
     en: 'Side Dishes',
     ja: '一品料理',
-    description: 'Small dishes perfect for sharing or accompanying drinks',
+    description: "Seasonal and fermented side dishes, including chef's selection, oden, and more. Perfect with drinks or ramen.",
+  },
+  LunchSpecial: {
+    en: 'Lunch Special',
+    ja: 'ランチスペシャル',
+    description: "Limited-time lunch specials, including fermentation gozen set, kids set, and more. Perfect for a quick meal.",
   },
 };
+
+const TIME_LABELS: Record<string, string> = {
+  Lunch: '11:30~14:30 Lunch',
+  Sunset: '14:30~18:00 Sunset',
+  Dinner: '18:00~22:00 Dinner',
+  Midnight: '22:00~23:30 Midnight',
+};
+
+function getDefaultTimeSlot() {
+  const now = new Date();
+  const hour = now.getHours();
+  const min = now.getMinutes();
+  const time = hour * 60 + min;
+  if (time >= 690 && time < 870) return 'Lunch'; // 11:30-14:30
+  if (time >= 870 && time < 1080) return 'Sunset'; // 14:30-18:00
+  if (time >= 1080 && time < 1320) return 'Dinner'; // 18:00-22:00
+  if (time >= 1320 && time < 1410) return 'Midnight'; // 22:00-23:30
+  return 'Dinner';
+}
 
 export default function MenuPage() {
   const menuItems = getMenuItems();
   const [expandedDescriptions, setExpandedDescriptions] = useState<Record<string, boolean>>({});
   const [activeCategory, setActiveCategory] = useState<string | null>('Ramen');
+  const [activeTime, setActiveTime] = useState<string>(getDefaultTimeSlot());
+
+  useEffect(() => {
+    setActiveTime(getDefaultTimeSlot());
+  }, []);
+
+  // 時間帯でフィルタ
+  const filteredMenuItems = menuItems.filter(item =>
+    item.availableAt ? item.availableAt.includes(activeTime) : activeTime === 'Dinner'
+  );
 
   // Group items by category
-  const grouped = menuItems.reduce(
+  const grouped = filteredMenuItems.reduce(
     (acc: Record<string, typeof menuItems>, item) => {
       if (!acc[item.category]) acc[item.category] = [];
       acc[item.category].push(item);
@@ -78,6 +112,21 @@ export default function MenuPage() {
             </p>
           </div>
         </header>
+
+        {/* 時間帯タブ */}
+        <nav className="flex justify-center gap-4 mb-8">
+          {Object.keys(TIME_LABELS).map(time => (
+            <button
+              key={time}
+              onClick={() => setActiveTime(time)}
+              className={`px-4 py-2 rounded-full font-medium transition-all ${
+                activeTime === time ? 'bg-[#E07A5F] text-white' : 'bg-[#FFF5F0] text-[#E07A5F] hover:bg-[#FFE5D0]'
+              }`}
+            >
+              {TIME_LABELS[time]}
+            </button>
+          ))}
+        </nav>
 
         <nav className="sticky top-0 z-20 bg-white/80 backdrop-blur-md border-y border-[#FFCDB6]/30 py-4">
           <div className="max-w-4xl mx-auto px-4">
