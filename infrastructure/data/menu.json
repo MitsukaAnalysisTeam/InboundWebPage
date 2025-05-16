@@ -329,7 +329,7 @@
     "name": "Seasonal Vegetable Platter with Miso & Torched Cheese",
     "priceYen": 1160,
     "ingredients": ["seasonal vegetables", "miso", "cheese"],
-    "dietary": [],
+    "dietary": ["cheese"],
     "allergies": ["dairy", "soy"],
     "imageUrl": "/images/menu/vege-board.jpg",
     "description": "Seasonal vegetables, artfully presented, coated with Kāchan miso and torched cheese. Rustic and elegant.",
