@@ -90,7 +90,7 @@ export default function HeroSection({ images }: HeroSectionProps) {
             </Link>
             <Link href="/access">
               <button className="bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 text-lg rounded-md font-medium transition-colors duration-200 min-w-[180px]">
-                Reserve Now
+                Access
               </button>
             </Link>
           </motion.div>
