@@ -1,0 +1,277 @@
+[
+  {
+    "id": "ippin-5",
+    "category": "Ippin",
+    "name": "Chef's Selection – 5 Seasonal Small Bites",
+    "priceYen": 1300,
+    "ingredients": [
+      "seasonal ingredients"
+    ],
+    "dietary": [],
+    "allergies": [],
+    "imageUrl": "/images/menu/ippin-5.jpg",
+    "description": "A tasting plate of five small dishes, handpicked by our staff. Each set is different—what you get is a surprise! A perfect way to sample a variety of flavors.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "potato-salad",
+    "category": "Ippin",
+    "name": "Creamy Egg Potato Salad with Miso Mayo",
+    "priceYen": 590,
+    "ingredients": [
+      "potato",
+      "egg",
+      "miso mayo"
+    ],
+    "dietary": [],
+    "allergies": [
+      "egg",
+      "soy"
+    ],
+    "imageUrl": "/images/menu/potato-salad.jpg",
+    "description": "Homestyle potato salad with soft-boiled eggs and special miso mayo sauce.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "karaage-shin",
+    "category": "Ippin",
+    "name": "Shin Fermented Fried Chicken",
+    "priceYen": 680,
+    "ingredients": [
+      "chicken",
+      "onion koji",
+      "garlic"
+    ],
+    "dietary": [],
+    "allergies": [
+      "chicken"
+    ],
+    "imageUrl": "/images/menu/karaage-shin.jpg",
+    "description": "Minimalist, umami-rich fried chicken marinated with onion koji and garlic, then fermented and fried.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "miso-chashu-carpaccio",
+    "category": "Ippin",
+    "name": "Miso-Marinated Chashu Carpaccio",
+    "priceYen": 1100,
+    "ingredients": [
+      "pork",
+      "miso"
+    ],
+    "dietary": [],
+    "allergies": [
+      "pork",
+      "soy"
+    ],
+    "imageUrl": "/images/menu/miso-chashu-carpaccio.jpg",
+    "description": "Tender slices of slow-cooked pork, lightly marinated in our rich miso blend, served carpaccio style.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "vege-board",
+    "category": "Ippin",
+    "name": "Seasonal Vegetable Platter with Miso & Torched Cheese",
+    "priceYen": 880,
+    "ingredients": [
+      "seasonal vegetables",
+      "miso",
+      "cheese"
+    ],
+    "dietary": [
+      "cheese"
+    ],
+    "allergies": [
+      "dairy",
+      "soy"
+    ],
+    "imageUrl": "/images/menu/vege-board.jpg",
+    "description": "Seasonal vegetables, artfully presented, coated with Kāchan miso and torched cheese. Rustic and elegant.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "oden-7",
+    "category": "Ippin",
+    "name": "Odens",
+    "priceYen": {"7 Item": 1050, "3 Item": 540},
+    "ingredients": [
+      "assorted oden"
+    ],
+    "dietary": [],
+    "allergies": [],
+    "imageUrl": "/images/menu/oden-7.jpg",
+    "description": "Slow-simmered in a light, flavorful dashi broth, our Oden features a variety of seasonal ingredients, gently cooked to soak up umami. Generous serving of 7 assorted oden pieces.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "local-pickles",
+    "category": "Ippin",
+    "name": "Pickled Local Vegetables with Homemade Koji",
+    "priceYen": 480,
+    "ingredients": [
+      "local vegetables",
+      "koji"
+    ],
+    "dietary": [
+      "vegan"
+    ],
+    "allergies": [],
+    "imageUrl": "/images/menu/local-pickles.jpg",
+    "description": "A colorful assortment of locally grown vegetables, pickled with a variety of our house-made koji. Crisp, refreshing, and rich in natural umami.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "fish-chips",
+    "category": "Ippin",
+    "name": "Fermented Fish & Chips",
+    "priceYen": 1160,
+    "ingredients": [
+      "white fish",
+      "potato",
+      "miso",
+      "beer"
+    ],
+    "dietary": [],
+    "allergies": [
+      "fish",
+      "gluten"
+    ],
+    "imageUrl": "/images/menu/fish-chips.jpg",
+    "description": "Japanese twist on the British classic. Crispy fried white fish in miso & beer batter, with fermented potato fries.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "hiyayakko",
+    "category": "Ippin",
+    "name": "Chilled Tofu with Shredded Leek & Chili Oil",
+    "priceYen": 480,
+    "ingredients": [
+      "tofu",
+      "leek",
+      "chili oil"
+    ],
+    "dietary": [
+      "vegan"
+    ],
+    "allergies": [
+      "soy"
+    ],
+    "imageUrl": "/images/menu/hiyayakko.jpg",
+    "description": "Chilled tofu topped with shredded leek and house-made chili oil. Addictive and perfect with sake or rice.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "fermented-fries",
+    "category": "Ippin",
+    "name": "Fermented Potato Fries",
+    "priceYen": 540,
+    "ingredients": [
+      "potato",
+      "salt"
+    ],
+    "dietary": [
+      "vegan"
+    ],
+    "allergies": [],
+    "imageUrl": "/images/menu/fermented-fries.jpg",
+    "description": "Fries made from Japanese potatoes, salt-water fermented before frying. Unique tangy umami flavor.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "niku-miso-tofu",
+    "category": "Ippin",
+    "name": "Warm Tofu with Spicy Miso Meat Sauce",
+    "priceYen": 600,
+    "ingredients": [
+      "tofu",
+      "miso",
+      "meat sauce"
+    ],
+    "dietary": [],
+    "allergies": [
+      "soy"
+    ],
+    "imageUrl": "/images/menu/niku-miso-tofu.jpg",
+    "description": "Silken tofu topped with savory-spicy miso meat sauce. Deeply flavorful, perfect with rice or sake.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "atsuage",
+    "category": "Ippin",
+    "name": "Fresh-Fried Atsuage with Shoyu Koji",
+    "priceYen": 630,
+    "ingredients": [
+      "tofu",
+      "shoyu koji"
+    ],
+    "dietary": [
+      "vegan"
+    ],
+    "allergies": [
+      "soy"
+    ],
+    "imageUrl": "/images/menu/atsuage.jpg",
+    "description": "Thick-fried tofu made fresh daily, complemented by house-made shoyu koji.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  }
+]

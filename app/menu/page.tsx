@@ -39,13 +39,18 @@ const CATEGORY_LABELS: Record<string, { en: string; ja: string; description: str
     ja: 'ランチスペシャル',
     description: "Limited-time lunch specials, including fermentation gozen set, kids set, and more. Perfect for a quick meal.",
   },
+  DinnerSpecial: {
+    en: 'Dinner Special',
+    ja: 'ディナースペシャル',
+    description: "Tasting experience featuring five appetizers paired with Osaka-brewed beer or sake.",
+  },
 };
 
 const TIME_LABELS: Record<string, string> = {
-  Lunch: '11:30~14:30 Lunch',
-  Sunset: '14:30~18:00 Sunset',
-  Dinner: '18:00~22:00 Dinner',
-  Midnight: '22:00~23:30 Midnight',
+  Lunch: '11:30〜14:30 Lunch',
+  Sunset: '14:30〜18:00 Sunset',
+  Dinner: '18:00〜22:00 Dinner',
+  Midnight: '22:00〜23:30 Midnight',
 };
 
 function getDefaultTimeSlot() {
@@ -53,12 +58,13 @@ function getDefaultTimeSlot() {
   const hour = now.getHours();
   const min = now.getMinutes();
   const time = hour * 60 + min;
-  if (time >= 690 && time < 870) return 'Lunch'; // 11:30-14:30
-  if (time >= 870 && time < 1080) return 'Sunset'; // 14:30-18:00
-  if (time >= 1080 && time < 1320) return 'Dinner'; // 18:00-22:00
   if (time >= 1320 && time < 1410) return 'Midnight'; // 22:00-23:30
+  if (time >= 1080 && time < 1320) return 'Dinner'; // 18:00-22:00
+  if (time >= 870 && time < 1080) return 'Sunset'; // 14:30-18:00
+  if (time >= 690 && time < 870) return 'Lunch'; // 11:30-14:30
   return 'Dinner';
 }
+
 
 export default function MenuPage() {
   const menuItems = getMenuItems();
@@ -114,48 +120,58 @@ export default function MenuPage() {
         </header>
 
         {/* 時間帯タブ */}
-        <nav className="flex justify-center gap-4 mb-8">
-          {Object.keys(TIME_LABELS).map(time => (
-            <button
-              key={time}
-              onClick={() => setActiveTime(time)}
-              className={`px-4 py-2 rounded-full font-medium transition-all ${
-                activeTime === time ? 'bg-[#E07A5F] text-white' : 'bg-[#FFF5F0] text-[#E07A5F] hover:bg-[#FFE5D0]'
-              }`}
-            >
-              {TIME_LABELS[time]}
-            </button>
-          ))}
-        </nav>
-
-        <nav className="sticky top-0 z-20 bg-white/80 backdrop-blur-md border-y border-[#FFCDB6]/30 py-4">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="flex justify-center overflow-x-auto gap-8 no-scrollbar">
-              {Object.keys(CATEGORY_LABELS).map((cat) =>
-                grouped[cat]?.length ? (
+        <nav className="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-[#FFCDB6]/30 py-2 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="overflow-x-auto no-scrollbar">
+              <div className="flex justify-center min-w-max py-2">
+                {Object.keys(TIME_LABELS).map(time => (
                   <button
-                    key={cat}
-                    onClick={() => scrollToCategory(cat)}
-                    className={`relative px-2 py-1 text-sm font-light transition-all ${
-                      activeCategory === cat ? 'text-[#E07A5F]' : 'text-[#666666] hover:text-[#E07A5F]'
+                    key={time}
+                    onClick={() => setActiveTime(time)}
+                    className={`px-3 py-2 mx-1 rounded-full font-medium text-sm whitespace-nowrap transition-all ${
+                      activeTime === time ? 'bg-[#E07A5F] text-white' : 'bg-[#FFF5F0] text-[#E07A5F] hover:bg-[#FFE5D0]'
                     }`}
                   >
-                    {CATEGORY_LABELS[cat].en}
-                    {activeCategory === cat && (
-                      <motion.div
-                        layoutId="activeCategory"
-                        className="absolute -bottom-1 left-0 right-0 h-[1px] bg-[#E07A5F]"
-                        transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                      />
-                    )}
+                    {TIME_LABELS[time]}
                   </button>
-                ) : null,
-              )}
+                ))}
+              </div>
             </div>
           </div>
         </nav>
 
-        <main className="relative z-10 max-w-4xl mx-auto px-4 py-12">
+        <nav className="sticky top-[72px] z-20 bg-white/90 backdrop-blur-md border-y border-[#FFCDB6]/30 py-3">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="relative overflow-hidden">
+              <div className="flex justify-start overflow-x-auto py-1 no-scrollbar mx-auto max-w-full">
+                {Object.keys(CATEGORY_LABELS).map((cat) =>
+                  grouped[cat]?.length ? (
+                    <button
+                      key={cat}
+                      onClick={() => scrollToCategory(cat)}
+                      className={`relative px-3 py-1.5 mx-1.5 text-sm font-medium rounded-md transition-all whitespace-nowrap ${
+                        activeCategory === cat
+                          ? "text-[#E07A5F] bg-[#FFF5F0]"
+                          : "text-[#666666] hover:text-[#E07A5F] hover:bg-[#FFF5F0]/50"
+                      }`}
+                    >
+                      {CATEGORY_LABELS[cat].en}
+                      {activeCategory === cat && (
+                        <motion.div
+                          layoutId="activeCategory"
+                          className="absolute bottom-0 left-0 w-full h-0.5 bg-[#E07A5F]"
+                          transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                        />
+                      )}
+                    </button>
+                  ) : null,
+                )}
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <main className="pt-[144px] relative z-10 max-w-4xl mx-auto px-4 py-12">
           {Object.keys(CATEGORY_LABELS).map((cat) =>
             grouped[cat]?.length ? (
               <section id={`category-${cat}`} key={cat} className="mb-24 scroll-mt-24">
@@ -179,12 +195,19 @@ export default function MenuPage() {
                       className="flex-none w-80 snap-center bg-white rounded-lg shadow-md overflow-hidden"
                     >
                       <div className="relative h-48">
+                        <div className="absolute inset-0 bg-[#F5F5F5] flex items-center justify-center">
+                          <span className="text-[#999999] text-sm font-light">No Image</span>
+                        </div>
                         <Image
                           src={`/images/menu/${item.id}.jpg`}
                           alt={item.name}
                           fill
                           className="object-cover"
                           sizes="(max-width: 768px) 100vw, 400px"
+                          onError={(e) => {
+                            const img = e.target as HTMLImageElement;
+                            img.style.display = 'none';
+                          }}
                         />
                       </div>
 
@@ -194,7 +217,17 @@ export default function MenuPage() {
                             {item.name}
                             <span className="block text-sm text-[#E07A5F] font-serif">{item.name}</span>
                           </h3>
-                          <p className="text-[#666666] font-light">¥{item.priceYen.toLocaleString()}</p>
+                          {typeof item.priceYen === 'object' ? (
+                            <div className="text-right">
+                              {Object.entries(item.priceYen as Record<string, number>).map(([size, price]) => (
+                                <p key={size} className="text-[#666666] font-light text-sm">
+                                  {size}: ¥{price.toLocaleString()}
+                                </p>
+                              ))}
+                            </div>
+                          ) : (
+                            <p className="text-[#666666] font-light">¥{item.priceYen.toLocaleString()}</p>
+                          )}
                         </div>
 
                         <div className="mb-4">

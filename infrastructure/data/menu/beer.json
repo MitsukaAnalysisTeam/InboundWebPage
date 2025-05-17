@@ -1,0 +1,228 @@
+[
+  {
+    "id": "draft-regular",
+    "category": "Beer",
+    "name": "Draft Beer (Regular)",
+    "priceYen": {
+      "265ml": 780,
+      "480ml": 1130
+    },
+    "ingredients": [
+      "water",
+      "barley malt",
+      "hops",
+      "yeast"
+    ],
+    "dietary": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergies": [
+      "gluten"
+    ],
+    "imageUrl": "/images/menu/beer-draft-regular.jpg",
+    "description": "Our signature draft beer, perfectly poured and served at the ideal temperature. Available in two sizes:\n• Half Pint (265ml): ¥780\n• Pint (480ml): ¥1,130\n\nCrisp, refreshing, and always consistent - the perfect accompaniment to any meal.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "draft-seasonal",
+    "category": "Beer",
+    "name": "Draft Beer(Seasonal)",
+    "priceYen": {
+      "265ml": 880,
+      "480ml": 1330
+    },
+    "ingredients": [
+      "water",
+      "barley malt",
+      "hops",
+      "yeast"
+    ],
+    "dietary": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergies": [
+      "gluten"
+    ],
+    "imageUrl": "/images/menu/beer-draft-seasonal.jpg",
+    "description": "Our rotating seasonal draft beer, featuring unique and limited-time brews. Available in two sizes:\n• Half Pint (265ml): ¥880\n• Pint (480ml): ¥1,330\n\nAsk our staff about the current seasonal selection and its special characteristics.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "weizen",
+    "category": "Beer",
+    "name": "Minoh Weizen(Bottle)",
+    "priceYen": 850,
+    "ingredients": [
+      "water",
+      "wheat malt",
+      "barley malt",
+      "hops",
+      "yeast"
+    ],
+    "dietary": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergies": [
+      "gluten"
+    ],
+    "imageUrl": "/images/menu/beer-001.jpg",
+    "description": "A classic German-style wheat beer brewed by Minoh Brewery. Cloudy and golden, with bright banana and clove aromas, a soft creamy mouthfeel, and a refreshing, slightly tart finish.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "pilsner",
+    "category": "Beer",
+    "name": "Minoh Pilsner(Bottle)",
+    "priceYen": 850,
+    "ingredients": [
+      "water",
+      "barley malt",
+      "Saaz hops",
+      "yeast"
+    ],
+    "dietary": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergies": [
+      "gluten"
+    ],
+    "imageUrl": "/images/menu/beer-002.jpg",
+    "description": "A crisp, clean Czech-style pilsner with delicate noble hop bitterness. Light straw color, fine carbonation, and a dry, snappy finish make it extremely drinkable.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "stout",
+    "category": "Beer",
+    "name": "Minoh Stout(Bottle)",
+    "priceYen": 850,
+    "ingredients": [
+      "water",
+      "roasted barley",
+      "barley malt",
+      "hops",
+      "yeast"
+    ],
+    "dietary": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergies": [
+      "gluten"
+    ],
+    "imageUrl": "/images/menu/beer-003.jpg",
+    "description": "A full-bodied, dark stout with notes of coffee, cocoa, and roasted malt. Silky smooth, with a lingering roast character and a creamy head that highlights its rich flavor.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "pale-ale",
+    "category": "Beer",
+    "name": "Minoh Pale Ale(Bottle)  ",
+    "priceYen": 850,
+    "ingredients": [
+      "water",
+      "barley malt",
+      "American hops",
+      "yeast"
+    ],
+    "dietary": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergies": [
+      "gluten"
+    ],
+    "imageUrl": "/images/menu/beer-004.jpg",
+    "description": "A balanced American-style pale ale featuring citrusy hop aroma and a gentle malt backbone. Golden amber color, medium body, with a crisp, refreshing finish.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "osaru-ipa",
+    "category": "Beer",
+    "name": "Osaru IPA(Bottle)",
+    "priceYen": 950,
+    "ingredients": [
+      "water",
+      "barley malt",
+      "Citra hops",
+      "Mosaic hops",
+      "yeast"
+    ],
+    "dietary": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergies": [
+      "gluten"
+    ],
+    "imageUrl": "/images/menu/beer-005.jpg",
+    "description": "Minoh Brewery's signature IPA, nicknamed \"Osaru.\" Bursting with tropical fruit and pine aromas, this bold, hoppy beer delivers a smooth bitterness and a bright, lingering finish.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  },
+  {
+    "id": "w-ipa",
+    "category": "Beer",
+    "name": "Minoh W-IPA(Bottle)",
+    "priceYen": 1100,
+    "ingredients": [
+      "water",
+      "barley malt",
+      "double blend of premium hops",
+      "yeast"
+    ],
+    "dietary": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergies": [
+      "gluten"
+    ],
+    "imageUrl": "/images/menu/beer-006.jpg",
+    "description": "A powerful double IPA with extra hop charge for intense citrus, resin, and mango flavors. Higher ABV balanced by a smooth malt body, delivering a satisfying, long-lasting hop finish.",
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ]
+  }
+
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "fermentation-gozen",
+    "category": "LunchSpecial",
+    "name": "Fermentation Gozen Set Meal",
+    "priceYen": 1800,
+    "ingredients": [
+      "fermented main dish",
+      "vegetable sides",
+      "miso ball",
+      "drink"
+    ],
+    "dietary": [],
+    "allergies": [],
+    "imageUrl": "/images/menu/fermentation-gozen.jpg",
+    "description": "Limited to 20 servings per day. Customize your set in 4 steps: 1. Choose a Fermented Main Dish — Meat, Fish, or Fermented Karaage (fried chicken) 2. Pick Your Fermented Vegetable Side Dishes — 5 kinds or 3 kinds of small seasonal veggie plates 3. Select Your Miso Ball — Choose your flavor of handmade miso soup base 4. Choose Your Drink — House-roasted Coffee, Oolong Tea, or Syrup Soda (Upgrade to an alcoholic drink for an additional ¥500: Minoh Beer, Akishika Sake, or Wine)",
+    "availableAt": [
+      "Lunch"
+    ]
+  },
+  {
+    "id": "karaage-gozen",
+    "category": "LunchSpecial",
+    "name": "Shin Fermented Fried Chicken Set",
+    "priceYen": 1800,
+    "ingredients": [
+      "fermented main dish",
+      "vegetable sides",
+      "miso ball",
+      "drink"
+    ],
+    "dietary": [],
+    "allergies": [],
+    "imageUrl": "/images/menu/karaage-gozen.jpg",
+    "description": "Includes chef’s choice of 2 small side dishes, our signature Shin fermented fried chicken, miso soup, and steamed rice. A satisfying and flavorful meal that highlights the rich taste of fermentation.",
+    "availableAt": [
+      "Lunch"
+    ]
+  }
+]

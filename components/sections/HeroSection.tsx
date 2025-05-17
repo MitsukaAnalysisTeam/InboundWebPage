@@ -36,7 +36,7 @@ export default function HeroSection({ images }: HeroSectionProps) {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
               >
-                <Image
+        <Image
                   src={src}
                   alt={`Hero background ${i + 1}`}
                   fill
@@ -120,7 +120,7 @@ export default function HeroSection({ images }: HeroSectionProps) {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-            >
+          >
               <path d="M12 5v14M5 12l7 7 7-7" />
             </svg>
           </motion.div>
