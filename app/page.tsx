@@ -1,4 +1,3 @@
-import Header from '@/components/Header';
 import HeroSection from '@/components/sections/HeroSection';
 import MitsukaValuesSection from '@/components/sections/MitsukaValuesSection';
 import AccessSection from '@/components/sections/AccessSection';

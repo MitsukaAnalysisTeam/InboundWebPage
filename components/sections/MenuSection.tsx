@@ -4,7 +4,6 @@ import { getMenuItems } from '@/domain/services/dataService';
 import { MenuItem } from '@/domain/types';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
 export default function MenuSection() {
   const items = getMenuItems();

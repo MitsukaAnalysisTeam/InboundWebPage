@@ -155,7 +155,7 @@ export default function FoodAndDrinksPage() {
             </motion.div>
 
             <motion.div variants={container} initial="hidden" animate="show" className="space-y-12">
-              {beers.map((beer, index) => (
+              {beers.map((beer) => (
                 <motion.div
                   key={beer.name}
                   variants={item}
@@ -181,8 +181,8 @@ export default function FoodAndDrinksPage() {
                         {beer.highlight}
                       </div>
                       <div className="prose prose-amber max-w-none">
-                        {beer.description.split("\n").map((paragraph, index) => (
-                          <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+                        {beer.description.split("\n").map((paragraph) => (
+                          <p key={paragraph} className="mb-4 text-gray-700 leading-relaxed">
                             {paragraph}
                           </p>
                         ))}
@@ -234,8 +234,8 @@ export default function FoodAndDrinksPage() {
                         {sake.highlight}
                       </div>
                       <div className="prose prose-amber max-w-none">
-                        {sake.description.split("\n").map((paragraph, index) => (
-                          <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+                        {sake.description.split("\n").map((paragraph) => (
+                          <p key={paragraph} className="mb-4 text-gray-700 leading-relaxed">
                             {paragraph}
                           </p>
                         ))}

@@ -10,11 +10,11 @@ const values = [
     title: "What Mitsukabōzu Values Most",
     body: (
       <>
-        <p className="mb-4">We value "cultivating people."<br />
+        <p className="mb-4">We value &quot;cultivating people.&quot;<br />
         Mitsukabōzu is not just a restaurant that serves miso ramen, local sake, or craft beer.<br />
-        As a "theme park of fermentation, miso, and noodles," our mission is to be a place where everyone involved—diners, staff, producers, and the local community—can experience the essence of fermentation: transformation, deepening, and connection.</p>
+        As a &quot;theme park of fermentation, miso, and noodles,&quot; our mission is to be a place where everyone involved—diners, staff, producers, and the local community—can experience the essence of fermentation: transformation, deepening, and connection.</p>
         <ul className="list-disc pl-5 mb-4 space-y-1">
-          <li>A single bowl of ramen can reset someone's day,</li>
+          <li>A single bowl of ramen can reset someone&rsquo;s day,</li>
           <li>Spark laughter between strangers,</li>
           <li>Become a source of pride for the one who made it.</li>
         </ul>
@@ -28,13 +28,13 @@ const values = [
     body: (
       <>
         <p className="mb-4">In 2022, after over a decade of serving miso ramen in both Hotarugaike and Umeda, Mitsukabōzu made the decision to consolidate its operations back to its origin—Hotarugaike.<br />
-        This move wasn't just a "downsizing," but rather the beginning of a re-fermentation. Our goal was not only to be "rooted in the community," but to become a presence that ferments with the community.</p>
+        This move wasn&rsquo;t just a &quot;downsizing,&quot; but rather the beginning of a re-fermentation. Our goal was not only to be &quot;rooted in the community,&quot; but to become a presence that ferments with the community.</p>
         <ul className="list-disc pl-5 mb-4 space-y-1">
           <li>Use local ingredients,</li>
           <li>Share the heart and soul of the producers,</li>
-          <li>Create a space where local residents, workers, and travelers can come together, blending into a living ecosystem where "people and the community ferment together."</li>
+          <li>Create a space where local residents, workers, and travelers can come together, blending into a living ecosystem where &quot;people and the community ferment together.&quot;</li>
         </ul>
-        <p>Mitsukabōzu is not just a restaurant.<br />It's a micro-fermentation hub.<br />This marked a new chapter for Mitsukabōzu starting in 2022—and the true beginning of the vision we had when we first opened.</p>
+        <p>Mitsukabōzu is not just a restaurant.<br />It&rsquo;s a micro-fermentation hub.<br />This marked a new chapter for Mitsukabōzu starting in 2022—and the true beginning of the vision we had when we first opened.</p>
       </>
     ),
   },
@@ -44,8 +44,8 @@ const values = [
     body: (
       <>
         <p className="mb-4">
-          "A community where warmth and the culture of fermentation naturally take root."<br />
-          In the northern part of Osaka, the Hokusetsu area strikes a perfect balance between city life and nature. From town, you can see the satoyama (rural foothills) woven into the landscape. With Itami Airport nearby, it offers easy domestic access, and it's home to national universities, Expo '70 Park, and many locals who nurture their community and small, meaningful cultures.
+          &quot;A community where warmth and the culture of fermentation naturally take root.&quot;<br />
+          In the northern part of Osaka, the Hokusetsu area strikes a perfect balance between city life and nature. From town, you can see the satoyama (rural foothills) woven into the landscape. With Itami Airport nearby, it offers easy domestic access, and it&rsquo;s home to national universities, Expo &#39;70 Park, and many locals who nurture their community and small, meaningful cultures.
         </p>
         <ul className="list-disc pl-5 mb-4 space-y-1">
           <li>Akishika Sake Brewery grows pesticide-free rice in the mountains of Nose.</li>
@@ -53,7 +53,7 @@ const values = [
           <li>In places like Suita and Minoh, people run local markets full of community love.</li>
         </ul>
         <p>This region provides fertile ground for enjoying both what remains unchanged and what evolves over time.<br />
-        Mitsukabōzu has taken root in this very "fermentation-friendly" place, and together with our team, we continue to cultivate it every day.</p>
+        Mitsukabōzu has taken root in this very &quot;fermentation-friendly&quot; place, and together with our team, we continue to cultivate it every day.</p>
       </>
     ),
   },

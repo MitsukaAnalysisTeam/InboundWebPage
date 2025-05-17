@@ -45,7 +45,7 @@ export interface MenuItem {
   id: string;
   category: string;
   name: string;
-  priceYen: number;
+  priceYen: number | Record<string, number | undefined>;
   ingredients: string[];
   dietary: string[];
   allergies: string[];

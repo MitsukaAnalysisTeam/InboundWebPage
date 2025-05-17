@@ -320,38 +320,6 @@ export default function MenuPage() {
             ) : null,
           )}
         </main>
-
-        <footer className="relative z-10 border-t border-[#FFCDB6]/30 py-12 mt-12">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <h3 className="text-lg font-serif font-light text-[#333333] mb-4">About Japanese Cuisine</h3>
-                <p className="text-sm text-[#666666] font-light">
-                  Japanese cuisine is known for its seasonal ingredients, meticulous preparation, and beautiful
-                  presentation. Our menu offers authentic dishes prepared with traditional techniques.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-serif font-light text-[#333333] mb-4">Dining Etiquette</h3>
-                <ul className="text-sm text-[#666666] font-light space-y-2">
-                  <li>• It's customary to say "Itadakimasu" before eating</li>
-                  <li>• Slurping noodles is considered a compliment to the chef</li>
-                  <li>• Chopsticks should never be stuck vertically in rice</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-serif font-light text-[#333333] mb-4">Have Questions?</h3>
-                <p className="text-sm text-[#666666] font-light">
-                  Our staff is happy to explain any dishes or ingredients. Don't hesitate to ask about recommendations
-                  or dietary concerns.
-                </p>
-              </div>
-            </div>
-            <div className="mt-12 text-center">
-              <p className="text-xs text-[#999999]">© 2023 Japanese Restaurant. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </div>
     </TooltipProvider>
   );
