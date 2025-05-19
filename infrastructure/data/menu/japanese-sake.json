@@ -3,7 +3,7 @@
     "id": "junmai",
     "category": "JapaneseSake",
     "name": "Junmai",
-    "priceYen": {"120ml":1400, "360ml":2200},
+    "priceYen": {"120ml":820, "360ml":2200},
     "ingredients": [
       "rice",
       "koji",
@@ -45,7 +45,7 @@
     "id": "junmai-daiginjo",
     "category": "JapaneseSake",
     "name": "Junmai Daiginjo",
-    "priceYen": {"120ml":1400},
+    "priceYen": {"120ml":1400, "360ml":4000},
     "ingredients": [
       "rice",
       "koji",

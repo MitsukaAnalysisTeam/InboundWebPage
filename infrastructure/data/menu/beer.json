@@ -223,6 +223,85 @@
       "Dinner",
       "Midnight"
     ]
+  },
+  {
+    "id": "orize-malt-pale-ale",
+    "category": "Beer",
+    "name": "Orizé Malt Pale Ale",
+    "priceYen": {
+      "265ml": 1080,
+      "480ml": 1870,
+      "bottle": 1180
+    },
+    "ingredients": ["koji-fermented rice malt (Orizé Malt)", "rice", "raw cane sugar", "hops"],
+    "dietary": ["gluten-free"],
+    "allergies": [],
+    "imageUrl": "/images/menu/orize-malt-pale-ale.jpg",
+    "description": "Bronze Medal Winner – Gluten-Free Category, International Beer Cup 2024. Crafted using a world-first innovation: koji-fermented rice malt. This beer is brewed with Orizé Malt, a unique ingredient made by cultivating koji on germinated rice husks, then kiln-drying them to bring out a deep, roasted character. The result is a gluten-free craft beer with exceptional complexity and depth. The flavor carries layered malt richness, enhanced by fruity aromas reminiscent of apricot, banana, melon, apple, and kumquat, with a sweet, cotton candy-like finish. • Made entirely from rice-based ingredients – no wheat or barley • The only gluten-free craft beer made in Japan using domestic ingredients • Bottled-conditioned using raw cane sugar for natural carbonation. An innovative and expressive brew that blends traditional Japanese fermentation techniques with the bold character of a pale ale.",
+    "availableAt": ["Lunch", "Sunset", "Dinner", "Midnight"]
+  },
+  {
+    "id": "japanese-white-no9-barrel",
+    "category": "Beer",
+    "name": "JAPANESE WHITE No.9",
+    "priceYen": {
+      "265ml": 1080,
+      "480ml": 1870,
+      "bottle": 1180
+    },
+    "ingredients": ["rice koji", "rice", "raw cane sugar", "hops"],
+    "dietary": ["gluten-free"],
+    "allergies": [],
+    "imageUrl": "/images/menu/japanese-white-no9-barrel.jpg",
+    "description": "Orizé Brewing's Signature Gluten-Free White Ale, Reimagined. Ingredients: Rice Koji, Rice, Raw Cane Sugar, Hops. IBU: 19 | Alcohol: 5%. This world-first beer is brewed entirely without malt, using rice koji as its core ingredient. A bold evolution of Orizé Brewing's flagship Japanese White, this No.9 edition undergoes primary fermentation in oak barrels, imparting a depth and complexity that is not achieved through standard barrel aging. The result is a beautifully textured beer with rich, expansive aromas and flavors, reminiscent of white wine or premium sake. Its elegant structure pairs perfectly with delicate dishes, especially seafood. A refined and innovative take on Japanese brewing tradition, crafted for those seeking subtlety, sophistication, and a true fermentation-first experience.",
+    "availableAt": ["Lunch", "Sunset", "Dinner", "Midnight"]
+  },
+  {
+    "id": "black-head-ipa",
+    "category": "Beer",
+    "name": "BLACK HEAD IPA",
+    "priceYen": {
+      "265ml": 1080,
+      "480ml": 1870,
+      "bottle": 1180
+    },
+    "ingredients": ["black koji orizé malt", "yellow koji rice", "raw cane sugar", "hops"],
+    "dietary": ["gluten-free"],
+    "allergies": [],
+    "imageUrl": "/images/menu/black-head-ipa.jpg",
+    "description": "A Bold, Gluten-Free Luchuensis Sour IPA Brewed with Rice Koji. Ingredients: Black Koji Orizé Malt, Yellow Koji Rice, Raw Cane Sugar, Hops. Alcohol: 5% (Note: Classified as 'Happoshu' under Japanese liquor tax law). A truly unique sour IPA, brewed with a combination of black koji and kiln-dried rice koji. This innovative beer style—Luchuensis Sour IPA—delivers a vivid tropical tartness, as if fresh island fruits were squeezed right into the glass. Its refreshing acidity makes it a perfect match for rich, bold dishes, cleansing the palate with each sip. Despite its dark name, the flavor is light, bright, and invigorating. As with all Orizé Brewing creations, this beer is 100% gluten-free, made exclusively from rice—no barley or wheat used.",
+    "availableAt": ["Lunch", "Sunset", "Dinner", "Midnight"]
+  },
+  {
+    "id": "parallel-ipa",
+    "category": "Beer",
+    "name": "PARALLEL IPA",
+    "priceYen": {
+      "265ml": 1080,
+      "480ml": 1870,
+      "bottle": 1180
+    },
+    "ingredients": ["germinated rice koji", "rice koji", "rice", "sugars", "hops"],
+    "dietary": ["gluten-free"],
+    "allergies": [],
+    "imageUrl": "/images/menu/parallel-ipa.jpg",
+    "description": "Gluten-Free Rice-Based IPA from Another World. Ingredients: Germinated Rice Koji, Rice Koji, Rice, Sugars, Hops. Alcohol: 5% Gluten-Free. Crafted using a world-first fermentation technique, this IPA is brewed with Orizé Malt—rice malt made by cultivating koji on germinated rice husks and then kiln-roasting it. The result is an IPA brewed entirely from rice-based ingredients, without any barley or wheat. PARALLEL IPA offers fruity aromas reminiscent of yellow peach and pear, paired with a clean bitterness that surprises with its depth—despite being made entirely from rice. It feels like a beer from another universe, as if it were brewed on a parallel timeline. A true IPA from a parallel world. • Made exclusively with rice-derived grains • Naturally gluten-free • One of the only gluten-free craft beers produced in Japan • Secondary fermentation in the bottle uses raw cane sugar.",
+    "availableAt": ["Lunch", "Sunset", "Dinner", "Midnight"]
+  },
+  {
+    "id": "oryzae-golden-ale",
+    "category": "Beer",
+    "name": "ORYZAE GOLDEN ALE",
+    "priceYen": {
+      "265ml": 1080,
+      "480ml": 1870,
+      "bottle": 1180
+    },
+    "ingredients": ["rice koji"],
+    "dietary": ["gluten-free"],
+    "allergies": [],
+    "imageUrl": "/images/menu/oryzae-golden-ale.jpg",
+    "description": "High-ABV Belgian-Style Golden Ale – Brewed Without Malt, Using Rice Koji. Alc: 7.5% Gluten-Free. A bold, golden ale brewed without any malt—only rice koji is used as the fermentation base. This beer undergoes primary fermentation in oak barrels, followed by bottle conditioning for a naturally carbonated finish. Styled as a Belgian Strong Ale, it delivers a rich, layered aroma of pear, apricot, and white grapes, complemented by delicate oak-derived notes and subtle acidity. Despite its high alcohol content, it maintains a crisp, dry finish with a long-lasting, complex aftertaste. • Made entirely from rice-based ingredients • Naturally gluten-free (no barley or wheat used) • Tax-classified as 'happoshu' (low-malt beer) in Japan due to the absence of barley malt.",
+    "availableAt": ["Lunch", "Sunset", "Dinner", "Midnight"]
   }
-
 ]

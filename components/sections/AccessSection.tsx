@@ -86,8 +86,8 @@ export default function AccessSection() {
 
               <motion.div variants={itemVariants}>
                 <h3 className="text-xl font-semibold mb-2">Business Hours</h3>
-                <p className="text-lg">Wed–Sat: 11:30–23:00 (Last order 23:00)</p>
-                <p className="text-lg">Sun & Holidays: 11:30–21:30 (Last order 21:30)</p>
+                <p className="text-lg">Wed–Sat & Holidays: 11:30–24:00 (Last order 23:30)</p>
+                <p className="text-lg">Sun: 11:30–22:00 (Last order 21:30)</p>
                 <p className="text-gray-600 mt-2">Closed on Monday and Tuesday</p>
               </motion.div>
             </div>

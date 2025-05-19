@@ -3,8 +3,8 @@
 import { getMenuItems } from '@/domain/services/dataService';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { ChevronDown, ChevronUp, Info } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ChevronDown, ChevronUp, Info, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Provider as TooltipProvider,
   Root as TooltipRoot,
@@ -71,6 +71,7 @@ export default function MenuPage() {
   const [expandedDescriptions, setExpandedDescriptions] = useState<Record<string, boolean>>({});
   const [activeCategory, setActiveCategory] = useState<string | null>('Ramen');
   const [activeTime, setActiveTime] = useState<string>(getDefaultTimeSlot());
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     setActiveTime(getDefaultTimeSlot());
@@ -110,6 +111,42 @@ export default function MenuPage() {
     <TooltipProvider delayDuration={200} skipDelayDuration={100}>
       <div className="min-h-screen bg-white">
         <DecorativeBackground />
+        {/* Image Modal */}
+        <AnimatePresence>
+          {selectedImage && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+              onClick={() => setSelectedImage(null)}
+            >
+              <motion.div
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.9 }}
+                className="relative max-w-4xl w-full"
+                onClick={e => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute -top-12 right-0 text-white hover:text-amber-400 transition-colors"
+                >
+                  <X size={32} />
+                </button>
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={selectedImage}
+                    alt="Enlarged view"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <header className="relative z-10 pt-16 pb-12 px-4 text-center">
           <div className="max-w-md mx-auto">
             <h1 className="text-4xl md:text-5xl font-serif font-light text-[#333333] mb-2">Menu</h1>
@@ -202,8 +239,9 @@ export default function MenuPage() {
                           src={`/images/menu/${item.id}.jpg`}
                           alt={item.name}
                           fill
-                          className="object-cover"
+                          className="object-cover cursor-pointer hover:opacity-90 transition-opacity"
                           sizes="(max-width: 768px) 100vw, 400px"
+                          onClick={() => setSelectedImage(`/images/menu/${item.id}.jpg`)}
                           onError={(e) => {
                             const img = e.target as HTMLImageElement;
                             img.style.display = 'none';

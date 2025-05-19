@@ -272,7 +272,10 @@
     "id": "kids-ramen",
     "category": "Ramen",
     "name": "Kids Ramen",
-    "priceYen": 780,
+    "priceYen": {
+      "white-miso": 500,
+      "toyono-miso": 500
+    },
     "ingredients": [
       "mild miso broth",
       "wheat noodles",
@@ -300,7 +303,12 @@
     "id": "burnt-shrimp-miso-ramen",
     "category": "Ramen",
     "name": "Burnt Shrimp Miso Ramen",
-    "priceYen": 1119,
+    "priceYen": {
+      "normal": 1230,
+      "egg": 1380,
+      "spicy":1360,
+      "egg&spicy":1510
+    },
     "ingredients": [
       "shrimp miso broth",
       "whole wheat noodles",
@@ -326,7 +334,12 @@
     "id": "light-shrimp-miso-ramen",
     "category": "Ramen",
     "name": "Light Shrimp Miso Ramen",
-    "priceYen": 964,
+    "priceYen": {
+      "normal": 1060,
+      "egg": 1210,
+      "spicy":1190,
+      "egg&spicy":1340
+    },
     "ingredients": [
       "clear shrimp miso soup",
       "whole wheat noodles",
@@ -352,7 +365,7 @@
     "id": "midnight-white-miso",
     "category": "Ramen",
     "name": "Late-Night Special: White Miso Ramen",
-    "priceYen": 1100,
+    "priceYen": 1250,
     "ingredients": [
       "white miso broth",
       "whole wheat noodles",
@@ -380,7 +393,7 @@
     "id": "midnight-red-miso",
     "category": "Ramen",
     "name": "Late-Night Special: Red Miso Ramen",
-    "priceYen": 1180,
+    "priceYen": 1380,
     "ingredients": [
       "red miso broth",
       "whole wheat noodles",
@@ -409,7 +422,11 @@
     "id": "midnight-tsukemen-6",
     "category": "Ramen",
     "name": "Late-Night Special: Tsukemen No.6",
-    "priceYen": 1300,
+    "priceYen": {
+      "150g": 1530,
+      "200g": 1580,
+      "300g": 1680
+    },
     "ingredients": [
       "spicy miso dipping sauce",
       "flat whole wheat noodles",
@@ -436,7 +453,11 @@
     "id": "midnight-tsukemen-8",
     "category": "Ramen",
     "name": "Late-Night Special: Tsukemen No.8",
-    "priceYen": 1350,
+    "priceYen": {
+      "150g": 1530,
+      "200g": 1580,
+      "300g": 1680
+    },
     "ingredients": [
       "spicy meat miso broth",
       "flat whole wheat noodles",

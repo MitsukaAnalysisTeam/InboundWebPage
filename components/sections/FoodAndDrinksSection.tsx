@@ -44,6 +44,18 @@ export default function FoodAndDrinksSection() {
         </motion.h2>
 
         <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="max-w-2xl mx-auto mb-12 bg-white/80 rounded-xl shadow p-6 border border-amber-100"
+        >
+          <h3 className="text-xl font-bold text-amber-700 mb-2">Orizé Brewing</h3>
+          <p className="text-gray-700">
+            2019年に和歌山県で設立されたOrizé Brewingは、世界初の米麹を主原料としたビールを生み出したパイオニア的なナノブルワリーです。革新と伝統にこだわり、発酵の芸術を讃えるユニークな日本ビールを醸造しています。彼らのビールは味わいが特徴的であるだけでなく、すべて国産原料を使用したグルテンフリーのビールです。日本の文化と職人技に根ざした、真にオリジナルなビールの世界をお楽しみください。
+          </p>
+        </motion.div>
+
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
