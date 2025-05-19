@@ -7,12 +7,12 @@ import { useSidebar } from "@/contexts/use-sidebar"
 
 const navigationItems = [
   { name: "Home", href: "/" },
-  { name: "History", href: "/history" },
-  { name: "What is Miso?", href: "/what-is-miso" },
-  { name: "Why Miso Ramen?", href: "/why-miso-ramen" },
+  // { name: "History", href: "/history" },
+  // { name: "What is Miso?", href: "/what-is-miso" },
+  // { name: "Why Miso Ramen?", href: "/why-miso-ramen" },
   { name: "Food & Drinks", href: "/food-and-drinks" },
   { name: "Menu", href: "/menu" },
-  { name: "Retail", href: "/retail" },
+  // { name: "Retail", href: "/retail" },
   { name: "Access", href: "/access" },
 ]
 

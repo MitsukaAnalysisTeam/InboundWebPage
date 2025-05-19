@@ -14,14 +14,14 @@ interface Value {
 const values = [
   {
     number: "①",
-    title: "What Mitsukabōzu Values Most",
+    title: "What Mitsukabose Values Most",
     icon: <Utensils className="w-8 h-8" />,
     body: (
       <>
         <p className="mb-4">
           We value &quot;cultivating people.&quot;
           <br />
-          Mitsukabōzu is not just a restaurant that serves miso ramen, local sake, or craft beer.
+          Mitsukabose is not just a restaurant that serves miso ramen, local sake, or craft beer.
           <br />
           As a &quot;theme park of fermentation, miso, and noodles,&quot; our mission is to be a place where everyone
           involved—diners, staff, producers, and the local community—can experience the essence of fermentation:
@@ -38,12 +38,12 @@ const values = [
   },
   {
     number: "②",
-    title: "A Turning Point for Mitsukabōzu",
+    title: "A Turning Point for Mitsukabose",
     icon: <Droplets className="w-8 h-8" />,
     body: (
       <>
         <p className="mb-4">
-          In 2022, after over a decade of serving miso ramen in both Hotarugaike and Umeda, Mitsukabōzu made the
+          In 2022, after over a decade of serving miso ramen in both Hotarugaike and Umeda, Mitsukabose made the
           decision to consolidate its operations back to its origin—Hotarugaike.
           <br />
           This move wasn&rsquo;t just a &quot;downsizing,&quot; but rather the beginning of a re-fermentation. Our goal
@@ -59,11 +59,11 @@ const values = [
           </li>
         </ul>
         <p>
-          Mitsukabōzu is not just a restaurant.
+          Mitsukabose is not just a restaurant.
           <br />
           It&rsquo;s a micro-fermentation hub.
           <br />
-          This marked a new chapter for Mitsukabōzu starting in 2022—and the true beginning of the vision we had when we
+          This marked a new chapter for Mitsukabose starting in 2022—and the true beginning of the vision we had when we
           first opened.
         </p>
       </>
@@ -91,7 +91,7 @@ const values = [
         <p>
           This region provides fertile ground for enjoying both what remains unchanged and what evolves over time.
           <br />
-          Mitsukabōzu has taken root in this very &quot;fermentation-friendly&quot; place, and together with our team,
+          Mitsukabose has taken root in this very &quot;fermentation-friendly&quot; place, and together with our team,
           we continue to cultivate it every day.
         </p>
       </>
@@ -224,7 +224,7 @@ function ValuesSectionHeader() {
                 ease: "easeInOut",
               }}
             >
-              MitsukaBōzu
+              Mitsukabose
               <motion.div
                 className="absolute -bottom-1 left-0 w-full h-1 bg-amber-500 rounded-full"
                 animate={{

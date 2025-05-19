@@ -4,6 +4,10 @@ import { getFoodDrinks } from "@/domain/services/dataService"
 import type { FoodDrinkItem } from "@/domain/types"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import { useState } from "react"
+import Image from "next/image"
+import { X } from "lucide-react"
+import { AnimatePresence } from "framer-motion"
 
 export default function FoodAndDrinksSection() {
   const items = getFoodDrinks()
@@ -11,6 +15,7 @@ export default function FoodAndDrinksSection() {
     triggerOnce: true,
     threshold: 0.1,
   })
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -34,6 +39,41 @@ export default function FoodAndDrinksSection() {
   return (
     <section ref={ref} className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
+        <AnimatePresence>
+          {selectedImage && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+              onClick={() => setSelectedImage(null)}
+            >
+              <motion.div
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.9 }}
+                className="relative max-w-4xl w-full"
+                onClick={e => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute -top-12 right-0 text-white hover:text-amber-400 transition-colors"
+                >
+                  <X size={32} />
+                </button>
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={selectedImage}
+                    alt="Enlarged view"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
@@ -78,6 +118,15 @@ export default function FoodAndDrinksSection() {
                 transition={{ duration: 0.2 }}
                 className="mb-4"
               >
+                <div className="relative w-full h-48 mb-2">
+                  <Image
+                    src={item.imageUrl || "/placeholder.svg"}
+                    alt={item.name}
+                    fill
+                    className="object-cover rounded cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => setSelectedImage(item.imageUrl)}
+                  />
+                </div>
                 <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-primary text-white">
                   {item.category}
                 </span>

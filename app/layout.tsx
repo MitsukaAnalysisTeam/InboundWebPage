@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Mitsukabose – 味噌ラーメン専門店',
-  description: '大阪・千里中央の味噌ラーメン専門店「Mitsukabose」の公式サイトです。',
+  description: '大阪・豊中蛍池の味噌ラーメン専門店「Mitsukabose」の公式サイトです。',
   viewport: 'width=device-width, initial-scale=1',
 };
 

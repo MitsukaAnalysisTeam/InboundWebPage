@@ -52,14 +52,21 @@
     "name": "Minoh Beer",
     "category": "beer",
     "highlight": "Local craft beer from Minoh Brewery.",
-    "imageUrl": "/images/menu/beer-001.jpg",
+    "imageUrl": "/images/menu/pilsner.jpg",
     "description": "Minoh Beer – Crafted with Care in Northern Osaka\nMinoh Beer is a family-run craft brewery born in Minoh City, nestled in the northern hills of Osaka.\nDedicated to quality, Minoh Beer is brewed with great care, using carefully selected ingredients and traditional methods. Every step—from preparation to fermentation—is done with patience and skill.\nThe result is a beer with remarkable depth of flavor, aroma, smooth texture, and a clean finish that beer lovers truly appreciate.\nTake your time and enjoy a glass of craft brewed character—born in nature, made with heart."
   },
   {
     "name": "Akishika Sake",
     "category": "sake",
     "highlight": "Premium sake from Akishika Brewery.",
-    "imageUrl": "/images/menu/sake-001.jpg",
-    "description": "Akishika Shuzō – Sake from Farm to Bottle\nFounded in 1886, Akishika Shuzō is located in Nose Town, the northernmost part of Osaka Prefecture. Since its inception, the brewery has been deeply rooted in rice cultivation. While it originally used local table rice, Akishika began cultivating the esteemed Yamada Nishiki sake rice in 1985, expanding its rice paddies from 3 hectares to 25 hectares today.\nA Philosophy of “Nōjō Ikkan” – Farm-Brewed Unity\nAkishika practices a “farm-to-bottle” philosophy, producing sake entirely from rice they cultivate themselves or source from dedicated contract farmers. Nearly 40% of their rice comes from organic, chemical-free paddies managed by the brewery's young team, using sustainable compost made from rice husks, bran, and sake lees.\nSince 2003, 100% of their sake has been junmai (pure rice sake), with a focus on low polishing rates to preserve the full flavor of the rice. They employ traditional yeasts and strive to minimize sake lees, extracting close to 100% of the rice's umami. Their sake is known for its rich depth and vibrant acidity, offering complexity without heaviness.\nAkishika Shuzō is more than a brewery—it's a sake château, cultivating terroir and tradition in every bottle."
+    "imageUrl": "/images/menu/junmai.jpg",
+    "description": "Akishika Shuzō – Sake from Farm to Bottle\nFounded in 1886, Akishika Shuzō is located in Nose Town, the northernmost part of Osaka Prefecture. Since its inception, the brewery has been deeply rooted in rice cultivation. While it originally used local table rice, Akishika began cultivating the esteemed Yamada Nishiki sake rice in 1985, expanding its rice paddies from 3 hectares to 25 hectares today.\nA Philosophy of “Nōjō Ikkan” – Farm-Brewed Unity\nAkishika practices a “farm-to-bottle” philosophy, producing sake entirely from rice they cultivate themselves or source from dedicated contract farmers. Nearly 40% of their rice comes from organic, chemical-free paddies managed by the brewery&apos; s young team, using sustainable compost made from rice husks, bran, and sake lees.\nSince 2003, 100% of their sake has been junmai (pure rice sake), with a focus on low polishing rates to preserve the full flavor of the rice. They employ traditional yeasts and strive to minimize sake lees, extracting close to 100% of the rice&apos;s umami. Their sake is known for its rich depth and vibrant acidity, offering complexity without heaviness.\nAkishika Shuzō is more than a brewery—it &aposs a sake château, cultivating terroir and tradition in every bottle."
+  },
+  {
+    "name": "Orizé Malt Pale Ale",
+    "category": "beer",
+    "highlight": "Gluten-free craft beer from Orizé Brewing.",
+    "imageUrl": "/images/menu/orize-malt-pale-ale.jpg",
+    "description": "Bronze Medal Winner – Gluten-Free Category, International Beer Cup 2024. Crafted using a world-first innovation: koji-fermented rice malt. This beer is brewed with Orizé Malt, a unique ingredient made by cultivating koji on germinated rice husks, then kiln-drying them to bring out a deep, roasted character. The result is a gluten-free craft beer with exceptional complexity and depth. The flavor carries layered malt richness, enhanced by fruity aromas reminiscent of apricot, banana, melon, apple, and kumquat, with a sweet, cotton candy-like finish. • Made entirely from rice-based ingredients – no wheat or barley • The only gluten-free craft beer made in Japan using domestic ingredients • Bottled-conditioned using raw cane sugar for natural carbonation. An innovative and expressive brew that blends traditional Japanese fermentation techniques with the bold character of a pale ale."
   }
 ] 
