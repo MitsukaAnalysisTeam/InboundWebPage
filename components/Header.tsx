@@ -27,8 +27,8 @@ export default function Header() {
               <div>
                 <span className="text-[#F7941D]">MI</span>
                 <span className="text-black">T</span>
-                <span className="text-[#F7941D]">SU</span>
-                <span className="text-black">KA</span>
+                <span className="text-[#F7941D]">S</span>
+                <span className="text-black">UKA</span>
               </div>
               <div className="text-center">
                 <span className="text-black">B</span>
