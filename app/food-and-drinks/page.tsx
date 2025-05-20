@@ -72,11 +72,17 @@ export default function FoodAndDrinksPage() {
 
     if (refs[section].current) {
       const headerHeight = 120 // ヘッダー＋ナビゲーションバーの高さ
-      const y = refs[section].current.getBoundingClientRect().top + window.pageYOffset - headerHeight
-      window.scrollTo({ top: y, behavior: "smooth" })
+      const element = refs[section].current
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
+      setActiveTab(section)
+      setMobileMenuOpen(false)
     }
-    setActiveTab(section)
-    setMobileMenuOpen(false)
   }
 
   const fadeIn = {
@@ -203,13 +209,13 @@ export default function FoodAndDrinksPage() {
             <div className="text-white font-bold text-xl">Our Selections</div>
 
             {/* Mobile menu button */}
-            <button
+            {/* <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden text-white p-2"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            </button> */}
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-1">
@@ -259,7 +265,7 @@ export default function FoodAndDrinksPage() {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
@@ -309,7 +315,7 @@ export default function FoodAndDrinksPage() {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <main className="max-w-7xl mx-auto px-4 py-16">
         {/* Introduction Section */}
@@ -364,7 +370,7 @@ export default function FoodAndDrinksPage() {
         </motion.section>
 
         {/* Minoh Beer Section */}
-        <section ref={minohRef} id="minoh" className="mb-32 scroll-mt-32">
+        <section ref={minohRef} id="minoh" className="mb-32 scroll-mt-40">
           <motion.div
             initial={{ opacity: 0 }}
             animate={isMinohInView ? { opacity: 1 } : { opacity: 0 }}
@@ -425,7 +431,7 @@ export default function FoodAndDrinksPage() {
           </div>
         </section>
         {/* Akishika Sake Section */}
-        <section ref={sakeRef} id="sake" className="mb-32 scroll-mt-32">
+        <section ref={sakeRef} id="sake" className="mb-32 scroll-mt-40">
           <motion.div
             initial={{ opacity: 0 }}
             animate={isSakeInView ? { opacity: 1 } : { opacity: 0 }}
@@ -487,7 +493,7 @@ export default function FoodAndDrinksPage() {
         </section>
 
         {/* Orizé Brewing Section */}
-        <section ref={orizeRef} id="orize" className="mb-32 scroll-mt-32">
+        <section ref={orizeRef} id="orize" className="mb-32 scroll-mt-40">
           <motion.div
             initial={{ opacity: 0 }}
             animate={isOrizeInView ? { opacity: 1 } : { opacity: 0 }}
@@ -549,7 +555,7 @@ export default function FoodAndDrinksPage() {
         </section>
 
         {/* MitsukaBose Food Section */}
-        <section ref={foodRef} id="food" className="scroll-mt-32">
+        <section ref={foodRef} id="food" className="scroll-mt-40">
           <motion.div
             initial={{ opacity: 0 }}
             animate={isFoodInView ? { opacity: 1 } : { opacity: 0 }}

@@ -7,32 +7,11 @@
     "description": "Our signature white miso ramen features a creamy, slightly sweet broth made with carefully selected white miso."
   },
   {
-    "name": "Red Miso Ramen",
-    "category": "ramen",
-    "highlight": "Bold umami with a hint of spice.",
-    "imageUrl": "/images/menu/red-miso.jpg",
-    "description": "A bold and flavorful ramen made with our special blend of red miso, offering deep umami flavors."
-  },
-  {
-    "name": "Spicy Miso Ramen",
-    "category": "ramen",
-    "highlight": "For heat lovers, perfectly balanced.",
-    "imageUrl": "/images/menu/spicy-miso.jpg",
-    "description": "A spicy twist on our classic miso ramen, with perfectly balanced heat and flavor."
-  },
-  {
     "name": "Vegi Miso Ramen",
     "category": "ramen",
     "highlight": "Vegetable-forward, vegan-friendly.",
     "imageUrl": "/images/menu/vegi-miso.jpg",
     "description": "A vegetable-rich ramen made with our special vegetable broth and miso blend."
-  },
-  {
-    "name": "Kids Ramen",
-    "category": "ramen",
-    "highlight": "Mild flavor for little ones.",
-    "imageUrl": "/images/menu/kids-ramen.jpg",
-    "description": "Specially designed for children, with a mild and kid-friendly flavor profile."
   },
   {
     "name": "Vegan Tantanmen",
