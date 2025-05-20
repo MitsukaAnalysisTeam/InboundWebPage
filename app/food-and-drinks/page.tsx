@@ -26,7 +26,7 @@ export default function FoodAndDrinksPage() {
   const sakeRef = useRef<HTMLDivElement>(null)
   const foodRef = useRef<HTMLDivElement>(null)
 
-  const isHeroInView = useInView(heroRef, { once: false, amount: 0.3 })
+  // const isHeroInView = useInView(heroRef, { once: false, amount: 0.3 })
   const isOrizeInView = useInView(orizeRef, { once: false, amount: 0.3 })
   const isMinohInView = useInView(minohRef, { once: false, amount: 0.3 })
   const isSakeInView = useInView(sakeRef, { once: false, amount: 0.3 })
@@ -317,7 +317,7 @@ export default function FoodAndDrinksPage() {
           <motion.div variants={fadeIn} className="mb-12">
             <h2 className="text-4xl font-bold mb-6">Authentic Japanese Experience</h2>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              We've carefully selected the finest Japanese craft beverages and dishes to bring you an authentic taste of
+              We&apos;ve carefully selected the finest Japanese craft beverages and dishes to bring you an authentic taste of
               Japan. Each item in our collection represents the pinnacle of Japanese craftsmanship and tradition.
             </p>
           </motion.div>
@@ -334,7 +334,7 @@ export default function FoodAndDrinksPage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Craft Beer</h3>
               <p className="text-neutral-600">
-                Discover Japan's thriving craft beer scene with our selection of award-winning brews from Minoh and
+                Discover Japan&apos;s thriving craft beer scene with our selection of award-winning brews from Minoh and
                 innovative koji-fermented beers from Orizé.
               </p>
             </motion.div>
@@ -345,7 +345,7 @@ export default function FoodAndDrinksPage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Premium Sake</h3>
               <p className="text-neutral-600">
-                Experience the depth and complexity of Akishika's organic sake, crafted using traditional methods and
+                Experience the depth and complexity of Akishika&apos;s organic sake, crafted using traditional methods and
                 locally-grown rice varieties.
               </p>
             </motion.div>
@@ -357,7 +357,7 @@ export default function FoodAndDrinksPage() {
               <h3 className="text-xl font-bold mb-4">Traditional Food</h3>
               <p className="text-neutral-600">
                 Savor authentic Japanese cuisine from MitsukaBose, featuring meticulously prepared dishes that honor
-                Japan's culinary heritage.
+                Japan&apos;s culinary heritage.
               </p>
             </motion.div>
           </motion.div>
@@ -501,7 +501,7 @@ export default function FoodAndDrinksPage() {
             </div>
             <p className="text-lg text-neutral-600 max-w-3xl">
               Founded in 2019 in Wakayama Prefecture, Orizé Brewing is a pioneering nano-brewery that created the
-              world's first beer brewed with rice koji. Their unique Japanese beers celebrate the art of fermentation,
+              world&apos;s first beer brewed with rice koji. Their unique Japanese beers celebrate the art of fermentation,
               offering gluten-free options made entirely with domestic ingredients.
             </p>
           </motion.div>
@@ -564,7 +564,7 @@ export default function FoodAndDrinksPage() {
             <p className="text-lg text-neutral-600 max-w-3xl">
               MitsukaBose is a celebrated culinary establishment specializing in authentic Japanese cuisine with a focus
               on traditional ramen and seasonal dishes. Using locally-sourced ingredients and time-honored techniques,
-              their expert chefs create dishes that honor Japan's rich culinary heritage.
+              their expert chefs create dishes that honor Japan&apos;s rich culinary heritage.
             </p>
           </motion.div>
 
