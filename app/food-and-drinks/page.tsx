@@ -5,7 +5,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { getFoodDrinks } from "@/domain/services/dataService"
 import type { FoodDrinkItem } from "@/domain/types"
-import { Beer, JapaneseYenIcon as Sake, UtensilsCrossed, ChevronDown, X, Menu } from "lucide-react"
+import { Beer, JapaneseYenIcon as Sake, UtensilsCrossed, ChevronDown, X } from "lucide-react"
 import Link from "next/link"
 
 export default function FoodAndDrinksPage() {
@@ -17,7 +17,7 @@ export default function FoodAndDrinksPage() {
 
   const [activeTab, setActiveTab] = useState<"all" | "minoh" | "sake" | "food" | "orize">("all")
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Refs for each section for scrolling
   const heroRef = useRef<HTMLDivElement>(null)
@@ -81,7 +81,7 @@ export default function FoodAndDrinksPage() {
         behavior: "smooth"
       })
       setActiveTab(section)
-      setMobileMenuOpen(false)
+      // setMobileMenuOpen(false)
     }
   }
 
