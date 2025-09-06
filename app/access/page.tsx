@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { DecorativeBackground } from '@/components/ui/DecorativeBackground';
 import { MapPin, Train, Clock, Phone } from 'lucide-react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function AccessPage() {
