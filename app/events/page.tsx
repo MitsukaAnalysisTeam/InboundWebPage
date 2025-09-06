@@ -64,7 +64,7 @@ export default function EventsPage() {
             <h2 className="text-4xl font-bold mb-6">Special Thank You Events</h2>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
               We appreciate every customer who visits our restaurant and takes the time to share their experience. 
-              As a token of our gratitude, we're offering special rewards for your support.
+              As a token of our gratitude, we&apos;re offering special rewards for your support.
             </p>
           </motion.div>
         </motion.section>
@@ -92,10 +92,10 @@ export default function EventsPage() {
 
                 <div className="space-y-4 mb-8">
                   <p className="text-neutral-600 text-lg">
-                    Thank you for visiting our website! We're excited to share our story and menu with you.
+                    Thank you for visiting our website! We&apos;re excited to share our story and menu with you.
                   </p>
                   <p className="text-neutral-600">
-                    Simply mention that you visited our website when you come to our restaurant, and we'll give you a special 
+                    Simply mention that you visited our website when you come to our restaurant, and we&apos;ll give you a special 
                     <span className="font-semibold text-amber-600"> Mitsukabōzu sticker</span> as a thank you gift!
                   </p>
                 </div>
@@ -112,7 +112,7 @@ export default function EventsPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-amber-500 mt-1">•</span>
-                      <span>Tell our staff "I visited your website"</span>
+                      <span>Tell our staff &quot;I visited your website&quot;</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-amber-500 mt-1">•</span>
@@ -217,7 +217,7 @@ export default function EventsPage() {
           <div className="bg-neutral-900 text-white rounded-3xl p-12 md:p-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
             <p className="text-lg text-neutral-300 max-w-2xl mx-auto mb-10">
-              Visit us today and be part of our growing community. We can't wait to share our authentic miso ramen experience with you!
+              Visit us today and be part of our growing community. We can&apos;t wait to share our authentic miso ramen experience with you!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/menu" passHref>
