@@ -19,6 +19,11 @@ const CATEGORY_LABELS: Record<string, { en: string; ja: string; description: str
     ja: 'ラーメン',
     description: 'Traditional Japanese noodle soup with various broths and toppings',
   },
+  Kaedama: {
+    en: 'Kaedama',
+    ja: '替え玉',
+    description: 'Refill noodles to enjoy more with your remaining soup. Seasoned options available.',
+  },
   Beer: {
     en: 'Beer',
     ja: 'ビール',

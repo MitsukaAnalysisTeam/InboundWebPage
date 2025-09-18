@@ -146,50 +146,6 @@
     ]
   },
   {
-    "id": "fish-chips",
-    "category": "Ippin",
-    "name": "Fermented Fish & Chips",
-    "priceYen": 1160,
-    "ingredients": [
-      "white fish",
-      "potato",
-      "miso",
-      "beer"
-    ],
-    "dietary": [],
-    "allergies": [
-      "fish",
-      "gluten"
-    ],
-    "imageUrl": "/images/menu/fish-chips.jpg",
-    "description": "Japanese twist on the British classic. Crispy fried white fish in miso & beer batter, with fermented potato fries.",
-    "availableAt": [
-      "Dinner"
-    ]
-  },
-  {
-    "id": "hiyayakko",
-    "category": "Ippin",
-    "name": "Chilled Tofu with Shredded Leek & Chili Oil",
-    "priceYen": 480,
-    "ingredients": [
-      "tofu",
-      "leek",
-      "chili oil"
-    ],
-    "dietary": [
-      "vegan"
-    ],
-    "allergies": [
-      "soy"
-    ],
-    "imageUrl": "/images/menu/hiyayakko.jpg",
-    "description": "Chilled tofu topped with shredded leek and house-made chili oil. Addictive and perfect with sake or rice.",
-    "availableAt": [
-      "Dinner"
-    ]
-  },
-  {
     "id": "fermented-fries",
     "category": "Ippin",
     "name": "Fermented Potato Fries",
