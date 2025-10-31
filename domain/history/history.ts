@@ -1,6 +1,4 @@
-export interface HistoryEvent {
-  year: number;
-  title: string;
-  description: string;
-  imageUrl?: string;
-} 
+// Deprecated: use HistoryEvent from domain/types
+import type { HistoryEvent as CanonHistoryEvent } from '@/domain/types';
+
+export type HistoryEvent = CanonHistoryEvent;

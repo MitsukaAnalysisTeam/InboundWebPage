@@ -1,22 +1,15 @@
-import ramenData from '@/infrastructure/data/ramen.json';
-import { Ramen } from './ramen';
+import { getMenuItems } from '@/domain/services/dataService';
+import type { Ramen } from './ramen';
 
-type RamenData = {
-  ramen: Array<{
-    id: string;
-    name: string;
-    description: string;
-    price: string;
-    imageUrl: string;
-    ingredients: string[];
-    spiceLevel: 'Mild' | 'Medium' | 'Hot';
-  }>;
-};
-
+/**
+ * Legacy API compatibility layer.
+ * Uses unified menu.json via getMenuItems() and filters Ramen-category items.
+ */
 export const getAllRamen = (): Ramen[] => {
-  return (ramenData as RamenData).ramen;
+  const menu = getMenuItems();
+  return menu.filter((m) => (m.category || '').toString().toLowerCase().includes('ramen')) as Ramen[];
 };
 
 export const getRamenById = (id: string): Ramen | undefined => {
-  return (ramenData as RamenData).ramen.find(ramen => ramen.id === id);
-}; 
+  return getAllRamen().find((r) => r.id === id);
+};

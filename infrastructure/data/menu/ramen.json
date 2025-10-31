@@ -95,7 +95,7 @@
       "egg",
       "dairy"
     ],
-    "imageUrl": "/images/menu/ramen-002.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "A masterful blend of several red misos creates a broth rich in umami and complexity. Bold yet balanced, the soup offers a satisfying depth of flavor. Toppings include tender, melt-in-your-mouth chashu pork, springy handmade chicken meatballs, and refreshing green onions that add brightness to each bite. Medium-thick noodles soak up the flavorful broth perfectly, creating a delicious harmony of taste and texture in every mouthful. A classic bowl with timeless richness and heartwarming comfort.",
     "availableAt": [
       "Dinner"
@@ -132,7 +132,7 @@
       "egg",
       "dairy"
     ],
-    "imageUrl": "/images/menu/ramen-003.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "This rich and complex ramen brings together the bold kick of Japanese miso with the deep, sweet heat of Korean-style spicy miso. The star topping—torched cheese—melts into the broth, creating a creamy, smoky richness that takes the flavor to the next level. Toppings like tender chashu pork, green onions, handmade chicken meatballs, and strips of roasted seaweed (bara nori) add unique textures and aromas, making every bite exciting and satisfying. A luxurious bowl for spice lovers—especially those who can't resist melty, golden cheese.",
     "availableAt": [
       "Dinner"
@@ -196,7 +196,7 @@
       "soy",
       "peanuts"
     ],
-    "imageUrl": "/images/menu/ramen-007.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "Don't let the word 'vegan' fool you—this is a truly rich and satisfying bowl of tantanmen, full of depth and umami. The broth is crafted without any animal products or fish. Instead, we combine a savory base of shiitake mushrooms and kombu seaweed with creamy soy milk and sake kasu (sake lees) from the renowned Akishika Sake Brewery. The result is a smooth, mellow soup that warms you from the inside out. We use Kāchan Miso, a lovingly made local miso from Toyono Town, to give the bowl a home-style richness. On top, our special vegan 'meat miso' is made from pea-based plant protein and enhanced with a secret ingredient that brings everything together beautifully. Enjoy the deep, nutty aroma and complex flavor of this plant-powered tantanmen—it might just change your mind about vegan ramen.",
     "availableAt": [
       "Dinner"
@@ -226,7 +226,7 @@
     "allergies": [
       "soy"
     ],
-    "imageUrl": "/images/menu/ramen-005.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "A luxurious white miso potage made by slow-simmering potatoes, corn, edamame, and more—this rich, velvety broth captures the natural sweetness of vegetables and the umami of miso. Each bowl is topped with a generous selection of fresh, seasonal vegetables, offering a vibrant taste of nature's bounty. Paired with medium-thin whole wheat noodles, this ramen is not only flavorful but also full of texture and nourishment. Gluten-free noodles are also available upon request, making this bowl a delicious and inclusive choice for all.",
     "availableAt": [
       "Lunch",
@@ -261,7 +261,7 @@
       "wheat",
       "dairy"
     ],
-    "imageUrl": "/images/menu/ramen-008.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "This deeply flavorful bowl features a bold blend of white miso and spicy miso in a hearty soup that's both mellow and packed with umami. Sweet corn and fermented butter melt into the broth, while a drizzle of hot aromatic oil adds a roasted depth that brings everything together beautifully. Topped with tender chashu pork, fragrant green onions, and a mountain of crisp white shredded leeks (shiraganegi), the soup's richness is perfectly matched with thick, chewy noodles. And for the final Hokkaido-inspired touch? A scoop of charred miso corn sizzled with hot oil—smoky, sweet, and irresistibly satisfying.",
     "availableAt": [
       "Dinner"
@@ -274,7 +274,7 @@
     "priceYen": {
       "normal": 1060,
       "asari clams": 1300,
-      "asari clams&butter":1450
+      "asari clams&butter": 1450
     },
     "ingredients": [
       "Kaachan miso broth",
@@ -294,7 +294,7 @@
       "wheat",
       "shellfish"
     ],
-    "imageUrl": "/images/menu/ramen-010.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "This comforting bowl features a rich, umami-packed broth made with Kaachan Miso—a lovingly handcrafted miso from Toyono Town in Osaka. Each spoonful brings gentle depth and warmth, while the toppings—tender chashu pork, fresh green onions, and handmade chicken meatballs—add layers of flavor and texture. Fragrant bara nori (roasted seaweed) finishes the bowl with a subtle coastal aroma. Don't miss the special pairing of clams and miso, which add a gentle brininess and extra umami to this soulful ramen. A bowl full of hometown care and culinary depth.",
     "availableAt": [
       "Dinner"
@@ -323,7 +323,7 @@
       "wheat",
       "dairy"
     ],
-    "imageUrl": "/images/menu/ramen-006.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "A smaller, gentle bowl of ramen made just for kids (elementary school age and under). Choose from two mellow miso flavors: • White Miso – Smooth and comforting • TOYONO Miso – Local miso with a touch of home-style warmth.",
     "availableAt": [
       "Lunch",
@@ -338,8 +338,8 @@
     "priceYen": {
       "normal": 1230,
       "egg": 1380,
-      "spicy":1360,
-      "egg&spicy":1510
+      "spicy": 1360,
+      "egg&spicy": 1510
     },
     "ingredients": [
       "shrimp miso broth",
@@ -369,8 +369,8 @@
     "priceYen": {
       "normal": 1060,
       "egg": 1210,
-      "spicy":1190,
-      "egg&spicy":1340
+      "spicy": 1190,
+      "egg&spicy": 1340
     },
     "ingredients": [
       "clear shrimp miso soup",
@@ -514,8 +514,7 @@
     "availableAt": [
       "Midnight"
     ]
-  }
-  ,
+  },
   {
     "id": "kae-dama",
     "category": "Kaedama",

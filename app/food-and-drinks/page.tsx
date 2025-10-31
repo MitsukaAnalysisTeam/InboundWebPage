@@ -10,8 +10,16 @@ import Link from "next/link"
 
 export default function FoodAndDrinksPage() {
   const items: FoodDrinkItem[] = getFoodDrinks()
-  const orizeBeers = items.filter((item) => item.category === "beer" && item.name.includes("Orize"))
-  const minohBeers = items.filter((item) => item.category === "beer" && !item.name.includes("Orize"))
+  // normalize names to strip diacritics (e.g. Orizé -> Orize) for reliable matching
+  const normalize = (s: string) =>
+    s?.normalize?.("NFD")?.replace(/\p{Diacritic}/gu, "")?.toLowerCase() ?? "";
+
+  const orizeBeers = items.filter(
+    (item) => item.category === "beer" && normalize(item.name).includes("orize")
+  )
+  const minohBeers = items.filter(
+    (item) => item.category === "beer" && !normalize(item.name).includes("orize")
+  )
   const sakes = items.filter((item) => item.category === "sake")
   const foods = items.filter((item) => item.category === "ramen")
 
@@ -102,6 +110,12 @@ export default function FoodAndDrinksPage() {
 
   return (
     <div className="min-h-screen bg-neutral-50">
+      {/* Debug: show count when items are empty to help diagnose missing data */}
+      {typeof window !== 'undefined' && (
+        <div className="fixed top-20 right-4 z-50">
+          <div className="bg-red-100 text-red-800 px-3 py-1 rounded">Food/Drink items: {items.length}</div>
+        </div>
+      )}
       {/* Image Modal */}
       <AnimatePresence>
         {selectedImage && (
@@ -392,7 +406,7 @@ export default function FoodAndDrinksPage() {
           <div className="space-y-16">
             {minohBeers.map((beer, index) => (
               <motion.div
-                key={beer.name}
+                key={`${beer.name}-${index}`}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isMinohInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -453,7 +467,7 @@ export default function FoodAndDrinksPage() {
           <div className="space-y-16">
             {sakes.map((sake, index) => (
               <motion.div
-                key={sake.name}
+                key={`${sake.name}-${index}`}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isSakeInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -515,7 +529,7 @@ export default function FoodAndDrinksPage() {
           <div className="space-y-16">
             {orizeBeers.map((beer, index) => (
               <motion.div
-                key={beer.name}
+                key={`${beer.name}-${index}`}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isOrizeInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -581,7 +595,7 @@ export default function FoodAndDrinksPage() {
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
             {foods.map((food, index) => (
-              <motion.div key={food.name} variants={fadeIn} transition={{ delay: index * 0.1 }} className="group">
+              <motion.div key={`${food.name}-${index}`} variants={fadeIn} transition={{ delay: index * 0.1 }} className="group">
                 <div className="bg-white rounded-3xl shadow-xl overflow-hidden h-full flex flex-col">
                   <div className="relative h-64">
                     <Image

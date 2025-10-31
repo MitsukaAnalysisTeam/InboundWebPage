@@ -109,7 +109,10 @@
     "id": "oden-7",
     "category": "Ippin",
     "name": "Odens",
-    "priceYen": {"7 Item": 1050, "3 Item": 540},
+    "priceYen": {
+      "7 Item": 1050,
+      "3 Item": 540
+    },
     "ingredients": [
       "assorted oden"
     ],

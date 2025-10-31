@@ -1,9 +1,7 @@
-export interface Ramen {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  imageUrl: string;
-  ingredients: string[];
-  spiceLevel?: 'Mild' | 'Medium' | 'Hot';
-} 
+// Deprecated: use types from `domain/types/index.ts` instead.
+import type { MenuItem } from '@/domain/types';
+
+/**
+ * Backwards-compatible alias for older code. Prefer `MenuItem`.
+ */
+export type Ramen = MenuItem;

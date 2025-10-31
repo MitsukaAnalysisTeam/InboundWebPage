@@ -11,7 +11,7 @@
       "vegan"
     ],
     "allergies": [],
-    "imageUrl": "/images/menu/sunset-fermented-veg.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "A gentle, nourishing side dish made with handmade koji seasonings and locally sourced seasonal vegetables. Enjoy the rich, natural umami of fermentation.",
     "availableAt": [
       "Sunset"
@@ -34,7 +34,7 @@
       "soy",
       "wheat"
     ],
-    "imageUrl": "/images/menu/sunset-karaage-set.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "Includes chef's choice of 2 small side dishes, our signature Shin fermented fried chicken, miso soup, and steamed rice.",
     "availableAt": [
       "Sunset"
@@ -51,7 +51,7 @@
     ],
     "dietary": [],
     "allergies": [],
-    "imageUrl": "/images/menu/sunset-cafe-set.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "Includes dessert and our house-roasted coffee (for those who ordered a meal).",
     "availableAt": [
       "Sunset"
@@ -68,7 +68,7 @@
     ],
     "dietary": [],
     "allergies": [],
-    "imageUrl": "/images/menu/sunset-cafe-set-alacarte.jpg",
+    "imageUrl": "/images/menu/.DS_Store",
     "description": "Dessert & House-Roasted Coffee (à la carte)",
     "availableAt": [
       "Sunset"

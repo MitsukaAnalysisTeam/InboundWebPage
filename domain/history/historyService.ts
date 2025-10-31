@@ -1,6 +1,5 @@
-import historyData from '@/infrastructure/data/history.json';
-import { HistoryEvent } from '@/domain/types';
+import { getHistoryEvents } from '@/domain/services/dataService';
 
-export const getHistory = (): HistoryEvent[] => {
-  return historyData;
-}; 
+export const getHistory = (): ReturnType<typeof getHistoryEvents> => {
+  return getHistoryEvents();
+};

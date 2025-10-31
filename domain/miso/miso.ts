@@ -1,8 +1,5 @@
-export interface Miso {
-  id: string;
-  name: string;
-  description: string;
-  characteristics: string[];
-  bestFor: string[];
-  imageUrl: string;
-} 
+// Deprecated: centralize miso types in domain/types/index.ts
+import type { MisoType } from '@/domain/types';
+
+/** Backwards-compatible alias; prefer MisoType from domain/types */
+export type Miso = MisoType;

@@ -1,10 +1,13 @@
-import misoData from '@/infrastructure/data/miso.json';
-import { MisoType } from '@/domain/types';
+import { getMisoInfo } from '@/domain/services/dataService';
+import type { MisoType } from '@/domain/types';
 
+/**
+ * Compatibility layer: use centralized miso data via dataService.
+ */
 export const getAllMiso = (): MisoType[] => {
-  return misoData.types;
+  return getMisoInfo().types;
 };
 
 export const getMisoById = (id: string): MisoType | undefined => {
-  return misoData.types.find(miso => miso.id === id);
-}; 
+  return getAllMiso().find((m) => m.id === id);
+};
