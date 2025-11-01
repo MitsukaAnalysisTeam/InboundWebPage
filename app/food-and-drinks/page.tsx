@@ -23,7 +23,7 @@ export default function FoodAndDrinksPage() {
   const sakes = items.filter((item) => item.category === "sake")
   const foods = items.filter((item) => item.category === "ramen")
 
-  const [activeTab, setActiveTab] = useState<"all" | "minoh" | "sake" | "food" | "orize">("all")
+  const [activeTab, setActiveTab] = useState<"all" | "minoh" | "orize" | "sake" | "food">("all")
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
   // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -47,9 +47,9 @@ export default function FoodAndDrinksPage() {
 
       const sections = [
         { id: "minoh", ref: minohRef, tab: "minoh" as const },
+        { id: "orize", ref: orizeRef, tab: "orize" as const },
         { id: "sake", ref: sakeRef, tab: "sake" as const },
         { id: "food", ref: foodRef, tab: "food" as const },
-        { id: "orize", ref: orizeRef, tab: "orize" as const },
       ]
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -70,7 +70,7 @@ export default function FoodAndDrinksPage() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const scrollToSection = (section: "minoh" | "sake" | "orize" | "food") => {
+  const scrollToSection = (section: "minoh" | "orize" | "sake" | "food") => {
     const refs = {
       minoh: minohRef,
       sake: sakeRef,
@@ -110,12 +110,6 @@ export default function FoodAndDrinksPage() {
 
   return (
     <div className="min-h-screen bg-neutral-50">
-      {/* Debug: show count when items are empty to help diagnose missing data */}
-      {typeof window !== 'undefined' && (
-        <div className="fixed top-20 right-4 z-50">
-          <div className="bg-red-100 text-red-800 px-3 py-1 rounded">Food/Drink items: {items.length}</div>
-        </div>
-      )}
       {/* Image Modal */}
       <AnimatePresence>
         {selectedImage && (
@@ -403,102 +397,25 @@ export default function FoodAndDrinksPage() {
             </p>
           </motion.div>
 
-          <div className="space-y-16">
-            {minohBeers.map((beer, index) => (
-              <motion.div
-                key={`${beer.name}-${index}`}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isMinohInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="group"
-              >
-                <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-                  <div className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
-                    <div className="lg:w-2/5 relative">
-                      <div className="aspect-square lg:aspect-auto lg:h-full">
-                        <Image
-                          src={beer.imageUrl || "/placeholder.svg"}
-                          alt={beer.name}
-                          fill
-                          className="object-cover cursor-pointer group-hover:scale-105 transition-transform duration-700"
-                          onClick={() => setSelectedImage(beer.imageUrl)}
-                        />
-                      </div>
-                    </div>
-                    <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
-                      <div className="inline-block px-4 py-1 bg-amber-100 text-amber-800 rounded-full mb-4 font-medium text-sm">
-                        {beer.highlight}
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4">{beer.name}</h3>
-                      <div className="prose prose-amber max-w-none">
-                        {beer.description.split("\n").map((paragraph, idx) => (
-                          <p key={idx} className="mb-4 text-neutral-600">
-                            {paragraph}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {minohBeers.map((beer) => (
+              <motion.div key={beer.id} variants={fadeIn} className="group">
+                <div className="bg-white rounded-3xl shadow-md overflow-hidden h-full flex flex-col">
+                  <div className="relative h-56">
+                    <Image
+                      src={beer.imageUrl}
+                      alt={beer.name}
+                      fill
+                      className="object-cover cursor-pointer group-hover:scale-105 transition-transform duration-500"
+                      onClick={() => setSelectedImage(beer.imageUrl)}
+                    />
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-        {/* Akishika Sake Section */}
-        <section ref={sakeRef} id="sake" className="mb-32 scroll-mt-40">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={isSakeInView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-16"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <Sake size={24} className="text-amber-500" />
-              <h2 className="text-3xl font-bold">Akishika Sake</h2>
-              <div className="h-[1px] flex-grow bg-neutral-200"></div>
-            </div>
-            <p className="text-lg text-neutral-600 max-w-3xl">
-              Located in the mountains of Osaka Prefecture, Akishika Brewery has been crafting exceptional sake since
-              1886. Under the guidance of master brewer Hiroaki Oku, they grow their own sake rice varieties using
-              natural farming techniques, creating pure expressions of terroir in each bottle.
-            </p>
-          </motion.div>
-
-          <div className="space-y-16">
-            {sakes.map((sake, index) => (
-              <motion.div
-                key={`${sake.name}-${index}`}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isSakeInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="group"
-              >
-                <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-                  <div className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
-                    <div className="lg:w-2/5 relative">
-                      <div className="aspect-square lg:aspect-auto lg:h-full">
-                        <Image
-                          src={sake.imageUrl || "/placeholder.svg"}
-                          alt={sake.name}
-                          fill
-                          className="object-cover cursor-pointer group-hover:scale-105 transition-transform duration-700"
-                          onClick={() => setSelectedImage(sake.imageUrl)}
-                        />
-                      </div>
+                  <div className="p-6 flex flex-col gap-4">
+                    <div className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
+                      {beer.highlight}
                     </div>
-                    <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
-                      <div className="inline-block px-4 py-1 bg-amber-100 text-amber-800 rounded-full mb-4 font-medium text-sm">
-                        {sake.highlight}
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4">{sake.name}</h3>
-                      <div className="prose prose-amber max-w-none">
-                        {sake.description.split("\n").map((paragraph, idx) => (
-                          <p key={idx} className="mb-4 text-neutral-600">
-                            {paragraph}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
+                    <h3 className="text-xl font-bold">{beer.name}</h3>
+                    <p className="text-neutral-600 line-clamp-4">{beer.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -526,47 +443,78 @@ export default function FoodAndDrinksPage() {
             </p>
           </motion.div>
 
-          <div className="space-y-16">
-            {orizeBeers.map((beer, index) => (
-              <motion.div
-                key={`${beer.name}-${index}`}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isOrizeInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="group"
-              >
-                <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-                  <div className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
-                    <div className="lg:w-2/5 relative">
-                      <div className="aspect-square lg:aspect-auto lg:h-full">
-                        <Image
-                          src={beer.imageUrl || "/placeholder.svg"}
-                          alt={beer.name}
-                          fill
-                          className="object-cover cursor-pointer group-hover:scale-105 transition-transform duration-700"
-                          onClick={() => setSelectedImage(beer.imageUrl)}
-                        />
-                      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {orizeBeers.map((beer) => (
+              <motion.div key={beer.id} variants={fadeIn} className="group">
+                <div className="bg-white rounded-3xl shadow-md overflow-hidden h-full flex flex-col">
+                  <div className="relative h-56">
+                    <Image
+                      src={beer.imageUrl}
+                      alt={beer.name}
+                      fill
+                      className="object-cover cursor-pointer group-hover:scale-105 transition-transform duration-500"
+                      onClick={() => setSelectedImage(beer.imageUrl)}
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col gap-4">
+                    <div className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
+                      {beer.highlight}
                     </div>
-                    <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
-                      <div className="inline-block px-4 py-1 bg-amber-100 text-amber-800 rounded-full mb-4 font-medium text-sm">
-                        {beer.highlight}
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4">{beer.name}</h3>
-                      <div className="prose prose-amber max-w-none">
-                        {beer.description.split("\n").map((paragraph, idx) => (
-                          <p key={idx} className="mb-4 text-neutral-600">
-                            {paragraph}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
+                    <h3 className="text-xl font-bold">{beer.name}</h3>
+                    <p className="text-neutral-600 line-clamp-4">{beer.description}</p>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </section>
+
+        {/* Akishika Sake Section */}
+        <section ref={sakeRef} id="sake" className="mb-32 scroll-mt-40">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isSakeInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <Sake size={24} className="text-amber-500" />
+              <h2 className="text-3xl font-bold">Akishika Sake</h2>
+              <div className="h-[1px] flex-grow bg-neutral-200"></div>
+            </div>
+            <p className="text-lg text-neutral-600 max-w-3xl">
+              Located in the mountains of Osaka Prefecture, Akishika Brewery has been crafting exceptional sake since
+              1886. Under the guidance of master brewer Hiroaki Oku, they grow their own sake rice varieties using
+              natural farming techniques, creating pure expressions of terroir in each bottle.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {sakes.map((sake) => (
+              <motion.div key={sake.id} variants={fadeIn} className="group">
+                <div className="bg-white rounded-3xl shadow-md overflow-hidden h-full flex flex-col">
+                  <div className="relative h-56">
+                    <Image
+                      src={sake.imageUrl}
+                      alt={sake.name}
+                      fill
+                      className="object-cover cursor-pointer group-hover:scale-105 transition-transform duration-500"
+                      onClick={() => setSelectedImage(sake.imageUrl)}
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col gap-4">
+                    <div className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
+                      {sake.highlight}
+                    </div>
+                    <h3 className="text-xl font-bold">{sake.name}</h3>
+                    <p className="text-neutral-600 line-clamp-4">{sake.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
 
         {/* MitsukaBose Food Section */}
         <section ref={foodRef} id="food" className="scroll-mt-40">

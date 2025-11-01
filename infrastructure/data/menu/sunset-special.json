@@ -1,6 +1,6 @@
 [
   {
-    "id": "sunset-fermented-veg",
+  "id": "sunset-fermented-veg",
     "category": "SunsetSpecial",
     "name": "Fermented Vegetables Small Plate",
     "priceYen": 400,
@@ -11,14 +11,14 @@
       "vegan"
     ],
     "allergies": [],
-    "imageUrl": "/images/menu/.DS_Store",
+  "imageUrl": "/images/menu/sunset-fermented-veg.jpg",
     "description": "A gentle, nourishing side dish made with handmade koji seasonings and locally sourced seasonal vegetables. Enjoy the rich, natural umami of fermentation.",
     "availableAt": [
       "Sunset"
     ]
   },
   {
-    "id": "sunset-karaage-set",
+  "id": "sunset-karaage-set",
     "category": "SunsetSpecial",
     "name": "Shin Fermented Fried Chicken Set",
     "priceYen": 1200,
@@ -34,14 +34,14 @@
       "soy",
       "wheat"
     ],
-    "imageUrl": "/images/menu/.DS_Store",
+  "imageUrl": "/images/menu/sunset-karaage-set.jpg",
     "description": "Includes chef's choice of 2 small side dishes, our signature Shin fermented fried chicken, miso soup, and steamed rice.",
     "availableAt": [
       "Sunset"
     ]
   },
   {
-    "id": "sunset-cafe-set",
+  "id": "sunset-cafe-set",
     "category": "SunsetSpecial",
     "name": "Café Set",
     "priceYen": 780,
@@ -51,14 +51,14 @@
     ],
     "dietary": [],
     "allergies": [],
-    "imageUrl": "/images/menu/.DS_Store",
+  "imageUrl": "/images/menu/sunset-cafe-set.jpg",
     "description": "Includes dessert and our house-roasted coffee (for those who ordered a meal).",
     "availableAt": [
       "Sunset"
     ]
   },
   {
-    "id": "sunset-cafe-set-alacarte",
+  "id": "sunset-cafe-set-alacarte",
     "category": "SunsetSpecial",
     "name": "Dessert & House-Roasted Coffee à la carte",
     "priceYen": 960,
@@ -68,7 +68,7 @@
     ],
     "dietary": [],
     "allergies": [],
-    "imageUrl": "/images/menu/.DS_Store",
+  "imageUrl": "/images/menu/sunset-cafe-set-alacarte.jpg",
     "description": "Dessert & House-Roasted Coffee (à la carte)",
     "availableAt": [
       "Sunset"

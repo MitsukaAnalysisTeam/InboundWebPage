@@ -60,7 +60,7 @@
     ]
   },
   {
-    "id": "weizen",
+  "id": "weizen",
     "category": "Beer",
     "name": "Minoh Weizen(Bottle)",
     "priceYen": 850,
@@ -78,7 +78,7 @@
     "allergies": [
       "gluten"
     ],
-    "imageUrl": "/images/menu/beer-001.jpg",
+  "imageUrl": "/images/menu/weizen.jpg",
     "description": "A classic German-style wheat beer brewed by Minoh Brewery. Cloudy and golden, with bright banana and clove aromas, a soft creamy mouthfeel, and a refreshing, slightly tart finish.",
     "availableAt": [
       "Lunch",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "id": "pilsner",
+  "id": "pilsner",
     "category": "Beer",
     "name": "Minoh Pilsner(Bottle)",
     "priceYen": 850,
@@ -105,7 +105,7 @@
     "allergies": [
       "gluten"
     ],
-    "imageUrl": "/images/menu/.DS_Store",
+  "imageUrl": "/images/menu/pilsner.jpg",
     "description": "A crisp, clean Czech-style pilsner with delicate noble hop bitterness. Light straw color, fine carbonation, and a dry, snappy finish make it extremely drinkable.",
     "availableAt": [
       "Lunch",
@@ -115,7 +115,7 @@
     ]
   },
   {
-    "id": "stout",
+  "id": "stout",
     "category": "Beer",
     "name": "Minoh Stout(Bottle)",
     "priceYen": 850,
@@ -133,7 +133,7 @@
     "allergies": [
       "gluten"
     ],
-    "imageUrl": "/images/menu/.DS_Store",
+  "imageUrl": "/images/menu/stout.jpg",
     "description": "A full-bodied, dark stout with notes of coffee, cocoa, and roasted malt. Silky smooth, with a lingering roast character and a creamy head that highlights its rich flavor.",
     "availableAt": [
       "Lunch",
@@ -143,7 +143,7 @@
     ]
   },
   {
-    "id": "pale-ale",
+  "id": "pale-ale",
     "category": "Beer",
     "name": "Minoh Pale Ale(Bottle)  ",
     "priceYen": 850,
@@ -160,7 +160,7 @@
     "allergies": [
       "gluten"
     ],
-    "imageUrl": "/images/menu/.DS_Store",
+  "imageUrl": "/images/menu/pale-ale.jpg",
     "description": "A balanced American-style pale ale featuring citrusy hop aroma and a gentle malt backbone. Golden amber color, medium body, with a crisp, refreshing finish.",
     "availableAt": [
       "Lunch",
@@ -170,7 +170,7 @@
     ]
   },
   {
-    "id": "osaru-ipa",
+  "id": "osaru-ipa",
     "category": "Beer",
     "name": "Osaru IPA(Bottle)",
     "priceYen": 950,
@@ -188,7 +188,7 @@
     "allergies": [
       "gluten"
     ],
-    "imageUrl": "/images/menu/.DS_Store",
+  "imageUrl": "/images/menu/osaru-ipa.jpg",
     "description": "Minoh Brewery's signature IPA, nicknamed \"Osaru.\" Bursting with tropical fruit and pine aromas, this bold, hoppy beer delivers a smooth bitterness and a bright, lingering finish.",
     "availableAt": [
       "Lunch",
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "id": "w-ipa",
+  "id": "w-ipa",
     "category": "Beer",
     "name": "Minoh W-IPA(Bottle)",
     "priceYen": 1100,
@@ -215,7 +215,7 @@
     "allergies": [
       "gluten"
     ],
-    "imageUrl": "/images/menu/.DS_Store",
+  "imageUrl": "/images/menu/w-ipa.jpg",
     "description": "A powerful double IPA with extra hop charge for intense citrus, resin, and mango flavors. Higher ABV balanced by a smooth malt body, delivering a satisfying, long-lasting hop finish.",
     "availableAt": [
       "Lunch",

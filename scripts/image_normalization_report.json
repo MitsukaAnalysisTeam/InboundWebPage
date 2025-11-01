@@ -1,0 +1,78 @@
+{
+  "timestamp": "2025-11-01T00:09:22.943Z",
+  "apply": true,
+  "actions": [
+    {
+      "type": "update-json",
+      "file": "japanese-sake.json",
+      "id": "junmai-ginjo",
+      "from": "/images/menu/junmai.jpg",
+      "to": "/images/menu/junmai-ginjo.jpg",
+      "reason": "expected exists"
+    },
+    {
+      "type": "update-json",
+      "file": "japanese-sake.json",
+      "id": "junmai-daiginjo",
+      "from": "/images/menu/sake-daiginjo.jpg",
+      "to": "/images/menu/junmai-daiginjo.jpg",
+      "reason": "expected exists"
+    },
+    {
+      "type": "update-json",
+      "file": "japanese-sake.json",
+      "id": "aged-limited",
+      "from": "/images/menu/sake-aged.jpg",
+      "to": "/images/menu/aged-limited.jpg",
+      "reason": "expected exists"
+    },
+    {
+      "type": "update-json",
+      "file": "japanese-sake.json",
+      "id": "akishika-tasting",
+      "from": "/images/menu/sake-tasting.jpg",
+      "to": "/images/menu/akishika-tasting.jpg",
+      "reason": "expected exists"
+    },
+    {
+      "type": "update-json",
+      "file": "japanese-sake.json",
+      "id": "akishika-highball",
+      "from": "/images/menu/sake-highball.jpg",
+      "to": "/images/menu/akishika-highball.jpg",
+      "reason": "expected exists"
+    },
+    {
+      "type": "wrote-json",
+      "file": "japanese-sake.json"
+    },
+    {
+      "type": "missing",
+      "file": "sunset-special.json",
+      "id": "sunset-fermented-veg",
+      "expected": "sunset-fermented-veg.jpg",
+      "note": "no candidate found"
+    },
+    {
+      "type": "missing",
+      "file": "sunset-special.json",
+      "id": "sunset-karaage-set",
+      "expected": "sunset-karaage-set.jpg",
+      "note": "no candidate found"
+    },
+    {
+      "type": "missing",
+      "file": "sunset-special.json",
+      "id": "sunset-cafe-set",
+      "expected": "sunset-cafe-set.jpg",
+      "note": "no candidate found"
+    },
+    {
+      "type": "missing",
+      "file": "sunset-special.json",
+      "id": "sunset-cafe-set-alacarte",
+      "expected": "sunset-cafe-set-alacarte.jpg",
+      "note": "no candidate found"
+    }
+  ]
+}
