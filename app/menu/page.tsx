@@ -1,6 +1,6 @@
-'use client';
+ 'use client';
 
-import { getMenuItems } from '@/domain/services/dataService';
+import type { MenuItem } from '@/domain/types';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, Info, X } from 'lucide-react';
@@ -72,7 +72,7 @@ function getDefaultTimeSlot() {
 
 
 export default function MenuPage() {
-  const menuItems = getMenuItems();
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
   const [expandedDescriptions, setExpandedDescriptions] = useState<Record<string, boolean>>({});
   const [activeCategory, setActiveCategory] = useState<string | null>('Ramen');
   const [activeTime, setActiveTime] = useState<string>(getDefaultTimeSlot());
@@ -80,6 +80,27 @@ export default function MenuPage() {
 
   useEffect(() => {
     setActiveTime(getDefaultTimeSlot());
+  }, []);
+
+  // Fetch menu from API (which tries DB, falls back to JSON files)
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const res = await fetch('/api/menu');
+        if (!res.ok) throw new Error('Failed to fetch menu');
+        else console.log('Menu fetched successfully from API');
+
+        const data = await res.json();
+        if (mounted && Array.isArray(data)) setMenuItems(data as MenuItem[]);
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error('Error fetching menu:', err);
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   // 時間帯でフィルタ
