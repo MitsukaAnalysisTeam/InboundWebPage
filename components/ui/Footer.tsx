@@ -8,13 +8,13 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-light mb-2">発酵と味噌ラーメン みつか坊主</h3>
+            <h3 className="text-xl font-light mb-2">Mitsukabōzu — Fermented Miso Ramen</h3>
             <p className="text-sm text-gray-300">
-              〒560-0032 大阪府豊中市螢池東町１丁目６−５ 空港センタービル ２階
-            </p> {/* :contentReference[oaicite:0]{index=0} */}
+              2F, Airport Center Building, 1-6-5 Hotarugaike Higashimachi, Toyonaka, Osaka 560-0032, Japan
+            </p>
             <p className="text-sm text-gray-300">
-              Tel: 06-6850-3532
-            </p> {/* :contentReference[oaicite:1]{index=1} */}
+              Tel: +81 6-6850-3532
+            </p>
           </div>
           
           <div className="flex space-x-6">
@@ -25,7 +25,7 @@ export function Footer() {
               className="text-white hover:text-[#E07A5F] transition-colors"
             >
               <span className="sr-only">Instagram</span>
-              <FaInstagram className="h-6 w-6" />
+              <FaInstagram className="h-8 w-8 md:h-9 md:w-9 hover:scale-110 transition-transform" />
             </Link> {/* :contentReference[oaicite:2]{index=2} */}
             
             <Link
@@ -35,7 +35,7 @@ export function Footer() {
               className="text-white hover:text-[#E07A5F] transition-colors"
             >
               <span className="sr-only">Official Website</span>
-              <HiGlobeAlt className="h-6 w-6" />
+              <HiGlobeAlt className="h-8 w-8 md:h-9 md:w-9 hover:scale-110 transition-transform" />
             </Link> {/* :contentReference[oaicite:3]{index=3} */}
           </div>
         </div>
