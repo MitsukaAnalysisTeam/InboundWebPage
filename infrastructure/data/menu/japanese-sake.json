@@ -1,142 +1,142 @@
 [
   {
     "id": "junmai",
-    "category": "JapaneseSake",
     "name": "Junmai",
+    "dietary": [],
+    "category": "JapaneseSake",
+    "imageUrl": "/images/menu/junmai.jpg",
     "priceYen": {
       "120ml": 820,
       "360ml": 2200
     },
-    "ingredients": [
-      "rice",
-      "koji",
-      "water"
-    ],
-    "dietary": [],
     "allergies": [],
-    "imageUrl": "/images/menu/junmai.jpg",
-    "description": "Pure & Earthy. Robust, deeply expressive, with natural umami and vibrant acidity. Best with hearty dishes.\n\nCharacteristics of Akishika Shuzō's Junmai Series: Akishika's Junmai sake is robust and deeply expressive, showcasing the natural umami of the rice. Brewed with low-polished rice and traditional methods, it has a bold structure with pronounced acidity, giving it excellent food-pairing versatility. Its full-bodied profile reflects the brewery's farm-based philosophy and the terroir of Nose Town. Flavor Profile: Rich umami, earthy notes, vibrant acidity. Best Pairing: Hearty dishes, grilled vegetables, fermented foods.",
     "availableAt": [
       "Lunch",
       "Sunset",
       "Dinner",
       "Midnight"
+    ],
+    "description": "Pure & Earthy. Robust, deeply expressive, with natural umami and vibrant acidity. Best with hearty dishes.\n\nCharacteristics of Akishika Shuzō's Junmai Series: Akishika's Junmai sake is robust and deeply expressive, showcasing the natural umami of the rice. Brewed with low-polished rice and traditional methods, it has a bold structure with pronounced acidity, giving it excellent food-pairing versatility. Its full-bodied profile reflects the brewery's farm-based philosophy and the terroir of Nose Town. Flavor Profile: Rich umami, earthy notes, vibrant acidity. Best Pairing: Hearty dishes, grilled vegetables, fermented foods.",
+    "ingredients": [
+      "rice",
+      "koji",
+      "water"
     ]
   },
   {
     "id": "junmai-ginjo",
-    "category": "JapaneseSake",
     "name": "Junmai Ginjo",
+    "dietary": [],
+    "category": "JapaneseSake",
+    "imageUrl": "/images/menu/junmai-ginjo.jpg",
     "priceYen": {
       "120ml": 1400,
       "360ml": 2200
     },
-    "ingredients": [
-      "rice",
-      "koji",
-      "water"
-    ],
-    "dietary": [],
     "allergies": [],
-    "imageUrl": "/images/menu/junmai-ginjo.jpg",
-    "description": "Pure & Earthy. Robust, deeply expressive, with natural umami and vibrant acidity. Best with hearty dishes.\n\nCharacteristics of Akishika Shuzō's Junmai Series: Akishika's Junmai sake is robust and deeply expressive, showcasing the natural umami of the rice. Brewed with low-polished rice and traditional methods, it has a bold structure with pronounced acidity, giving it excellent food-pairing versatility. Its full-bodied profile reflects the brewery's farm-based philosophy and the terroir of Nose Town. Flavor Profile: Rich umami, earthy notes, vibrant acidity. Best Pairing: Hearty dishes, grilled vegetables, fermented foods.",
     "availableAt": [
       "Lunch",
       "Sunset",
       "Dinner",
       "Midnight"
+    ],
+    "description": "Pure & Earthy. Robust, deeply expressive, with natural umami and vibrant acidity. Best with hearty dishes.\n\nCharacteristics of Akishika Shuzō's Junmai Series: Akishika's Junmai sake is robust and deeply expressive, showcasing the natural umami of the rice. Brewed with low-polished rice and traditional methods, it has a bold structure with pronounced acidity, giving it excellent food-pairing versatility. Its full-bodied profile reflects the brewery's farm-based philosophy and the terroir of Nose Town. Flavor Profile: Rich umami, earthy notes, vibrant acidity. Best Pairing: Hearty dishes, grilled vegetables, fermented foods.",
+    "ingredients": [
+      "rice",
+      "koji",
+      "water"
     ]
   },
   {
     "id": "junmai-daiginjo",
-    "category": "JapaneseSake",
     "name": "Junmai Daiginjo",
+    "dietary": [],
+    "category": "JapaneseSake",
+    "imageUrl": "/images/menu/junmai-daiginjo.jpg",
     "priceYen": {
       "120ml": 1400,
       "360ml": 4000
     },
-    "ingredients": [
-      "rice",
-      "koji",
-      "water"
-    ],
-    "dietary": [],
     "allergies": [],
-    "imageUrl": "/images/menu/junmai-daiginjo.jpg",
-    "description": "Refined & Aromatic. Elegant fragrance, silky mouthfeel, layered umami. Best with delicate Japanese cuisine.\n\nAkishika's Junmai Daiginjo is a premium expression of their craft, using highly polished rice and careful temperature control during fermentation. Despite its refined character and floral, melon-like aromas, it retains the complexity and natural essence of the rice. It is a sake of quiet power and grace. Flavor Profile: Elegant fragrance, silky mouthfeel, layered umami. Best Pairing: Delicate Japanese cuisine, white fish, or lightly grilled seafood.",
     "availableAt": [
       "Lunch",
       "Sunset",
       "Dinner",
       "Midnight"
+    ],
+    "description": "Refined & Aromatic. Elegant fragrance, silky mouthfeel, layered umami. Best with delicate Japanese cuisine.\n\nAkishika's Junmai Daiginjo is a premium expression of their craft, using highly polished rice and careful temperature control during fermentation. Despite its refined character and floral, melon-like aromas, it retains the complexity and natural essence of the rice. It is a sake of quiet power and grace. Flavor Profile: Elegant fragrance, silky mouthfeel, layered umami. Best Pairing: Delicate Japanese cuisine, white fish, or lightly grilled seafood.",
+    "ingredients": [
+      "rice",
+      "koji",
+      "water"
     ]
   },
   {
     "id": "aged-limited",
-    "category": "JapaneseSake",
     "name": "Aged/Limited Sake",
-    "priceYen": {
-      "1000ml": 1000,
-      "360ml": 2700
-    },
-    "ingredients": [
-      "rice",
-      "koji",
-      "water"
-    ],
     "dietary": [],
-    "allergies": [],
+    "category": "JapaneseSake",
     "imageUrl": "/images/menu/aged-limited.jpg",
-    "description": "Special aged or limited edition sake from Akishika. Please ask staff for details.",
+    "priceYen": {
+      "360ml": 2700,
+      "1000ml": 1000
+    },
+    "allergies": [],
     "availableAt": [
       "Lunch",
       "Sunset",
       "Dinner",
       "Midnight"
+    ],
+    "description": "Special aged or limited edition sake from Akishika. Please ask staff for details.",
+    "ingredients": [
+      "rice",
+      "koji",
+      "water"
     ]
   },
   {
     "id": "akishika-tasting",
-    "category": "JapaneseSake",
     "name": "Akishika Tasting Set",
+    "dietary": [],
+    "category": "JapaneseSake",
+    "imageUrl": "/images/menu/akishika-tasting.jpg",
     "priceYen": {
-      "60ml 3kinds": 1680,
-      "30ml 3kinds": 1000
+      "30ml 3kinds": 1000,
+      "60ml 3kinds": 1680
     },
+    "allergies": [],
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ],
+    "description": "Tasting set of 3 Akishika sakes. Experience the range of Akishika's sake craftsmanship.",
     "ingredients": [
       "rice",
       "koji",
       "water"
-    ],
-    "dietary": [],
-    "allergies": [],
-    "imageUrl": "/images/menu/akishika-tasting.jpg",
-    "description": "Tasting set of 3 Akishika sakes. Experience the range of Akishika's sake craftsmanship.",
-    "availableAt": [
-      "Lunch",
-      "Sunset",
-      "Dinner",
-      "Midnight"
     ]
   },
   {
     "id": "akishika-highball",
-    "category": "JapaneseSake",
     "name": "Akishika Highball",
-    "priceYen": 680,
-    "ingredients": [
-      "sake",
-      "soda"
-    ],
     "dietary": [],
-    "allergies": [],
+    "category": "JapaneseSake",
     "imageUrl": "/images/menu/akishika-highball.jpg",
-    "description": "Refreshing highball made with Akishika sake and soda.",
+    "priceYen": 680,
+    "allergies": [],
     "availableAt": [
       "Lunch",
       "Sunset",
       "Dinner",
       "Midnight"
+    ],
+    "description": "Refreshing highball made with Akishika sake and soda.",
+    "ingredients": [
+      "sake",
+      "soda"
     ]
   }
 ]
