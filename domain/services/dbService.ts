@@ -1,8 +1,8 @@
 import * as neon from '@neondatabase/serverless';
 import { MenuItem } from '../types';
 
-// Some TypeScript builds may not include exact typings for the package; resolve createClient dynamically.
-const createClient = (neon as any).createClient ?? (neon as any).default ?? neon;
+// Resolve Client constructor from @neondatabase/serverless (package exports vary)
+const ClientCtor: any = (neon as any).Client ?? (neon as any).default?.Client ?? (neon as any).default ?? (neon as any);
 
 const connectionString = process.env.NEON_DATABASE_URL || process.env.DATABASE_URL || process.env.NEON_URL || '';
 
@@ -15,13 +15,29 @@ export async function getMenuItemsFromDb(): Promise<MenuItem[]> {
     throw new Error('Database connection string not provided in environment');
   }
 
-  const client = createClient({ connectionString });
+  // Instantiate client using resolved constructor/path
+  const client = new ClientCtor({ connectionString });
 
   try {
+    if (typeof client.connect === 'function') {
+      await client.connect();
+    }
+
     const res = await client.query('SELECT payload FROM menu');
-    // Each row is expected to have a `payload` json/jsonb column that matches MenuItem shape
-    return res.rows.map((r: any) => r.payload) as MenuItem[];
-  } finally {
-    // serverless clients for Neon do not require explicit end/disconnect
+    const items = res.rows.map((r: any) => r.payload) as MenuItem[];
+
+    if (typeof client.end === 'function') {
+      await client.end();
+    }
+
+    return items;
+  } catch (err) {
+    // try to close if possible
+    if (typeof client.end === 'function') {
+      try {
+        await client.end();
+      } catch (_) {}
+    }
+    throw err;
   }
 }
