@@ -4,9 +4,8 @@ import AccessSection from '@/components/sections/AccessSection';
 import { getHeroImages } from '@/lib/getHeroImages';
 import { DecorativeBackground } from '@/components/ui/DecorativeBackground';
 
-export default function Home({ params }: { params: { lang: string } }) {
+export default function Home() {
   const heroImages = getHeroImages();
-  const isEn = params.lang === 'en';
 
   return (
     <div className="min-h-screen bg-white">

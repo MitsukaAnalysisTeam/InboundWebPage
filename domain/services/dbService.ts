@@ -1,10 +1,14 @@
-import * as neon from '@neondatabase/serverless';
 import { MenuItem } from '../types';
 
-// Resolve Client constructor from @neondatabase/serverless (package exports vary)
-const ClientCtor: any = (neon as any).Client ?? (neon as any).default?.Client ?? (neon as any).default ?? (neon as any);
-
 const connectionString = process.env.NEON_DATABASE_URL || process.env.DATABASE_URL || process.env.NEON_URL || '';
+
+async function createClientInstance() {
+  // dynamic import to avoid bundler issues when package exports differ between environments
+  const mod = await import('@neondatabase/serverless');
+  // try several possible shapes
+  const ClientCtor = (mod as any).Client ?? (mod as any).default?.Client ?? (mod as any).default ?? (mod as any);
+  return new ClientCtor({ connectionString });
+}
 
 /**
  * Try to fetch menu items from Neon (Postgres). Expects a table named `menu` with a `payload` jsonb column.
@@ -15,8 +19,12 @@ export async function getMenuItemsFromDb(): Promise<MenuItem[]> {
     throw new Error('Database connection string not provided in environment');
   }
 
-  // Instantiate client using resolved constructor/path
-  const client = new ClientCtor({ connectionString });
+  if (!connectionString) {
+    throw new Error('Database connection string not provided in environment');
+  }
+
+  // Instantiate client using dynamic import
+  const client = await createClientInstance();
 
   try {
     if (typeof client.connect === 'function') {
@@ -54,7 +62,11 @@ export async function upsertMenuItem(item: MenuItem): Promise<void> {
     throw new Error('Database connection string not provided in environment');
   }
 
-  const client = new ClientCtor({ connectionString });
+  if (!connectionString) {
+    throw new Error('Database connection string not provided in environment');
+  }
+
+  const client = await createClientInstance();
 
   try {
     if (typeof client.connect === 'function') {
@@ -92,7 +104,11 @@ export async function deleteMenuItem(id: string): Promise<void> {
     throw new Error('Database connection string not provided in environment');
   }
 
-  const client = new ClientCtor({ connectionString });
+  if (!connectionString) {
+    throw new Error('Database connection string not provided in environment');
+  }
+
+  const client = await createClientInstance();
 
   try {
     if (typeof client.connect === 'function') {

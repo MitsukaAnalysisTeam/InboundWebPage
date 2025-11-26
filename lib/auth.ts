@@ -1,9 +1,9 @@
-import { SignJWT, jwtVerify } from 'jose';
+import { SignJWT, jwtVerify, type JWTPayload } from 'jose';
 
-const secretKey = process.env.AUTH_SECRET;
+const secretKey = process.env.AUTH_SECRET || '';
 const key = new TextEncoder().encode(secretKey);
 
-export async function signToken(payload: any) {
+export async function signToken(payload: JWTPayload) {
   return await new SignJWT(payload)
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
@@ -17,7 +17,7 @@ export async function verifyToken(token: string) {
       algorithms: ['HS256'],
     });
     return payload;
-  } catch (error) {
+  } catch {
     return null;
   }
 }

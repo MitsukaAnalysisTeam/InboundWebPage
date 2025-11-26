@@ -30,7 +30,7 @@ export default function AdminLoginPage() {
         const data = await res.json();
         setError(data.error || 'ログインに失敗しました');
       }
-    } catch (err) {
+    } catch {
       setError('エラーが発生しました。もう一度お試しください。');
     } finally {
       setLoading(false);
