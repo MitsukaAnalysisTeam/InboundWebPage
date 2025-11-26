@@ -1,77 +1,77 @@
 [
   {
     "id": "sunset-fermented-veg",
-    "category": "SunsetSpecial",
     "name": "Fermented Vegetables Small Plate",
-    "priceYen": 400,
-    "ingredients": [
-      "seasonal fermented vegetables"
-    ],
     "dietary": [
       "vegan"
     ],
-    "allergies": [],
+    "category": "SunsetSpecial",
     "imageUrl": "/images/menu/sunset-fermented-veg.jpg",
-    "description": "A gentle, nourishing side dish made with handmade koji seasonings and locally sourced seasonal vegetables. Enjoy the rich, natural umami of fermentation.",
+    "priceYen": 400,
+    "allergies": [],
     "availableAt": [
       "Sunset"
+    ],
+    "description": "A gentle, nourishing side dish made with handmade koji seasonings and locally sourced seasonal vegetables. Enjoy the rich, natural umami of fermentation.",
+    "ingredients": [
+      "seasonal fermented vegetables"
     ]
   },
   {
     "id": "sunset-karaage-set",
-    "category": "SunsetSpecial",
     "name": "Shin Fermented Fried Chicken Set",
-    "priceYen": 1200,
-    "ingredients": [
-      "shin fermented fried chicken",
-      "side dishes",
-      "miso soup",
-      "steamed rice"
-    ],
     "dietary": [],
+    "category": "SunsetSpecial",
+    "imageUrl": "/images/menu/sunset-karaage-set.jpg",
+    "priceYen": 1200,
     "allergies": [
       "chicken",
       "soy",
       "wheat"
     ],
-    "imageUrl": "/images/menu/sunset-karaage-set.jpg",
-    "description": "Includes chef's choice of 2 small side dishes, our signature Shin fermented fried chicken, miso soup, and steamed rice.",
     "availableAt": [
       "Sunset"
+    ],
+    "description": "Includes chef's choice of 2 small side dishes, our signature Shin fermented fried chicken, miso soup, and steamed rice.",
+    "ingredients": [
+      "shin fermented fried chicken",
+      "side dishes",
+      "miso soup",
+      "steamed rice"
     ]
   },
   {
     "id": "sunset-cafe-set",
-    "category": "SunsetSpecial",
     "name": "Café Set",
+    "dietary": [],
+    "category": "SunsetSpecial",
+    "imageUrl": "/images/menu/sunset-cafe-set.jpg",
     "priceYen": 780,
+    "allergies": [],
+    "availableAt": [
+      "Sunset"
+    ],
+    "description": "Includes dessert and our house-roasted coffee (for those who ordered a meal).",
     "ingredients": [
       "dessert",
       "house-roasted coffee"
-    ],
-    "dietary": [],
-    "allergies": [],
-    "imageUrl": "/images/menu/sunset-cafe-set.jpg",
-    "description": "Includes dessert and our house-roasted coffee (for those who ordered a meal).",
-    "availableAt": [
-      "Sunset"
     ]
   },
   {
     "id": "sunset-cafe-set-alacarte",
-    "category": "SunsetSpecial",
     "name": "Dessert & House-Roasted Coffee à la carte",
+    "dietary": [],
+    "category": "SunsetSpecial",
+    "imageUrl": "/images/menu/sunset-cafe-set-alacarte.jpg",
     "priceYen": 960,
+    "allergies": [],
+    "availableAt": [
+      "Sunset"
+    ],
+    "description": "Dessert & House-Roasted Coffee (à la carte)",
     "ingredients": [
       "dessert",
       "house-roasted coffee"
-    ],
-    "dietary": [],
-    "allergies": [],
-    "imageUrl": "/images/menu/sunset-cafe-set-alacarte.jpg",
-    "description": "Dessert & House-Roasted Coffee (à la carte)",
-    "availableAt": [
-      "Sunset"
     ]
   }
 ]

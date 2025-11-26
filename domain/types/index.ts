@@ -12,28 +12,9 @@ export interface RestaurantInfo {
   twitter: string;
 }
 
-export interface HistoryEvent {
-  year: number;
-  event: string;
-}
-
-export interface MisoType {
-  id: string;
-  name: string;
-  origin: string;
-  flavor: string;
-  imageUrl: string;
-  description: string;
-  characteristics: string[];
-  bestFor: string[];
-}
-
-export interface MisoInfo {
-  intro: string;
-  types: MisoType[];
-}
 
 export interface FoodDrinkItem {
+  id: string;
   name: string;
   category: 'ramen' | 'beer' | 'sake';
   highlight: string;

@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Providers from '@/components/Providers';
 import { Analytics } from "@vercel/analytics/next"
-import { Navbar } from '@/components/ui/Navbar';
+import Header from '@/components/Header';
 import { Footer } from '@/components/ui/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -26,7 +26,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
         <Providers>
-          <Navbar />
+          <Header />
           <main>{children}</main>
           <Footer />
         </Providers>

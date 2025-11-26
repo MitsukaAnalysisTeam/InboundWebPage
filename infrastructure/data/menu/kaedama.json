@@ -1,0 +1,75 @@
+[
+  {
+    "id": "kae-dama",
+    "name": "Kae-Dama (Noodle Refill)",
+    "dietary": [],
+    "category": "Kaedama",
+    "imageUrl": "/images/menu/kae-dama.jpg",
+    "priceYen": 350,
+    "allergies": [
+      "wheat"
+    ],
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ],
+    "description": "Add an extra serving of noodles to your remaining soup. A simple noodle refill to enjoy a little more.",
+    "ingredients": [
+      "wheat noodles"
+    ]
+  },
+  {
+    "id": "marinated-noodle-refill-egg",
+    "name": "Marinated Noodle Refill (Egg & Soy Sauce)",
+    "dietary": [],
+    "category": "Kaedama",
+    "imageUrl": "/images/menu/marinated-noodle-refill-egg.jpg",
+    "priceYen": {
+      "egg & soy sauce": 500
+    },
+    "allergies": [
+      "wheat",
+      "soy",
+      "egg"
+    ],
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ],
+    "description": "Seasoned noodle refill. Choose from two flavors: Egg & Soy Sauce, or Garlic & Chili Oil.",
+    "ingredients": [
+      "wheat noodles",
+      "seasoning"
+    ]
+  },
+  {
+    "id": "marinated-noodle-refill-garlic",
+    "name": "Marinated Noodle Refill (Garlic & Chili Oil)",
+    "dietary": [],
+    "category": "Kaedama",
+    "imageUrl": "/images/menu/marinated-noodle-refill-garlic.jpg",
+    "priceYen": {
+      "garlic & chili oil": 500
+    },
+    "allergies": [
+      "wheat",
+      "soy",
+      "egg"
+    ],
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner",
+      "Midnight"
+    ],
+    "description": "Seasoned noodle refill. Choose from two flavors: Egg & Soy Sauce, or Garlic & Chili Oil.",
+    "ingredients": [
+      "wheat noodles",
+      "seasoning"
+    ]
+  }
+]

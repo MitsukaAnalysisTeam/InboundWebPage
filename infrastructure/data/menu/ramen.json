@@ -1,13 +1,28 @@
 [
   {
     "id": "white-miso",
-    "category": "Ramen",
     "name": "White Miso Ramen",
+    "dietary": [
+      "pork"
+    ],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/white-miso.jpg",
     "priceYen": {
-      "normal": 1060,
       "+egg": 1210,
+      "normal": 1060,
       "special": 1680
     },
+    "allergies": [
+      "soy",
+      "wheat",
+      "egg",
+      "dairy"
+    ],
+    "availableAt": [
+      "Lunch",
+      "Dinner"
+    ],
+    "description": "This is the very first miso ramen ever created at Mitsukabose—a bowl that captures our origins. The soup is made with a smooth white miso base, gently enriched with the comforting aroma of Japanese dashi. Its mild, savory flavor brings warmth to the soul with every sip. Toppings include tender slices of chashu pork, aromatic green onions, house-made chicken meatballs (tsukune), and sweet onions that enhance the broth's natural richness. Each element pairs harmoniously with the soup, offering a satisfying and balanced experience in every bite. Finished with thin noodles that gently soak up the white miso flavor, this bowl is loved by everyone—from seasoned ramen fans to children tasting miso ramen for the first time.",
     "ingredients": [
       "miso broth",
       "wheat noodles",
@@ -17,31 +32,30 @@
       "egg",
       "chicken meatballs",
       "sweet onions"
-    ],
-    "dietary": [
-      "pork"
-    ],
-    "allergies": [
-      "soy",
-      "wheat",
-      "egg",
-      "dairy"
-    ],
-    "imageUrl": "/images/menu/ramen-001.jpg",
-    "description": "This is the very first miso ramen ever created at Mitsukabose—a bowl that captures our origins. The soup is made with a smooth white miso base, gently enriched with the comforting aroma of Japanese dashi. Its mild, savory flavor brings warmth to the soul with every sip. Toppings include tender slices of chashu pork, aromatic green onions, house-made chicken meatballs (tsukune), and sweet onions that enhance the broth's natural richness. Each element pairs harmoniously with the soup, offering a satisfying and balanced experience in every bite. Finished with thin noodles that gently soak up the white miso flavor, this bowl is loved by everyone—from seasoned ramen fans to children tasting miso ramen for the first time.",
-    "availableAt": [
-      "Lunch",
-      "Dinner"
     ]
   },
   {
     "id": "white-miso",
-    "category": "Ramen",
     "name": "White Miso Ramen",
+    "dietary": [
+      "pork"
+    ],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/white-miso.jpg",
     "priceYen": {
-      "normal": 1060,
-      "+egg": 1210
+      "+egg": 1210,
+      "normal": 1060
     },
+    "allergies": [
+      "soy",
+      "wheat",
+      "egg",
+      "dairy"
+    ],
+    "availableAt": [
+      "Sunset"
+    ],
+    "description": "This is the very first miso ramen ever created at Mitsukabose—a bowl that captures our origins. The soup is made with a smooth white miso base, gently enriched with the comforting aroma of Japanese dashi. Its mild, savory flavor brings warmth to the soul with every sip. Toppings include tender slices of chashu pork, aromatic green onions, house-made chicken meatballs (tsukune), and sweet onions that enhance the broth's natural richness. Each element pairs harmoniously with the soup, offering a satisfying and balanced experience in every bite. Finished with thin noodles that gently soak up the white miso flavor, this bowl is loved by everyone—from seasoned ramen fans to children tasting miso ramen for the first time.",
     "ingredients": [
       "miso broth",
       "wheat noodles",
@@ -51,31 +65,31 @@
       "egg",
       "chicken meatballs",
       "sweet onions"
-    ],
+    ]
+  },
+  {
+    "id": "red-miso",
+    "name": "Red Miso Ramen",
     "dietary": [
       "pork"
     ],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/red-miso.jpg",
+    "priceYen": {
+      "+egg": 1210,
+      "normal": 1060,
+      "special": 1810
+    },
     "allergies": [
       "soy",
       "wheat",
       "egg",
       "dairy"
     ],
-    "imageUrl": "/images/menu/ramen-001.jpg",
-    "description": "This is the very first miso ramen ever created at Mitsukabose—a bowl that captures our origins. The soup is made with a smooth white miso base, gently enriched with the comforting aroma of Japanese dashi. Its mild, savory flavor brings warmth to the soul with every sip. Toppings include tender slices of chashu pork, aromatic green onions, house-made chicken meatballs (tsukune), and sweet onions that enhance the broth's natural richness. Each element pairs harmoniously with the soup, offering a satisfying and balanced experience in every bite. Finished with thin noodles that gently soak up the white miso flavor, this bowl is loved by everyone—from seasoned ramen fans to children tasting miso ramen for the first time.",
     "availableAt": [
-      "Sunset"
-    ]
-  },
-  {
-    "id": "red-miso",
-    "category": "Ramen",
-    "name": "Red Miso Ramen",
-    "priceYen": {
-      "normal": 1060,
-      "+egg": 1210,
-      "special": 1810
-    },
+      "Dinner"
+    ],
+    "description": "A masterful blend of several red misos creates a broth rich in umami and complexity. Bold yet balanced, the soup offers a satisfying depth of flavor. Toppings include tender, melt-in-your-mouth chashu pork, springy handmade chicken meatballs, and refreshing green onions that add brightness to each bite. Medium-thick noodles soak up the flavorful broth perfectly, creating a delicious harmony of taste and texture in every mouthful. A classic bowl with timeless richness and heartwarming comfort.",
     "ingredients": [
       "red miso broth",
       "wheat noodles",
@@ -85,31 +99,32 @@
       "egg",
       "spices",
       "chicken meatballs"
-    ],
+    ]
+  },
+  {
+    "id": "spicy-miso",
+    "name": "Spicy Miso Ramen",
     "dietary": [
-      "pork"
+      "pork",
+      "spicy"
     ],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/spicy-miso.jpg",
+    "priceYen": {
+      "cheese": 1350,
+      "normal": 1150,
+      "special": 1870
+    },
     "allergies": [
       "soy",
       "wheat",
       "egg",
       "dairy"
     ],
-    "imageUrl": "/images/menu/ramen-002.jpg",
-    "description": "A masterful blend of several red misos creates a broth rich in umami and complexity. Bold yet balanced, the soup offers a satisfying depth of flavor. Toppings include tender, melt-in-your-mouth chashu pork, springy handmade chicken meatballs, and refreshing green onions that add brightness to each bite. Medium-thick noodles soak up the flavorful broth perfectly, creating a delicious harmony of taste and texture in every mouthful. A classic bowl with timeless richness and heartwarming comfort.",
     "availableAt": [
       "Dinner"
-    ]
-  },
-  {
-    "id": "spicy-miso",
-    "category": "Ramen",
-    "name": "Spicy Miso Ramen",
-    "priceYen": {
-      "normal": 1150,
-      "cheese": 1350,
-      "special": 1870
-    },
+    ],
+    "description": "This rich and complex ramen brings together the bold kick of Japanese miso with the deep, sweet heat of Korean-style spicy miso. The star topping—torched cheese—melts into the broth, creating a creamy, smoky richness that takes the flavor to the next level. Toppings like tender chashu pork, green onions, handmade chicken meatballs, and strips of roasted seaweed (bara nori) add unique textures and aromas, making every bite exciting and satisfying. A luxurious bowl for spice lovers—especially those who can't resist melty, golden cheese.",
     "ingredients": [
       "miso broth",
       "wheat noodles",
@@ -121,63 +136,62 @@
       "cheese",
       "chicken meatballs",
       "roasted seaweed"
-    ],
-    "dietary": [
-      "pork",
-      "spicy"
-    ],
-    "allergies": [
-      "soy",
-      "wheat",
-      "egg",
-      "dairy"
-    ],
-    "imageUrl": "/images/menu/ramen-003.jpg",
-    "description": "This rich and complex ramen brings together the bold kick of Japanese miso with the deep, sweet heat of Korean-style spicy miso. The star topping—torched cheese—melts into the broth, creating a creamy, smoky richness that takes the flavor to the next level. Toppings like tender chashu pork, green onions, handmade chicken meatballs, and strips of roasted seaweed (bara nori) add unique textures and aromas, making every bite exciting and satisfying. A luxurious bowl for spice lovers—especially those who can't resist melty, golden cheese.",
-    "availableAt": [
-      "Dinner"
     ]
   },
   {
     "id": "tsukemen-ver8",
-    "category": "Ramen",
     "name": "Miso Tsukemen No.8",
+    "dietary": [
+      "pork"
+    ],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/tsukemen-ver8.jpg",
     "priceYen": {
       "150g": 1250,
       "200g": 1300,
       "300g": 1400,
       "special+": 590
     },
-    "ingredients": [
-      "miso dipping broth",
-      "thick noodles",
-      "stir-fried vegetables",
-      "garlic oil",
-      "pork chashu"
-    ],
-    "dietary": [
-      "pork"
-    ],
     "allergies": [
       "soy",
       "wheat",
       "egg",
       "dairy"
     ],
-    "imageUrl": "/images/menu/tsukemen-001.jpg",
-    "description": "A long-standing customer favorite, this richly flavored miso tsukemen features a balanced blend of white miso and spicy miso in a deeply satisfying dipping broth. Stir-fried vegetables add a smoky aroma that pairs beautifully with the soup, while our house-made garlic oil (mayu) brings extra depth and umami to every bite. A flavorful, hearty bowl made for miso lovers.",
     "availableAt": [
       "Dinner"
+    ],
+    "description": "A long-standing customer favorite, this richly flavored miso tsukemen features a balanced blend of white miso and spicy miso in a deeply satisfying dipping broth. Stir-fried vegetables add a smoky aroma that pairs beautifully with the soup, while our house-made garlic oil (mayu) brings extra depth and umami to every bite. A flavorful, hearty bowl made for miso lovers.",
+    "ingredients": [
+      "miso dipping broth",
+      "thick noodles",
+      "stir-fried vegetables",
+      "garlic oil",
+      "pork chashu"
     ]
   },
   {
     "id": "vegan-tantanmen",
-    "category": "Ramen",
     "name": "Vegan Tantanmen",
+    "dietary": [
+      "vegan",
+      "vegetarian",
+      "gluten-free"
+    ],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/vegan-tantanmen.jpg",
     "priceYen": {
       "normal": 1350,
       "gluten-free noodles": 1690
     },
+    "allergies": [
+      "soy",
+      "peanuts"
+    ],
+    "availableAt": [
+      "Dinner"
+    ],
+    "description": "Don't let the word 'vegan' fool you—this is a truly rich and satisfying bowl of tantanmen, full of depth and umami. The broth is crafted without any animal products or fish. Instead, we combine a savory base of shiitake mushrooms and kombu seaweed with creamy soy milk and sake kasu (sake lees) from the renowned Akishika Sake Brewery. The result is a smooth, mellow soup that warms you from the inside out. We use Kāchan Miso, a lovingly made local miso from Toyono Town, to give the bowl a home-style richness. On top, our special vegan 'meat miso' is made from pea-based plant protein and enhanced with a secret ingredient that brings everything together beautifully. Enjoy the deep, nutty aroma and complex flavor of this plant-powered tantanmen—it might just change your mind about vegan ramen.",
     "ingredients": [
       "sesame-chili broth",
       "rice noodles",
@@ -186,30 +200,30 @@
       "bamboo shoots",
       "peanuts",
       "pea protein meat miso"
-    ],
+    ]
+  },
+  {
+    "id": "vegi-miso",
+    "name": "Vegetable Miso Ramen",
     "dietary": [
       "vegan",
       "vegetarian",
       "gluten-free"
     ],
-    "allergies": [
-      "soy",
-      "peanuts"
-    ],
-    "imageUrl": "/images/menu/ramen-007.jpg",
-    "description": "Don't let the word 'vegan' fool you—this is a truly rich and satisfying bowl of tantanmen, full of depth and umami. The broth is crafted without any animal products or fish. Instead, we combine a savory base of shiitake mushrooms and kombu seaweed with creamy soy milk and sake kasu (sake lees) from the renowned Akishika Sake Brewery. The result is a smooth, mellow soup that warms you from the inside out. We use Kāchan Miso, a lovingly made local miso from Toyono Town, to give the bowl a home-style richness. On top, our special vegan 'meat miso' is made from pea-based plant protein and enhanced with a secret ingredient that brings everything together beautifully. Enjoy the deep, nutty aroma and complex flavor of this plant-powered tantanmen—it might just change your mind about vegan ramen.",
-    "availableAt": [
-      "Dinner"
-    ]
-  },
-  {
-    "id": "vegi-miso",
     "category": "Ramen",
-    "name": "Vegetable Miso Ramen",
+    "imageUrl": "/images/menu/vegi-miso.jpg",
     "priceYen": {
       "normal": 1600,
       "gluten-free noodles": 1940
     },
+    "allergies": [
+      "soy"
+    ],
+    "availableAt": [
+      "Lunch",
+      "Dinner"
+    ],
+    "description": "A luxurious white miso potage made by slow-simmering potatoes, corn, edamame, and more—this rich, velvety broth captures the natural sweetness of vegetables and the umami of miso. Each bowl is topped with a generous selection of fresh, seasonal vegetables, offering a vibrant taste of nature's bounty. Paired with medium-thin whole wheat noodles, this ramen is not only flavorful but also full of texture and nourishment. Gluten-free noodles are also available upon request, making this bowl a delicious and inclusive choice for all.",
     "ingredients": [
       "white miso potage",
       "potato",
@@ -217,30 +231,29 @@
       "edamame",
       "seasonal vegetables",
       "whole wheat noodles"
-    ],
-    "dietary": [
-      "vegan",
-      "vegetarian",
-      "gluten-free"
-    ],
-    "allergies": [
-      "soy"
-    ],
-    "imageUrl": "/images/menu/ramen-005.jpg",
-    "description": "A luxurious white miso potage made by slow-simmering potatoes, corn, edamame, and more—this rich, velvety broth captures the natural sweetness of vegetables and the umami of miso. Each bowl is topped with a generous selection of fresh, seasonal vegetables, offering a vibrant taste of nature's bounty. Paired with medium-thin whole wheat noodles, this ramen is not only flavorful but also full of texture and nourishment. Gluten-free noodles are also available upon request, making this bowl a delicious and inclusive choice for all.",
-    "availableAt": [
-      "Lunch",
-      "Dinner"
     ]
   },
   {
     "id": "hokkaido-miso-corn",
-    "category": "Ramen",
     "name": "Hokkaido-Style Miso Corn Ramen",
+    "dietary": [
+      "pork"
+    ],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/hokkaido-miso-corn.jpg",
     "priceYen": {
-      "normal": 1200,
-      "butter": 1350
+      "butter": 1350,
+      "normal": 1200
     },
+    "allergies": [
+      "soy",
+      "wheat",
+      "dairy"
+    ],
+    "availableAt": [
+      "Dinner"
+    ],
+    "description": "This deeply flavorful bowl features a bold blend of white miso and spicy miso in a hearty soup that's both mellow and packed with umami. Sweet corn and fermented butter melt into the broth, while a drizzle of hot aromatic oil adds a roasted depth that brings everything together beautifully. Topped with tender chashu pork, fragrant green onions, and a mountain of crisp white shredded leeks (shiraganegi), the soup's richness is perfectly matched with thick, chewy noodles. And for the final Hokkaido-inspired touch? A scoop of charred miso corn sizzled with hot oil—smoky, sweet, and irresistibly satisfying.",
     "ingredients": [
       "white miso",
       "spicy miso",
@@ -252,30 +265,31 @@
       "shredded leeks",
       "charred miso corn",
       "aromatic oil"
-    ],
-    "dietary": [
-      "pork"
-    ],
-    "allergies": [
-      "soy",
-      "wheat",
-      "dairy"
-    ],
-    "imageUrl": "/images/menu/ramen-008.jpg",
-    "description": "This deeply flavorful bowl features a bold blend of white miso and spicy miso in a hearty soup that's both mellow and packed with umami. Sweet corn and fermented butter melt into the broth, while a drizzle of hot aromatic oil adds a roasted depth that brings everything together beautifully. Topped with tender chashu pork, fragrant green onions, and a mountain of crisp white shredded leeks (shiraganegi), the soup's richness is perfectly matched with thick, chewy noodles. And for the final Hokkaido-inspired touch? A scoop of charred miso corn sizzled with hot oil—smoky, sweet, and irresistibly satisfying.",
-    "availableAt": [
-      "Dinner"
     ]
   },
   {
     "id": "toyono-ramen",
-    "category": "Ramen",
     "name": "TOYONO Ramen",
+    "dietary": [
+      "pork",
+      "seafood"
+    ],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/toyono-ramen.jpg",
     "priceYen": {
       "normal": 1060,
       "asari clams": 1300,
-      "asari clams&butter":1450
+      "asari clams&butter": 1450
     },
+    "allergies": [
+      "soy",
+      "wheat",
+      "shellfish"
+    ],
+    "availableAt": [
+      "Dinner"
+    ],
+    "description": "This comforting bowl features a rich, umami-packed broth made with Kaachan Miso—a lovingly handcrafted miso from Toyono Town in Osaka. Each spoonful brings gentle depth and warmth, while the toppings—tender chashu pork, fresh green onions, and handmade chicken meatballs—add layers of flavor and texture. Fragrant bara nori (roasted seaweed) finishes the bowl with a subtle coastal aroma. Don't miss the special pairing of clams and miso, which add a gentle brininess and extra umami to this soulful ramen. A bowl full of hometown care and culinary depth.",
     "ingredients": [
       "Kaachan miso broth",
       "wheat noodles",
@@ -284,63 +298,61 @@
       "chicken meatballs",
       "roasted seaweed",
       "clams"
-    ],
-    "dietary": [
-      "pork",
-      "seafood"
-    ],
-    "allergies": [
-      "soy",
-      "wheat",
-      "shellfish"
-    ],
-    "imageUrl": "/images/menu/ramen-010.jpg",
-    "description": "This comforting bowl features a rich, umami-packed broth made with Kaachan Miso—a lovingly handcrafted miso from Toyono Town in Osaka. Each spoonful brings gentle depth and warmth, while the toppings—tender chashu pork, fresh green onions, and handmade chicken meatballs—add layers of flavor and texture. Fragrant bara nori (roasted seaweed) finishes the bowl with a subtle coastal aroma. Don't miss the special pairing of clams and miso, which add a gentle brininess and extra umami to this soulful ramen. A bowl full of hometown care and culinary depth.",
-    "availableAt": [
-      "Dinner"
     ]
   },
   {
     "id": "kids-ramen",
-    "category": "Ramen",
     "name": "Kids Ramen",
+    "dietary": [
+      "pork"
+    ],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/kids-ramen.jpg",
     "priceYen": {
       "white-miso": 500,
       "toyono-miso": 500
     },
+    "allergies": [
+      "soy",
+      "wheat",
+      "dairy"
+    ],
+    "availableAt": [
+      "Lunch",
+      "Sunset",
+      "Dinner"
+    ],
+    "description": "A smaller, gentle bowl of ramen made just for kids (elementary school age and under). Choose from two mellow miso flavors: • White Miso – Smooth and comforting • TOYONO Miso – Local miso with a touch of home-style warmth.",
     "ingredients": [
       "mild miso broth",
       "wheat noodles",
       "pork chashu",
       "green onions",
       "corn"
-    ],
-    "dietary": [
-      "pork"
-    ],
-    "allergies": [
-      "soy",
-      "wheat",
-      "dairy"
-    ],
-    "imageUrl": "/images/menu/ramen-006.jpg",
-    "description": "A smaller, gentle bowl of ramen made just for kids (elementary school age and under). Choose from two mellow miso flavors: • White Miso – Smooth and comforting • TOYONO Miso – Local miso with a touch of home-style warmth.",
-    "availableAt": [
-      "Lunch",
-      "Sunset",
-      "Dinner"
     ]
   },
   {
     "id": "burnt-shrimp-miso-ramen",
-    "category": "Ramen",
     "name": "Burnt Shrimp Miso Ramen",
+    "dietary": [],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/burnt-shrimp-miso-ramen.jpg",
     "priceYen": {
-      "normal": 1230,
       "egg": 1380,
-      "spicy":1360,
-      "egg&spicy":1510
+      "spicy": 1360,
+      "normal": 1230,
+      "egg&spicy": 1510
     },
+    "allergies": [
+      "shrimp",
+      "wheat",
+      "egg",
+      "soy"
+    ],
+    "availableAt": [
+      "Lunch"
+    ],
+    "description": "A bowl of comforting Kyoto white miso broth with a delicate sweetness, infused with dashi for added depth. Topped with a sizzling pour of spicy hot olive oil for a flavorful kick. Toppings include: House-made Yuzu Chicken Meatball, Shredded Leek, Mitsuba Herbs, Rare 'Kaachan Miso' Marinated Chashu.",
     "ingredients": [
       "shrimp miso broth",
       "whole wheat noodles",
@@ -348,30 +360,30 @@
       "shredded leek",
       "mitsuba",
       "kaachan miso chashu"
-    ],
+    ]
+  },
+  {
+    "id": "light-shrimp-miso-ramen",
+    "name": "Light Shrimp Miso Ramen",
     "dietary": [],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/light-shrimp-miso-ramen.jpg",
+    "priceYen": {
+      "egg": 1210,
+      "spicy": 1190,
+      "normal": 1060,
+      "egg&spicy": 1340
+    },
     "allergies": [
       "shrimp",
       "wheat",
       "egg",
       "soy"
     ],
-    "imageUrl": "/images/menu/burnt-shrimp-miso-ramen.jpg",
-    "description": "A bowl of comforting Kyoto white miso broth with a delicate sweetness, infused with dashi for added depth. Topped with a sizzling pour of spicy hot olive oil for a flavorful kick. Toppings include: House-made Yuzu Chicken Meatball, Shredded Leek, Mitsuba Herbs, Rare 'Kaachan Miso' Marinated Chashu.",
     "availableAt": [
       "Lunch"
-    ]
-  },
-  {
-    "id": "light-shrimp-miso-ramen",
-    "category": "Ramen",
-    "name": "Light Shrimp Miso Ramen",
-    "priceYen": {
-      "normal": 1060,
-      "egg": 1210,
-      "spicy":1190,
-      "egg&spicy":1340
-    },
+    ],
+    "description": "A clear, delicate shrimp miso soup accented with fragrant dashi and shrimp oil — light yet full of umami. Toppings include: House-made Yuzu Chicken Meatball, Shredded Leek, Mitsuba Herbs, Rare 'Kaachan Miso' Marinated Chashu.",
     "ingredients": [
       "clear shrimp miso soup",
       "whole wheat noodles",
@@ -379,25 +391,25 @@
       "shredded leek",
       "mitsuba",
       "kaachan miso chashu"
-    ],
-    "dietary": [],
-    "allergies": [
-      "shrimp",
-      "wheat",
-      "egg",
-      "soy"
-    ],
-    "imageUrl": "/images/menu/light-shrimp-miso-ramen.jpg",
-    "description": "A clear, delicate shrimp miso soup accented with fragrant dashi and shrimp oil — light yet full of umami. Toppings include: House-made Yuzu Chicken Meatball, Shredded Leek, Mitsuba Herbs, Rare 'Kaachan Miso' Marinated Chashu.",
-    "availableAt": [
-      "Lunch"
     ]
   },
   {
     "id": "midnight-white-miso",
-    "category": "Ramen",
     "name": "Late-Night Special: White Miso Ramen",
+    "dietary": [],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/midnight-white-miso.jpg",
     "priceYen": 1250,
+    "allergies": [
+      "soy",
+      "wheat",
+      "egg",
+      "dairy"
+    ],
+    "availableAt": [
+      "Midnight"
+    ],
+    "description": "A comforting bowl made exclusively for late-night cravings. Featuring a mellow and slightly sweet white miso broth, this ramen is topped with tender rare char siu, savory chicken meatballs, crisp bean sprouts, wood ear mushrooms, fresh green onions, and sweet sautéed onions.",
     "ingredients": [
       "white miso broth",
       "whole wheat noodles",
@@ -407,25 +419,25 @@
       "wood ear mushrooms",
       "green onions",
       "sweet onions"
-    ],
+    ]
+  },
+  {
+    "id": "midnight-red-miso",
+    "name": "Late-Night Special: Red Miso Ramen",
     "dietary": [],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/midnight-red-miso.jpg",
+    "priceYen": 1380,
     "allergies": [
       "soy",
       "wheat",
       "egg",
       "dairy"
     ],
-    "imageUrl": "/images/menu/midnight-white-miso.jpg",
-    "description": "A comforting bowl made exclusively for late-night cravings. Featuring a mellow and slightly sweet white miso broth, this ramen is topped with tender rare char siu, savory chicken meatballs, crisp bean sprouts, wood ear mushrooms, fresh green onions, and sweet sautéed onions.",
     "availableAt": [
       "Midnight"
-    ]
-  },
-  {
-    "id": "midnight-red-miso",
-    "category": "Ramen",
-    "name": "Late-Night Special: Red Miso Ramen",
-    "priceYen": 1380,
+    ],
+    "description": "A bold and satisfying ramen created just for the night owls. This rich red miso broth packs depth and umami, accented with a hint of sansho pepper for a unique aromatic kick.",
     "ingredients": [
       "red miso broth",
       "whole wheat noodles",
@@ -436,29 +448,29 @@
       "onion",
       "mitsuba mix",
       "sansho pepper"
-    ],
-    "dietary": [],
-    "allergies": [
-      "soy",
-      "wheat",
-      "egg",
-      "dairy"
-    ],
-    "imageUrl": "/images/menu/midnight-red-miso.jpg",
-    "description": "A bold and satisfying ramen created just for the night owls. This rich red miso broth packs depth and umami, accented with a hint of sansho pepper for a unique aromatic kick.",
-    "availableAt": [
-      "Midnight"
     ]
   },
   {
     "id": "midnight-tsukemen-6",
-    "category": "Ramen",
     "name": "Late-Night Special: Tsukemen No.6",
+    "dietary": [],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/midnight-tsukemen-6.jpg",
     "priceYen": {
       "150g": 1530,
       "200g": 1580,
       "300g": 1680
     },
+    "allergies": [
+      "soy",
+      "wheat",
+      "egg",
+      "pork"
+    ],
+    "availableAt": [
+      "Midnight"
+    ],
+    "description": "A rich and bold dipping noodle experience featuring a spicy miso base that brings heat and depth in every bite. Enjoy three kinds of pork—tender rare char siu, seared pork slices, and cubed char siu—for a satisfying variety of textures and flavors.",
     "ingredients": [
       "spicy miso dipping sauce",
       "flat whole wheat noodles",
@@ -467,29 +479,29 @@
       "cubed char siu",
       "spicy meat miso",
       "green onions"
-    ],
+    ]
+  },
+  {
+    "id": "midnight-tsukemen-8",
+    "name": "Late-Night Special: Tsukemen No.8",
     "dietary": [],
+    "category": "Ramen",
+    "imageUrl": "/images/menu/midnight-tsukemen-8.jpg",
+    "priceYen": {
+      "150g": 1530,
+      "200g": 1580,
+      "300g": 1680
+    },
     "allergies": [
       "soy",
       "wheat",
       "egg",
       "pork"
     ],
-    "imageUrl": "/images/menu/midnight-tsukemen-6.jpg",
-    "description": "A rich and bold dipping noodle experience featuring a spicy miso base that brings heat and depth in every bite. Enjoy three kinds of pork—tender rare char siu, seared pork slices, and cubed char siu—for a satisfying variety of textures and flavors.",
     "availableAt": [
       "Midnight"
-    ]
-  },
-  {
-    "id": "midnight-tsukemen-8",
-    "category": "Ramen",
-    "name": "Late-Night Special: Tsukemen No.8",
-    "priceYen": {
-      "150g": 1530,
-      "200g": 1580,
-      "300g": 1680
-    },
+    ],
+    "description": "An indulgent and aromatic dipping noodle dish, Tsukemen No.8 layers deep umami with savory richness. The broth features spicy meat miso and is enhanced with fragrant black garlic oil (mayu), delivering a bold, smoky finish.",
     "ingredients": [
       "spicy meat miso broth",
       "flat whole wheat noodles",
@@ -501,92 +513,6 @@
       "fried onions",
       "black garlic oil",
       "green onions"
-    ],
-    "dietary": [],
-    "allergies": [
-      "soy",
-      "wheat",
-      "egg",
-      "pork"
-    ],
-    "imageUrl": "/images/menu/midnight-tsukemen-8.jpg",
-    "description": "An indulgent and aromatic dipping noodle dish, Tsukemen No.8 layers deep umami with savory richness. The broth features spicy meat miso and is enhanced with fragrant black garlic oil (mayu), delivering a bold, smoky finish.",
-    "availableAt": [
-      "Midnight"
-    ]
-  }
-  ,
-  {
-    "id": "kae-dama",
-    "category": "Kaedama",
-    "name": "Kae-Dama (Noodle Refill)",
-    "priceYen": 350,
-    "ingredients": [
-      "wheat noodles"
-    ],
-    "dietary": [],
-    "allergies": [
-      "wheat"
-    ],
-    "imageUrl": "/images/menu/kae-dama.jpg",
-    "description": "Add an extra serving of noodles to your remaining soup. A simple noodle refill to enjoy a little more.",
-    "availableAt": [
-      "Lunch",
-      "Sunset",
-      "Dinner",
-      "Midnight"
-    ]
-  },
-  {
-    "id": "marinated-noodle-refill-egg",
-    "category": "Kaedama",
-    "name": "Marinated Noodle Refill (Egg & Soy Sauce)",
-    "priceYen": {
-      "egg & soy sauce": 500
-    },
-    "ingredients": [
-      "wheat noodles",
-      "seasoning"
-    ],
-    "dietary": [],
-    "allergies": [
-      "wheat",
-      "soy",
-      "egg"
-    ],
-    "imageUrl": "/images/menu/marinated-noodle-refill-egg.jpg",
-    "description": "Seasoned noodle refill. Choose from two flavors: Egg & Soy Sauce, or Garlic & Chili Oil.",
-    "availableAt": [
-      "Lunch",
-      "Sunset",
-      "Dinner",
-      "Midnight"
-    ]
-  },
-  {
-    "id": "marinated-noodle-refill-garlic",
-    "category": "Kaedama",
-    "name": "Marinated Noodle Refill (Garlic & Chili Oil)",
-    "priceYen": {
-      "garlic & chili oil": 500
-    },
-    "ingredients": [
-      "wheat noodles",
-      "seasoning"
-    ],
-    "dietary": [],
-    "allergies": [
-      "wheat",
-      "soy",
-      "egg"
-    ],
-    "imageUrl": "/images/menu/marinated-noodle-refill-garlic.jpg",
-    "description": "Seasoned noodle refill. Choose from two flavors: Egg & Soy Sauce, or Garlic & Chili Oil.",
-    "availableAt": [
-      "Lunch",
-      "Sunset",
-      "Dinner",
-      "Midnight"
     ]
   }
 ]

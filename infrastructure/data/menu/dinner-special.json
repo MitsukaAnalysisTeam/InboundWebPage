@@ -1,36 +1,36 @@
 [
   {
     "id": "yoidore-set",
-    "category": "DinnerSpecial",
     "name": "Yoidore Set",
+    "dietary": [],
+    "category": "DinnerSpecial",
+    "imageUrl": "/images/menu/yoidore-set.jpg",
     "priceYen": 2580,
+    "allergies": [],
+    "availableAt": [
+      "Dinner"
+    ],
+    "description": "Indulge in our curated tasting experience featuring five delicious appetizers perfectly paired with premium Osaka-brewed beer and sake. This celebratory set showcases the finest local flavors:\n• Artisanal ham crafted from Osaka Agricultural High School’s specialty “Nogei Pork”\n• Pickled seasonal vegetables from local farms\n• Thinly-sliced chashu (braised pork) carpaccio\n• Our famous creamy egg potato salad with runny yolks and house-made miso mayo\n• “Shin” fermented fried chicken with onion koji and fresh garlic\n\nThis exquisite selection comes paired with your choice of award-winning Minoh Beer or premium Akishika sake. The perfect way to elevate your Mitsukabōzu dining experience while supporting local producers.",
     "ingredients": [
       "assorted appetizers",
       "beer or sake"
-    ],
-    "dietary": [],
-    "allergies": [],
-    "imageUrl": "/images/menu/yoidore-set.jpg",
-    "description": "Indulge in our curated tasting experience featuring five delicious appetizers perfectly paired with premium Osaka-brewed beer and sake. This celebratory set showcases the finest local flavors:\n• Artisanal ham crafted from Osaka Agricultural High School’s specialty “Nogei Pork”\n• Pickled seasonal vegetables from local farms\n• Thinly-sliced chashu (braised pork) carpaccio\n• Our famous creamy egg potato salad with runny yolks and house-made miso mayo\n• “Shin” fermented fried chicken with onion koji and fresh garlic\n\nThis exquisite selection comes paired with your choice of award-winning Minoh Beer or premium Akishika sake. The perfect way to elevate your Mitsukabōzu dining experience while supporting local producers.",
-    "availableAt": [
-      "Dinner"
     ]
   },
   {
     "id": "choinomi-set",
-    "category": "DinnerSpecial",
     "name": "Choi-Nomi Set",
+    "dietary": [],
+    "category": "DinnerSpecial",
+    "imageUrl": "/images/menu/choinomi-set.jpg",
     "priceYen": 1200,
+    "allergies": [],
+    "availableAt": [
+      "Dinner"
+    ],
+    "description": "Enjoy a casual drinking experience with our staff-selected appetizer paired with your choice of one premium beverage. This perfect light refreshment option allows you to sample our quality drinks without committing to a full set.\n\nChoose one drink from our carefully curated selection:\n• Award-winning Minoh Beer\n• Premium Akishika sake\n• Refreshing Akishika highball\n• Marusan Wine (red or white)\n\nOur knowledgeable staff will recommend the perfect small plate to complement your chosen beverage, creating a harmonious tasting experience. An ideal way to begin your meal or enjoy a quick visit to Mitsukabōzu.",
     "ingredients": [
       "appetizer",
       "choice of drink"
-    ],
-    "dietary": [],
-    "allergies": [],
-    "imageUrl": "/images/menu/choinomi-set.jpg",
-    "description": "Enjoy a casual drinking experience with our staff-selected appetizer paired with your choice of one premium beverage. This perfect light refreshment option allows you to sample our quality drinks without committing to a full set.\n\nChoose one drink from our carefully curated selection:\n• Award-winning Minoh Beer\n• Premium Akishika sake\n• Refreshing Akishika highball\n• Marusan Wine (red or white)\n\nOur knowledgeable staff will recommend the perfect small plate to complement your chosen beverage, creating a harmonious tasting experience. An ideal way to begin your meal or enjoy a quick visit to Mitsukabōzu.",
-    "availableAt": [
-      "Dinner"
     ]
   }
 ]
