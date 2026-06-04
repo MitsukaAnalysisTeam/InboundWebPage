@@ -197,38 +197,38 @@ export default function MenuClient() {
             </motion.div>
           )}
         </AnimatePresence>
-        <header className="relative z-10 pt-24 pb-16 px-4 text-center">
+        <header className="relative z-10 pt-20 pb-6 px-4 text-center">
           <div className="max-w-2xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.6 }}
             >
-              <p className="text-[10px] tracking-[0.5em] text-kohaku uppercase mb-4 font-light">
+              <p className="text-[9px] tracking-[0.5em] text-kohaku uppercase mb-2 font-light">
                 Mitsukabose
               </p>
             </motion.div>
             <motion.h1
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-serif text-5xl md:text-6xl font-light text-foreground mb-4 tracking-wide"
+              transition={{ duration: 0.7, delay: 0.05 }}
+              className="font-serif text-4xl md:text-5xl font-light text-foreground mb-2 tracking-wide"
             >
               Menu
             </motion.h1>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex items-center justify-center gap-4"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex items-center justify-center gap-3"
             >
-              <div className="w-10 h-px bg-kasshoku/25" />
-              <p className="text-base text-foreground-soft font-light">
+              <div className="w-8 h-px bg-kasshoku/20" />
+              <p className="text-sm text-foreground-soft font-light">
                 <span className="font-serif tracking-[0.3em]">お品書き</span>
-                <span className="mx-3 text-muted/50">·</span>
-                <span className="text-sm">Fermented Miso Ramen &amp; Craft Beer</span>
+                <span className="mx-2 text-muted/40">·</span>
+                <span className="text-xs">Fermented Miso Ramen &amp; Craft Beer</span>
               </p>
-              <div className="w-10 h-px bg-kasshoku/25" />
+              <div className="w-8 h-px bg-kasshoku/20" />
             </motion.div>
           </div>
         </header>
@@ -287,127 +287,131 @@ export default function MenuClient() {
           </div>
         </nav>
 
-        <main className="relative z-10 max-w-4xl mx-auto px-4 py-12">
+        <main className="relative z-10 max-w-5xl mx-auto px-3 sm:px-4 py-6">
           {(Object.keys(CATEGORY_LABELS) as MenuCategory[]).map((cat) =>
             grouped[cat]?.length ? (
-              <section id={`category-${cat}`} key={cat} className="mb-28 scroll-mt-32">
-                {/* Category header */}
-                <div className="mb-10 flex items-center gap-6">
-                  <div className="flex-1 h-px bg-kasshoku/15" />
-                  <div className="text-center">
-                    <p className="text-[10px] tracking-[0.4em] text-kohaku uppercase mb-1">
+              <section id={`category-${cat}`} key={cat} className="mb-14 scroll-mt-28">
+                {/* Category header — compact */}
+                <div className="mb-5 flex items-center gap-4">
+                  <div className="flex-1 h-px bg-kasshoku/12" />
+                  <div className="text-center flex-none">
+                    <p className="text-[9px] tracking-[0.35em] text-kohaku uppercase mb-0.5 font-light">
                       {CATEGORY_LABELS[cat].ja}
                     </p>
-                    <h2 className="font-serif text-2xl md:text-3xl font-light text-foreground tracking-wide">
+                    <h2 className="font-serif text-xl md:text-2xl font-light text-foreground tracking-wide">
                       {CATEGORY_LABELS[cat].en}
                     </h2>
                   </div>
-                  <div className="flex-1 h-px bg-kasshoku/15" />
+                  <div className="flex-1 h-px bg-kasshoku/12" />
+                  {/* Item count badge */}
+                  <span className="flex-none text-[10px] text-muted font-light tabular-nums">
+                    {grouped[cat].length} items
+                  </span>
                 </div>
-                <p className="text-center text-foreground-soft font-light text-sm max-w-lg mx-auto mb-10 leading-relaxed">
+                <p className="text-center text-foreground-soft font-light text-xs max-w-md mx-auto mb-6 leading-relaxed">
                   {CATEGORY_LABELS[cat].description}
                 </p>
 
-                <div className="flex overflow-x-auto pb-6 gap-5 snap-x snap-mandatory">
+                {/* Grid layout: 2 cols mobile, 3 cols desktop */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
                   {grouped[cat].map((item, itemIndex) => (
                     <motion.div
                       key={item.id}
-                      initial={{ opacity: 0, y: 24 }}
+                      initial={{ opacity: 0, y: 16 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.2 }}
-                      transition={{ duration: 0.55, delay: itemIndex * 0.07, ease: [0.22, 1, 0.36, 1] }}
-                      className="flex-none w-72 snap-center"
+                      viewport={{ once: true, amount: 0.15 }}
+                      transition={{ duration: 0.45, delay: Math.min(itemIndex * 0.05, 0.3), ease: [0.22, 1, 0.36, 1] }}
                     >
-                      <div className="group bg-background-soft/60 border border-kasshoku/10 rounded-md overflow-hidden shadow-[0_4px_24px_-8px_rgba(91,58,41,0.12)] hover:shadow-[0_12px_40px_-12px_rgba(91,58,41,0.22)] transition-all duration-400 hover:-translate-y-1 h-full flex flex-col">
-                        {/* Image */}
-                        <div className="relative h-52 overflow-hidden bg-background-soft flex-none">
+                      <div className="group bg-background-soft/50 border border-kasshoku/8 rounded-md overflow-hidden shadow-[0_2px_16px_-6px_rgba(91,58,41,0.1)] hover:shadow-[0_8px_32px_-8px_rgba(91,58,41,0.2)] transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+                        {/* Image — compact */}
+                        <div className="relative aspect-[4/3] overflow-hidden bg-background-soft flex-none">
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="text-muted text-xs tracking-widest uppercase font-light">No Image</span>
+                            <span className="text-muted text-[9px] tracking-widest uppercase font-light">No Image</span>
                           </div>
                           <Image
                             src={item.imageUrl}
                             alt={item.name}
                             fill
                             className="object-cover cursor-zoom-in group-hover:scale-105 transition-transform duration-700 ease-out"
-                            sizes="(max-width: 768px) 80vw, 320px"
+                            sizes="(max-width: 768px) 50vw, 280px"
                             onClick={() => setSelectedImage(item.imageUrl)}
                             onError={(e) => {
                               (e.target as HTMLImageElement).style.display = 'none';
                             }}
                           />
-                          {/* Price overlay on image */}
-                          <div className="absolute bottom-0 right-0 m-3">
+                          {/* Price badge */}
+                          <div className="absolute bottom-0 right-0 m-2">
                             {typeof item.priceYen === 'number' ? (
-                              <span className="bg-kasshoku-deep/85 backdrop-blur-sm text-kohaku-soft text-xs font-light px-3 py-1 rounded-sm tracking-wider">
+                              <span className="bg-kasshoku-deep/80 backdrop-blur-sm text-kohaku-soft text-[10px] font-light px-2 py-0.5 rounded-sm tracking-wider">
                                 ¥{item.priceYen.toLocaleString()}
                               </span>
                             ) : (
-                              <span className="bg-kasshoku-deep/85 backdrop-blur-sm text-kohaku-soft text-xs font-light px-3 py-1 rounded-sm tracking-wider">
+                              <span className="bg-kasshoku-deep/80 backdrop-blur-sm text-kohaku-soft text-[10px] font-light px-2 py-0.5 rounded-sm tracking-wider">
                                 ¥{Math.min(...Object.values(item.priceYen as Record<string, number>)).toLocaleString()}〜
                               </span>
                             )}
                           </div>
                         </div>
 
-                        <div className="p-5 flex flex-col flex-1">
+                        <div className="p-3 sm:p-4 flex flex-col flex-1">
                           {/* Title */}
-                          <h3 className="font-serif text-lg font-light text-foreground tracking-wide mb-1 leading-snug">
+                          <h3 className="font-serif text-sm sm:text-base font-light text-foreground tracking-wide mb-1 leading-snug line-clamp-2">
                             {item.name}
                           </h3>
 
-                          {/* Multi-price table */}
+                          {/* Multi-price table — collapsed on mobile */}
                           {typeof item.priceYen === 'object' && (
-                            <div className="mb-3 border-t border-kasshoku/10 pt-2 mt-1">
+                            <div className="mb-2 border-t border-kasshoku/8 pt-1.5 mt-1 hidden sm:block">
                               {Object.entries(item.priceYen as Record<string, number>).map(([size, price]) => (
-                                <div key={size} className="flex justify-between items-baseline py-0.5">
-                                  <span className="text-xs text-muted font-light truncate mr-2 max-w-[60%]">{size}</span>
-                                  <span className="text-xs text-foreground font-light tabular-nums whitespace-nowrap">¥{price.toLocaleString()}</span>
+                                <div key={size} className="flex justify-between items-baseline py-px">
+                                  <span className="text-[10px] text-muted font-light truncate mr-1.5 max-w-[55%]">{size}</span>
+                                  <span className="text-[10px] text-foreground font-light tabular-nums whitespace-nowrap">¥{price.toLocaleString()}</span>
                                 </div>
                               ))}
                             </div>
                           )}
 
-                          {/* Description */}
+                          {/* Description — 2 lines on mobile, 3 on desktop */}
                           <div className="flex-1">
-                            <div className={`text-foreground-soft text-sm font-light leading-relaxed ${
-                              expandedDescriptions[item.id] ? '' : 'line-clamp-3'
+                            <div className={`text-foreground-soft text-xs sm:text-sm font-light leading-relaxed ${
+                              expandedDescriptions[item.id] ? '' : 'line-clamp-2 sm:line-clamp-3'
                             }`}>
                               {item.description}
                             </div>
-                            {item.description.length > 120 && (
+                            {item.description.length > 80 && (
                               <button
-                                className="inline-flex items-center gap-1 text-shibu-aka text-xs mt-1.5 hover:text-shibu-aka-deep transition-colors focus:outline-none"
+                                className="inline-flex items-center gap-0.5 text-shibu-aka text-[10px] sm:text-xs mt-1 hover:text-shibu-aka-deep transition-colors focus:outline-none"
                                 onClick={() => toggleDescription(item.id)}
                               >
                                 {expandedDescriptions[item.id] ? (
-                                  <><span>Show less</span><ChevronUp className="w-3 h-3" /></>
+                                  <><span>Less</span><ChevronUp className="w-2.5 h-2.5" /></>
                                 ) : (
-                                  <><span>Read more</span><ChevronDown className="w-3 h-3" /></>
+                                  <><span>More</span><ChevronDown className="w-2.5 h-2.5" /></>
                                 )}
                               </button>
                             )}
                           </div>
 
-                          {/* Tags */}
-                          <div className="mt-4 pt-3 border-t border-kasshoku/10 space-y-2">
+                          {/* Tags — compact */}
+                          <div className="mt-2.5 pt-2 border-t border-kasshoku/8 space-y-1">
                             {item.ingredients.length > 0 && (
-                              <div className="flex flex-wrap gap-1">
-                                {item.ingredients.slice(0, 4).map((ing: string, i: number) => (
-                                  <span key={i} className="px-2 py-0.5 bg-background text-muted rounded-full text-[10px] font-light border border-kasshoku/10">
+                              <div className="flex flex-wrap gap-0.5">
+                                {item.ingredients.slice(0, 3).map((ing: string, i: number) => (
+                                  <span key={i} className="px-1.5 py-px bg-background text-muted rounded-full text-[8px] sm:text-[9px] font-light border border-kasshoku/8">
                                     {ing}
                                   </span>
                                 ))}
-                                {item.ingredients.length > 4 && (
-                                  <span className="px-2 py-0.5 text-muted text-[10px] font-light">+{item.ingredients.length - 4}</span>
+                                {item.ingredients.length > 3 && (
+                                  <span className="px-1 py-px text-muted text-[8px] font-light">+{item.ingredients.length - 3}</span>
                                 )}
                               </div>
                             )}
-                            <div className="flex flex-wrap gap-1">
+                            <div className="flex flex-wrap gap-0.5">
                               {item.dietary.map((opt: string, i: number) => (
                                 <TooltipRoot key={`${opt}-${i}`}>
                                   <TooltipTrigger asChild>
-                                    <span className="px-2 py-0.5 bg-matcha/10 text-matcha rounded-full text-[10px] font-light flex items-center gap-0.5 cursor-help">
-                                      {opt}<Info className="w-2.5 h-2.5" />
+                                    <span className="px-1.5 py-px bg-matcha/10 text-matcha rounded-full text-[8px] sm:text-[9px] font-light flex items-center gap-px cursor-help">
+                                      {opt}<Info className="w-2 h-2" />
                                     </span>
                                   </TooltipTrigger>
                                   <TooltipContent side="top" className="bg-kasshoku-deep text-washi text-xs px-3 py-2 rounded-sm shadow-xl">
@@ -416,7 +420,7 @@ export default function MenuClient() {
                                 </TooltipRoot>
                               ))}
                               {item.allergies.map((alg: string, i: number) => (
-                                <span key={i} className="px-2 py-0.5 bg-shibu-aka/10 text-shibu-aka rounded-full text-[10px] font-light">
+                                <span key={i} className="px-1.5 py-px bg-shibu-aka/10 text-shibu-aka rounded-full text-[8px] sm:text-[9px] font-light">
                                   {alg}
                                 </span>
                               ))}

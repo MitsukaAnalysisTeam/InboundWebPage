@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { MenuItem, TimeSlot } from '@/domain/types';
 
@@ -10,6 +10,9 @@ export default function AdminDashboard() {
   const [editingItem, setEditingItem] = useState<MenuItem | null>(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [filterCategory, setFilterCategory] = useState('All');
+  const [isReorderMode, setIsReorderMode] = useState(false);
+  const [isSavingOrder, setIsSavingOrder] = useState(false);
+  const [orderChanged, setOrderChanged] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -86,9 +89,85 @@ export default function AdminDashboard() {
     }
   };
 
-  const filteredItems = items.filter(item => 
-    filterCategory === 'All' || item.category === filterCategory
-  );
+  // ---- Reorder logic ----
+
+  const getItemsByCategory = useCallback((category: string) => {
+    return items
+      .filter(item => item.category === category)
+      .sort((a, b) => ((a as any).sortOrder ?? 0) - ((b as any).sortOrder ?? 0));
+  }, [items]);
+
+  const moveItem = useCallback((itemId: string, direction: 'up' | 'down') => {
+    setItems(prevItems => {
+      const item = prevItems.find(i => i.id === itemId);
+      if (!item) return prevItems;
+
+      // Get items in same category, sorted
+      const categoryItems = prevItems
+        .filter(i => i.category === item.category)
+        .sort((a, b) => ((a as any).sortOrder ?? 0) - ((b as any).sortOrder ?? 0));
+
+      const currentIndex = categoryItems.findIndex(i => i.id === itemId);
+      const targetIndex = direction === 'up' ? currentIndex - 1 : currentIndex + 1;
+
+      if (targetIndex < 0 || targetIndex >= categoryItems.length) return prevItems;
+
+      // Swap sort orders
+      const currentSortOrder = (categoryItems[currentIndex] as any).sortOrder ?? currentIndex;
+      const targetSortOrder = (categoryItems[targetIndex] as any).sortOrder ?? targetIndex;
+
+      return prevItems.map(i => {
+        if (i.id === categoryItems[currentIndex].id) {
+          return { ...i, sortOrder: targetSortOrder } as any;
+        }
+        if (i.id === categoryItems[targetIndex].id) {
+          return { ...i, sortOrder: currentSortOrder } as any;
+        }
+        return i;
+      });
+    });
+    setOrderChanged(true);
+  }, []);
+
+  const saveOrder = async () => {
+    setIsSavingOrder(true);
+    try {
+      const orderData = items.map(item => ({
+        id: item.id,
+        sortOrder: (item as any).sortOrder ?? 0,
+      }));
+
+      const res = await fetch('/api/admin/menu/reorder', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: orderData }),
+      });
+
+      if (res.ok) {
+        setOrderChanged(false);
+        alert('並び順を保存しました');
+      } else {
+        alert('並び順の保存に失敗しました');
+      }
+    } catch (error) {
+      console.error('Error saving order', error);
+      alert('並び順の保存中にエラーが発生しました');
+    } finally {
+      setIsSavingOrder(false);
+    }
+  };
+
+  const cancelReorder = () => {
+    setIsReorderMode(false);
+    setOrderChanged(false);
+    fetchItems(); // re-fetch to revert changes
+  };
+
+  // ---- End reorder logic ----
+
+  const filteredItems = items
+    .filter(item => filterCategory === 'All' || item.category === filterCategory)
+    .sort((a, b) => ((a as any).sortOrder ?? 0) - ((b as any).sortOrder ?? 0));
 
   const categories = ['All', 'Ramen', 'Beer', 'JapaneseSake', 'Ippin', 'LunchSpecial', 'DinnerSpecial', 'SunsetSpecial', 'Kaedama', 'Event'];
   
@@ -104,6 +183,9 @@ export default function AdminDashboard() {
     'Kaedama': '替え玉',
     'Event': 'イベント'
   };
+
+  // Which categories actually have items
+  const activeCategories = categories.filter(c => c !== 'All' && items.some(i => i.category === c));
 
   if (loading) return <div className="p-8 text-center">読み込み中...</div>;
 
@@ -122,29 +204,65 @@ export default function AdminDashboard() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-6 flex justify-between items-center">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mr-2 inline-block">
-              カテゴリで絞り込み:
-            </label>
-            <select
-              value={filterCategory}
-              onChange={(e) => setFilterCategory(e.target.value)}
-              className="mt-1 block border border-gray-300 rounded-md shadow-sm p-2"
-            >
-              {categories.map(category => (
-                <option key={category} value={category}>
-                  {categoryLabels[category] || category}
-                </option>
-              ))}
-            </select>
+        <div className="mb-6 flex flex-wrap justify-between items-center gap-4">
+          <div className="flex items-center gap-4">
+            {!isReorderMode && (
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mr-2 inline-block">
+                  カテゴリで絞り込み:
+                </label>
+                <select
+                  value={filterCategory}
+                  onChange={(e) => setFilterCategory(e.target.value)}
+                  className="mt-1 block border border-gray-300 rounded-md shadow-sm p-2"
+                >
+                  {categories.map(category => (
+                    <option key={category} value={category}>
+                      {categoryLabels[category] || category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
           </div>
-          <button
-            onClick={handleAddNew}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >
-            新規追加
-          </button>
+          <div className="flex items-center gap-3">
+            {isReorderMode ? (
+              <>
+                <button
+                  onClick={saveOrder}
+                  disabled={!orderChanged || isSavingOrder}
+                  className={`px-4 py-2 rounded font-medium transition-colors ${
+                    orderChanged && !isSavingOrder
+                      ? 'bg-green-600 text-white hover:bg-green-700'
+                      : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  }`}
+                >
+                  {isSavingOrder ? '保存中...' : '並び順を保存'}
+                </button>
+                <button
+                  onClick={cancelReorder}
+                  className="px-4 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-50 font-medium"
+                >
+                  キャンセル
+                </button>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={() => setIsReorderMode(true)}
+                  className="px-4 py-2 bg-amber-500 text-white rounded hover:bg-amber-600 font-medium transition-colors"
+                >
+                  ↕ 並び替え
+                </button>
+                <button
+                  onClick={handleAddNew}
+                  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                >
+                  新規追加
+                </button>
+              </>
+            )}
+          </div>
         </div>
 
         {isFormOpen && (
@@ -162,68 +280,192 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
-            <div key={item.id} className="bg-white rounded-lg shadow overflow-hidden flex flex-col">
-              {item.imageUrl && (
-                <div className="h-48 w-full relative bg-gray-200">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              )}
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-lg font-semibold text-gray-900">{item.name}</h3>
-                  <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
-                    {item.category}
-                  </span>
-                </div>
-                <p className="text-xs text-gray-400 mb-2 font-mono">ID: {item.id}</p>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                  {item.description}
-                </p>
-              <div className="flex justify-between items-center mt-auto">
-                <div className="text-gray-900 font-medium text-sm">
-                  {typeof item.priceYen === 'number' ? (
-                    `¥${item.priceYen}`
-                  ) : item.priceYen && typeof item.priceYen === 'object' ? (
-                    // priceYen がオブジェクトの場合、各価格を改行（縦並び）で表示
-                    <div className="space-y-1">
-                      {Object.entries(item.priceYen as Record<string, number | undefined>)
-                        .filter(([, v]) => v !== undefined)
-                        .map(([k, v], idx) => (
-                          <div key={idx} className="flex gap-2 items-baseline">
-                            {k ? <span className="text-gray-600">{k}:</span> : null}
-                            <span>¥{v}</span>
+        {isReorderMode ? (
+          /* ===== Reorder Mode ===== */
+          <div className="space-y-8">
+            {activeCategories.map(category => {
+              const categoryItems = getItemsByCategory(category);
+              if (categoryItems.length === 0) return null;
+
+              return (
+                <div key={category} className="bg-white rounded-lg shadow overflow-hidden">
+                  <div className="bg-gray-100 px-4 py-3 border-b border-gray-200">
+                    <h2 className="text-lg font-bold text-gray-800">
+                      {categoryLabels[category] || category}
+                      <span className="ml-2 text-sm font-normal text-gray-500">
+                        ({categoryItems.length}件)
+                      </span>
+                    </h2>
+                  </div>
+                  <ul className="divide-y divide-gray-100">
+                    {categoryItems.map((item, index) => (
+                      <li
+                        key={item.id}
+                        className="flex items-center gap-4 px-4 py-3 hover:bg-gray-50 transition-colors"
+                      >
+                        {/* Sort order number */}
+                        <span className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-gray-600 text-sm font-bold shrink-0">
+                          {index + 1}
+                        </span>
+
+                        {/* Thumbnail */}
+                        {item.imageUrl ? (
+                          <div className="w-12 h-12 rounded overflow-hidden bg-gray-200 shrink-0">
+                            <img
+                              src={item.imageUrl}
+                              alt={item.name}
+                              className="w-full h-full object-cover"
+                            />
                           </div>
-                        ))}
-                    </div>
-                  ) : (
-                    '価格未設定'
-                  )}
+                        ) : (
+                          <div className="w-12 h-12 rounded bg-gray-200 shrink-0 flex items-center justify-center text-gray-400 text-xs">
+                            N/A
+                          </div>
+                        )}
+
+                        {/* Name + price */}
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-semibold text-gray-900 truncate">{item.name}</p>
+                          <p className="text-xs text-gray-500">
+                            {typeof item.priceYen === 'number'
+                              ? `¥${item.priceYen}`
+                              : item.priceYen && typeof item.priceYen === 'object'
+                              ? Object.entries(item.priceYen as Record<string, number>)
+                                  .map(([k, v]) => `${k}: ¥${v}`)
+                                  .join(' / ')
+                              : '価格未設定'}
+                          </p>
+                        </div>
+
+                        {/* Up/Down buttons */}
+                        <div className="flex flex-col gap-1 shrink-0">
+                          <button
+                            onClick={() => moveItem(item.id, 'up')}
+                            disabled={index === 0}
+                            className={`w-8 h-8 flex items-center justify-center rounded transition-colors ${
+                              index === 0
+                                ? 'text-gray-300 cursor-not-allowed'
+                                : 'text-gray-600 hover:bg-blue-100 hover:text-blue-700'
+                            }`}
+                            title="上に移動"
+                          >
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M8 12V4M8 4L4 8M8 4L12 8" />
+                            </svg>
+                          </button>
+                          <button
+                            onClick={() => moveItem(item.id, 'down')}
+                            disabled={index === categoryItems.length - 1}
+                            className={`w-8 h-8 flex items-center justify-center rounded transition-colors ${
+                              index === categoryItems.length - 1
+                                ? 'text-gray-300 cursor-not-allowed'
+                                : 'text-gray-600 hover:bg-blue-100 hover:text-blue-700'
+                            }`}
+                            title="下に移動"
+                          >
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M8 4V12M8 12L4 8M8 12L12 8" />
+                            </svg>
+                          </button>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => handleEdit(item)}
-                    className="px-4 py-2 bg-blue-50 text-blue-700 rounded-md hover:bg-blue-100 font-medium transition-colors"
-                  >
-                    編集
-                  </button>
-                  <button
-                    onClick={() => handleDelete(item.id)}
-                    className="px-4 py-2 bg-red-50 text-red-700 rounded-md hover:bg-red-100 font-medium transition-colors"
-                  >
-                    削除
-                  </button>
+              );
+            })}
+
+            {/* Sticky save bar */}
+            {orderChanged && (
+              <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40">
+                <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+                  <p className="text-sm text-amber-700 font-medium">
+                    ⚠ 並び順が変更されています。保存してください。
+                  </p>
+                  <div className="flex gap-3">
+                    <button
+                      onClick={cancelReorder}
+                      className="px-4 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-50 text-sm"
+                    >
+                      キャンセル
+                    </button>
+                    <button
+                      onClick={saveOrder}
+                      disabled={isSavingOrder}
+                      className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 text-sm font-medium"
+                    >
+                      {isSavingOrder ? '保存中...' : '並び順を保存'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          /* ===== Normal Card View ===== */
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredItems.map((item) => (
+              <div key={item.id} className="bg-white rounded-lg shadow overflow-hidden flex flex-col">
+                {item.imageUrl && (
+                  <div className="h-48 w-full relative bg-gray-200">
+                    <img
+                      src={item.imageUrl}
+                      alt={item.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-lg font-semibold text-gray-900">{item.name}</h3>
+                    <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                      {item.category}
+                    </span>
+                  </div>
+                  <p className="text-xs text-gray-400 mb-2 font-mono">ID: {item.id}</p>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                    {item.description}
+                  </p>
+                <div className="flex justify-between items-center mt-auto">
+                  <div className="text-gray-900 font-medium text-sm">
+                    {typeof item.priceYen === 'number' ? (
+                      `¥${item.priceYen}`
+                    ) : item.priceYen && typeof item.priceYen === 'object' ? (
+                      // priceYen がオブジェクトの場合、各価格を改行（縦並び）で表示
+                      <div className="space-y-1">
+                        {Object.entries(item.priceYen as Record<string, number | undefined>)
+                          .filter(([, v]) => v !== undefined)
+                          .map(([k, v], idx) => (
+                            <div key={idx} className="flex gap-2 items-baseline">
+                              {k ? <span className="text-gray-600">{k}:</span> : null}
+                              <span>¥{v}</span>
+                            </div>
+                          ))}
+                      </div>
+                    ) : (
+                      '価格未設定'
+                    )}
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <button
+                      onClick={() => handleEdit(item)}
+                      className="px-4 py-2 bg-blue-50 text-blue-700 rounded-md hover:bg-blue-100 font-medium transition-colors"
+                    >
+                      編集
+                    </button>
+                    <button
+                      onClick={() => handleDelete(item.id)}
+                      className="px-4 py-2 bg-red-50 text-red-700 rounded-md hover:bg-red-100 font-medium transition-colors"
+                    >
+                      削除
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+            ))}
           </div>
-          ))}
-        </div>
+        )}
       </main>
     </div>
   );
